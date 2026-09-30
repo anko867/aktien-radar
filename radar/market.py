@@ -72,6 +72,21 @@ def sentences(m):
         d = y["abs1m"]
         out.append(f"Die 10-jährige US-Staatsanleihe rentiert mit {de(y['last'], 2)} % "
                    f"({'+' if d >= 0 else '−'}{de(abs(d), 2)} Prozentpunkte in einem Monat).")
+    mc = m.get("macro")
+    if mc:
+        c = mc.get("T10Y2Y")
+        if c:
+            state = "negativ (invertiert, gilt historisch oft als Warnzeichen)" if c["value"] < 0 else "positiv (normal)"
+            out.append(f"Zinskurve (Rendite 10 Jahre minus 2 Jahre): {de(c['value'], 2)} Prozentpunkte, {state}; vor einem Monat "
+                       f"{de(c['prev_month'], 2)} (FRED, Stand {c['date']}).")
+        c = mc.get("DFF")
+        if c:
+            out.append(f"Leitzins der US-Notenbank (effektiv): {de(c['value'], 2)} % (FRED, Stand {c['date']}).")
+        c = mc.get("BAMLH0A0HYM2")
+        if c:
+            out.append(f"Risikoaufschlag für Unternehmensanleihen schwacher Bonität: {de(c['value'], 2)} Prozentpunkte "
+                       f"(vor einem Monat {de(c['prev_month'], 2)}); ein steigender Wert zeigt wachsende Sorgen am Kreditmarkt "
+                       f"(FRED, Stand {c['date']}).")
     bt = m.get("backtest")
     if bt and sp:
         weak = m["sp_weak"]

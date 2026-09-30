@@ -140,7 +140,7 @@ def target_range(price, lo, mean, med, hi, sym):
 
 
 # ---------------------------------------------------------------- Karte pro Aktie
-def card(rank, tk, r, uni, info, det, news, ins, hist, real, prices, usd_eur, kind):
+def card(rank, tk, r, uni, info, det, news, ins, hist, real, prices, usd_eur, kind, ex=None):
     i = info or {}
     sym = cur_sym(i, tk)
     name = i.get("longName") or i.get("shortName") or uni[tk]["name"]
@@ -211,6 +211,36 @@ def card(rank, tk, r, uni, info, det, news, ins, hist, real, prices, usd_eur, ki
         f'<details class="inner"><summary>Wie der {T("Punktwert", "score")} {r["score"]:.0f} entsteht</summary>'
         f'<table class="mini"><tr><th>Teil</th><th>Gewicht</th><th>Erreicht</th></tr>{comp}</table></details></section>')
 
+    # Zweitquellen (nur wenn vorhanden)
+    sec_ex = ""
+    ex = ex or {}
+    bits = []
+    fh = ex.get("fh") or {}
+    if fh.get("rec"):
+        rc = fh["rec"]
+        bits.append(f'<p><b>Zweitquelle Finnhub</b> ({esc(rc.get("period", ""))}): Strong Buy {rc.get("strongBuy", "?")}, Buy {rc.get("buy", "?")}, '
+                    f'Hold {rc.get("hold", "?")}, Sell {rc.get("sell", "?")}, Strong Sell {rc.get("strongSell", "?")}. '
+                    f'<span class="muted small">Analystendaten stammen bei beiden Quellen aus ähnlichen Originalquellen, das ist eine Gegenprobe, keine unabhängige Bestätigung.</span></p>')
+    if fh.get("eps"):
+        rows_e = "".join(
+            f'<tr><td>{esc(e["period"])}</td><td>{de(e["estimate"], 2)}</td><td>{de(e["actual"], 2)}</td>'
+            f'<td class="{"up" if (e["pct"] or 0) >= 0 else "dn"}">{de(e["pct"], 1, True) + " %" if e["pct"] is not None else "keine Daten"}</td></tr>' for e in fh["eps"])
+        bits.append(f'<h5>Gewinn je Aktie: Erwartung gegen Ergebnis (letzte 4 Quartale)</h5><table class="mini"><tr><th>Quartalsende</th><th>Erwartet</th><th>Tatsächlich</th><th>Überraschung</th></tr>{rows_e}</table>')
+    av = ex.get("av")
+    if av:
+        m_ = av["mean"]
+        lab = ("bearish (negativ)" if m_ <= -0.35 else "eher negativ" if m_ <= -0.15 else "neutral" if m_ < 0.15 else "eher positiv" if m_ < 0.35 else "bullish (positiv)")
+        bits.append(f'<p><b>Nachrichten-Stimmung (Alpha Vantage)</b>: {de(m_, 2, True)} = {lab}, aus {av["n"]} Artikeln. '
+                    f'<span class="muted small">Skala −1 bis +1; Einstufung nach der Konvention des Anbieters; maschinell berechnet.</span></p>')
+    fm = ex.get("fmp")
+    if fm:
+        if abs(fm["dev"]) > 0.15:
+            bits.append(f'<p class="warn"><b>Hinweis:</b> Der Börsenwert weicht zwischen Yahoo und einer zweiten Quelle um {de(fm["dev"] * 100, 0, True)} % ab. Bitte selbst prüfen.</p>')
+        else:
+            bits.append('<p class="muted small">✓ Börsenwert von einer zweiten Quelle bestätigt (Abweichung unter 15 %).</p>')
+    if bits:
+        sec_ex = '<section><h4>Zweitquellen und Gewinne</h4>' + "".join(bits) + "</section>"
+
     # Kennzahlen
     kv = [
         (T("Börsenwert", "mcap"), big(i.get("marketCap"), sym)), (T("KGV", "kgv") + " (letzte 12 Mon.)", de(i.get("trailingPE"), 1)),
@@ -243,7 +273,7 @@ def card(rank, tk, r, uni, info, det, news, ins, hist, real, prices, usd_eur, ki
 
     fl = [("Handelbarkeit/Größe", bool(r["f1"])), ("Analysten", bool(r["f2"])), ("Abstand zum Hoch", bool(r["f3"])), ("Erholungssignal", bool(r["f4"]))]
     sec_f = '<section><h4>Filter-Check</h4><p>' + " · ".join(f"{mk(ok)} {n}" for n, ok in fl) + "</p></section>"
-    body = f'<div class="body">{sec_price}{sec_real}{sec_an}{sec_kv}{sec_co}{sec_ins}{sec_news}{sec_f}</div>'
+    body = f'<div class="body">{sec_price}{sec_real}{sec_an}{sec_ex}{sec_kv}{sec_co}{sec_ins}{sec_news}{sec_f}</div>'
     return f'<details class="card {kind}" id="t-{esc(tk)}">{head}{body}</details>'
 
 
@@ -395,7 +425,7 @@ def build_page(ctx):
         out = []
         for n, (tk, r) in enumerate(frame.iterrows(), start):
             real = ctx["realism"][tk]
-            out.append(card(n, tk, r, uni, info.get(tk), det.get(tk), news.get(tk), ins.get(tk), hist.get(tk), real, prices, fx, kind))
+            out.append(card(n, tk, r, uni, info.get(tk), det.get(tk), news.get(tk), ins.get(tk), hist.get(tk), real, prices, fx, kind, ctx.get("extras", {}).get(tk)))
         return "".join(out)
 
     n_pass = len(top)

@@ -284,3 +284,118 @@ def fetch_indices(period="2y"):
     df = yf.download(list(INDICES), period=period, interval="1d", auto_adjust=False, group_by="column",
                      threads=True, progress=False)
     return df["Close"].dropna(how="all")
+
+
+# ---------------------------------------------------------------- Schluessel-Quellen (nur aktiv, wenn Schluessel gesetzt ist)
+def _key(name):
+    return os.environ.get(name) or None
+
+
+def _get_json(url, params):
+    r = requests.get(url, params=params, headers=UA, timeout=25)
+    if r.status_code != 200:
+        raise RuntimeError(f"HTTP {r.status_code}")
+    return r.json()
+
+
+def fred_macro():
+    """Zinskurve, Leitzins und Risikoaufschlag fuer schwache Schuldner (FRED, US-Notenbank St. Louis)."""
+    k = _key("FRED_KEY")
+    if not k:
+        return None, "kein Schlüssel hinterlegt"
+    series = {"T10Y2Y": "Zinskurve: Rendite 10 Jahre minus 2 Jahre (Prozentpunkte)",
+              "DFF": "Leitzins der US-Notenbank (Prozent)",
+              "BAMLH0A0HYM2": "Risikoaufschlag Unternehmensanleihen schwacher Bonität (Prozentpunkte)"}
+    out, err = {}, None
+    for sid, label in series.items():
+        try:
+            j = _get_json("https://api.stlouisfed.org/fred/series/observations",
+                          {"series_id": sid, "api_key": k, "file_type": "json", "sort_order": "desc", "limit": 30})
+            obs = [o for o in j["observations"] if o["value"] not in (".", "")]
+            out[sid] = {"label": label, "date": obs[0]["date"], "value": float(obs[0]["value"]),
+                        "prev_month": float(obs[min(21, len(obs) - 1)]["value"])}
+        except Exception as e:  # noqa: BLE001
+            err = err or f"{sid}: {e}"
+    return (out or None), (f"OK: {len(out)} von {len(series)} Reihen" + (f" ({err})" if err else "")) if out else (err or "keine Daten")
+
+
+def finnhub_extra(tickers):
+    """Zweitquelle fuer Analystenurteile und die Gewinnueberraschungen der letzten 4 Quartale (nur US-Aktien)."""
+    k = _key("FINNHUB_KEY")
+    if not k:
+        return {}, "kein Schlüssel hinterlegt"
+    out, errs = {}, []
+    for tk in tickers:
+        item = {}
+        try:
+            rec = _get_json("https://finnhub.io/api/v1/stock/recommendation", {"symbol": tk, "token": k})
+            if rec:
+                item["rec"] = rec[0]
+        except Exception as e:  # noqa: BLE001
+            errs.append(f"Empfehlungen {e}")
+        time.sleep(1.1)  # kostenlos: 60 Abrufe pro Minute
+        try:
+            eps = _get_json("https://finnhub.io/api/v1/stock/earnings", {"symbol": tk, "limit": 4, "token": k})
+            if eps:
+                item["eps"] = [{"period": e.get("period"), "actual": e.get("actual"), "estimate": e.get("estimate"),
+                                "pct": e.get("surprisePercent")} for e in eps]
+        except Exception as e:  # noqa: BLE001
+            errs.append(f"Gewinne {e}")
+        time.sleep(1.1)
+        if item:
+            out[tk] = item
+    msg = f"OK: {len(out)} von {len(tickers)} Aktien" if out else "keine Daten"
+    if errs:
+        msg += f"; Meldungen: {sorted(set(errs))[:3]}"
+    return out, msg
+
+
+def alpha_sentiment(tickers, max_calls=20):
+    """Nachrichten-Stimmung je Aktie (Alpha Vantage, kostenlos nur 25 Abrufe pro Tag)."""
+    k = _key("ALPHAVANTAGE_KEY")
+    if not k:
+        return {}, "kein Schlüssel hinterlegt"
+    out, note = {}, None
+    for tk in tickers[:max_calls]:
+        try:
+            j = _get_json("https://www.alphavantage.co/query",
+                          {"function": "NEWS_SENTIMENT", "tickers": tk, "limit": 50, "apikey": k})
+        except Exception as e:  # noqa: BLE001
+            note = str(e)
+            continue
+        if "feed" not in j:
+            note = (j.get("Information") or j.get("Note") or "keine Antwortdaten")[:90]
+            break
+        scores = []
+        for art in j["feed"]:
+            for ts in art.get("ticker_sentiment", []):
+                if ts.get("ticker") == tk and float(ts.get("relevance_score", 0)) >= 0.3:
+                    scores.append(float(ts["ticker_sentiment_score"]))
+        if scores:
+            out[tk] = {"mean": sum(scores) / len(scores), "n": len(scores)}
+        time.sleep(1.0)
+    msg = f"OK: {len(out)} von {min(len(tickers), max_calls)} Aktien" if out else "keine Daten"
+    return out, msg + (f" ({note})" if note else "")
+
+
+def fmp_marketcap_check(tickers, mcaps):
+    """Stille Gegenprobe: weicht der Boersenwert bei Financial Modeling Prep stark von Yahoo ab? Zahlen werden nicht angezeigt."""
+    k = _key("FMP_KEY")
+    if not k:
+        return {}, "kein Schlüssel hinterlegt"
+    out, errs = {}, []
+    for tk in tickers:
+        ym = mcaps.get(tk)
+        if not ym:
+            continue
+        try:
+            j = _get_json("https://financialmodelingprep.com/stable/profile", {"symbol": tk, "apikey": k})
+            fm = (j[0].get("marketCap") if isinstance(j, list) and j else None)
+            if fm:
+                out[tk] = {"dev": fm / ym - 1}
+        except Exception as e:  # noqa: BLE001
+            errs.append(str(e))
+            if len(errs) >= 3:
+                break
+    msg = f"OK: {len(out)} Gegenproben" if out else "keine Daten"
+    return out, msg + (f" ({sorted(set(errs))[:2]})" if errs else "")

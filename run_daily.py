@@ -61,6 +61,16 @@ news = data.fetch_news([(t, info[t].get("shortName") or uni[t]["name"], uni[t]["
 log(f"Nachrichten geladen ({sum(1 for v in news.values() if v)} mit Treffern)")
 ins = data.fetch_insiders([t for t in shown if uni[t]["region"] == "US"])
 log(f"SEC-Insiderdaten: {sum(1 for v in ins.values() if v)} von {len(ins)}")
+us_shown = [t for t in shown if uni[t]["region"] == "US"]
+macro, macro_msg = data.fred_macro()
+log(f"FRED: {macro_msg}")
+fh, fh_msg = data.finnhub_extra(us_shown)
+log(f"Finnhub: {fh_msg}")
+av, av_msg = data.alpha_sentiment([t for t in top.index if uni[t]["region"] == "US"])
+log(f"Alpha Vantage: {av_msg}")
+fmp, fmp_msg = data.fmp_marketcap_check(us_shown, {t: (info.get(t) or {}).get("marketCap") for t in us_shown})
+log(f"Financial Modeling Prep: {fmp_msg}")
+extras = {t: {"fh": fh.get(t), "av": av.get(t), "fmp": fmp.get(t)} for t in shown}
 hist = screen.history_hit_rate(prices, shown, CFG["hist_years"])
 realism = {t: screen.realism(df.loc[t], hist.get(t)) for t in shown}
 
@@ -79,6 +89,7 @@ if data.SEC_ERROR:
     notes.append("SEC EDGAR: Zugriff abgelehnt (" + data.SEC_ERROR[0] + "). Die SEC verlangt eine Kontakt-E-Mail im Programmkopf; "
                  "ohne Freigabe bleibt die Insider-Auswertung aus.")
 mk = market.overview(idx_df, rows, fx, asof)
+mk["macro"] = macro
 n_info = sum(1 for v in info.values() if v)
 n_news = sum(1 for v in news.values() if v)
 n_ins = sum(1 for v in ins.values() if v)
@@ -90,13 +101,16 @@ source_status = [
     ("SEC EDGAR", "Insider-Käufe und -Verkäufe (nur US-Firmen)",
      f"OK: {n_ins} von {len(ins)} US-Aktien" if n_ins else "pausiert: Die SEC lehnt Abrufe ohne Kontaktangabe im Programmkopf ab (siehe Hinweise)"),
     ("Stooq", "Ersatz-Kursquelle", "nicht verwendet: Die Seite sperrt automatische Abrufe per Bot-Schutz"),
-    ("Finnhub, Financial Modeling Prep, Alpha Vantage, FRED", "Zweitquellen für Analysten, Kennzahlen, Zinsen", "noch nicht angeschlossen (API-Schlüssel fehlen)"),
+    ("FRED (US-Notenbank St. Louis)", "Zinskurve, Leitzins, Risikoaufschlag", macro_msg),
+    ("Finnhub", "Analystenurteile als Zweitquelle, Gewinnüberraschungen (US-Aktien)", fh_msg),
+    ("Alpha Vantage", "Nachrichten-Stimmung (nur Top-Liste, 25 Abrufe pro Tag)", av_msg),
+    ("Financial Modeling Prep", "stille Gegenprobe des Börsenwerts (Zahlen werden nicht angezeigt)", fmp_msg),
 ]
 counts = {"universe": len(uni), "data": prices["Close"].shape[1], "liquid": int(rows["f_liquid_price"].sum()),
           "dd": int((rows["f_liquid_price"] & (rows["dd"] >= CFG["min_dd"])).sum()), "pass": int(df["passed"].sum())}
 ctx = dict(asof=asof, top=top, watch=watch, uni=uni, info=info, details=details, news=news, insiders=ins, hist=hist,
            realism=realism, prices=prices, fx=fx, market=mk, diff=diff, names=names, picks=picks, picks_summary=psum,
-           source_status=source_status, notes=notes, counts=counts)
+           source_status=source_status, notes=notes, counts=counts, extras=extras)
 html = build_page(ctx)
 (DOCS / "index.html").write_text(html, encoding="utf-8")
 (DOCS / ".nojekyll").write_text("", encoding="utf-8")
