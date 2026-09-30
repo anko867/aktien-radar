@@ -16,6 +16,7 @@ def previous_snapshot(asof):
 
 
 def save_snapshot(asof, top, watch, df):
+    SNAP_DIR.mkdir(parents=True, exist_ok=True)
     snap = {
         "asof": str(asof.date()),
         "top": list(top.index),

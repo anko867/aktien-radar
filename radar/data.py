@@ -20,6 +20,7 @@ FIELDS = ["Open", "High", "Low", "Close", "Volume"]
 # ---------------------------------------------------------------- Kurse
 def download_prices(tickers, period="6y", chunk=50, use_cache=False):
     """Tageskurse (bereinigt um Splits/Dividenden). Gibt {feld: DataFrame[datum x ticker]} zurueck."""
+    CACHE.mkdir(parents=True, exist_ok=True)
     cache_file = CACHE / f"prices_{period}.pkl"
     if use_cache and cache_file.exists():
         return pd.read_pickle(cache_file)

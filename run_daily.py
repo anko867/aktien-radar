@@ -9,6 +9,8 @@ from radar import data, market, screen, state, universe
 from radar.config import CFG, DATA, DOCS
 from radar.render import build_page
 
+DATA.mkdir(parents=True, exist_ok=True)
+DOCS.mkdir(parents=True, exist_ok=True)
 t0 = time.time()
 use_cache = "--cache" in sys.argv
 notes = []
