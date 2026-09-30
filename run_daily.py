@@ -100,6 +100,7 @@ ctx = dict(asof=asof, top=top, watch=watch, uni=uni, info=info, details=details,
 html = build_page(ctx)
 (DOCS / "index.html").write_text(html, encoding="utf-8")
 (DOCS / ".nojekyll").write_text("", encoding="utf-8")
+(DOCS / "robots.txt").write_text("User-agent: *\nDisallow: /\n", encoding="utf-8")
 log(f"Seite geschrieben: docs/index.html ({len(html) / 1024:.0f} KB)")
 
 latest = {"asof": str(asof.date()), "top": list(top.index), "watch": list(watch.index), "counts": counts, "notes": notes}

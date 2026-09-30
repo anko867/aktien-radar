@@ -1,7 +1,23 @@
 """Zentrale Einstellungen. Alle Schwellen sind Startwerte (siehe Umsetzungsplan)."""
 from pathlib import Path
 
+import os
+
 ROOT = Path(__file__).resolve().parent.parent
+
+
+def _load_env():
+    """Liest lokale Schluessel aus der Datei .env (steht in .gitignore, wird nie hochgeladen).
+    Auf GitHub kommen dieselben Namen aus den Secrets."""
+    f = ROOT / ".env"
+    if f.exists():
+        for line in f.read_text(encoding="utf-8").splitlines():
+            k, _, v = line.partition("=")
+            if k.strip() and not k.lstrip().startswith("#") and v.strip():
+                os.environ.setdefault(k.strip(), v.strip().strip('"').strip("'"))
+
+
+_load_env()
 DATA = ROOT / "data"
 DOCS = ROOT / "docs"
 CACHE = ROOT / "cache"

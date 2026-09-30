@@ -415,7 +415,7 @@ def build_page(ctx):
            '<a href="#bilanz">Bilanz</a><a href="#rueckblick">Rückblick</a><a href="#quellen">Quellen</a></nav>')
     head = (f'<header><h1>Mein Aktien-Radar</h1><p class="muted">Datenstand: Schlusskurse vom {asof.strftime("%d.%m.%Y")} · erstellt {now.strftime("%d.%m.%Y %H:%M")} Uhr (Berlin)<br>'
             f'Ziel: Aktien mit Analysten-Kaufempfehlung, deutlich unter dem Hoch, mit Chance auf +20 % in {CFG["horizon"]} Handelstagen (ca. 4 Wochen). Keine Anlageberatung.</p></header>')
-    doc = (f'<!doctype html><html lang="de"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">'
+    doc = (f'<!doctype html><html lang="de"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow">'
            f'<title>Mein Aktien-Radar</title><style>{CSS}</style></head><body data-asof="{asof.strftime("%Y-%m-%d")}"><main>{head}'
            f'<div id="stale" class="stale" hidden>Achtung: Die Daten sind älter als 4 Tage. Der tägliche Lauf hat vermutlich nicht funktioniert.</div>{nav}'
            f'{section_market(ctx["market"])}{section_changes(ctx["diff"], ctx["names"])}{tops}{watchs}'
