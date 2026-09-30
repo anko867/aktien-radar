@@ -1,16 +1,19 @@
 [    0s] Python 3.12.14, pandas 3.0.6, numpy 2.5.3, yfinance 1.7.0
 [    1s] Aktienliste: 599 Aktien
-Traceback (most recent call last):
-  File "/home/runner/work/aktien-radar/aktien-radar/run_daily.py", line 35, in <module>
-    prices = data.download_prices(list(uni), "6y", use_cache=use_cache)
-             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/runner/work/aktien-radar/aktien-radar/radar/data.py", line 59, in download_prices
-    pd.to_pickle(out, cache_file)
-  File "/opt/hostedtoolcache/Python/3.12.14/x64/lib/python3.12/site-packages/pandas/io/pickle.py", line 119, in to_pickle
-    with get_handle(
-         ^^^^^^^^^^^
-  File "/opt/hostedtoolcache/Python/3.12.14/x64/lib/python3.12/site-packages/pandas/io/common.py", line 797, in get_handle
-    check_parent_directory(str(handle))
-  File "/opt/hostedtoolcache/Python/3.12.14/x64/lib/python3.12/site-packages/pandas/io/common.py", line 656, in check_parent_directory
-    raise OSError(rf"Cannot save file into a non-existent directory: '{parent}'")
-OSError: Cannot save file into a non-existent directory: '/home/runner/work/aktien-radar/aktien-radar/cache'
+[   74s] Kurse: 599 Aktien, Datenstand 2026-09-30
+[   75s] Handelbar: 573, Kandidaten fuer Analystendaten: 340
+[   90s] Top: 15 (alle Filter), Beobachtung: 25
+HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"No fundamentals data found for symbol: IFX.DE"}}}
+HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"No fundamentals data found for symbol: ZAL.DE"}}}
+HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"No fundamentals data found for symbol: TUI1.DE"}}}
+HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"No fundamentals data found for symbol: ENR.DE"}}}
+HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"No fundamentals data found for symbol: RHM.DE"}}}
+HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"No fundamentals data found for symbol: AIXA.DE"}}}
+[   92s] Analystenverlauf geladen
+[   95s] Nachrichten geladen (34 mit Treffern)
+[   95s] SEC-Insiderdaten: 0 von 34
+[   95s] FRED: kein Schlüssel hinterlegt
+[   95s] Finnhub: kein Schlüssel hinterlegt
+[   95s] Alpha Vantage: kein Schlüssel hinterlegt
+[   95s] Financial Modeling Prep: kein Schlüssel hinterlegt
+[   96s] Seite geschrieben: docs/index.html (684 KB)
