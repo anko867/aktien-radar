@@ -18,6 +18,13 @@ def log(msg):
     print(f"[{time.time() - t0:5.0f}s] {msg}", flush=True)
 
 
+import platform  # noqa: E402
+
+import numpy  # noqa: E402
+import yfinance  # noqa: E402
+
+log(f"Python {platform.python_version()}, pandas {pd.__version__}, numpy {numpy.__version__}, yfinance {yfinance.__version__}")
+
 # 1. Aktienliste
 uni, unotes = universe.build()
 notes += unotes

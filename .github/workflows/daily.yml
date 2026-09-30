@@ -6,6 +6,12 @@ on:
     # (dann liegen die Schlusskurse vom Vortag vor). GitHub startet geplante Läufe teils mit Verspätung.
     - cron: "0 5 * * 2-6"
   workflow_dispatch: {}
+  push:
+    # Testlauf nach Aenderungen am Programm (Ergebnis-Dateien in data/ und docs/ loesen keinen Lauf aus)
+    paths:
+      - "radar/**"
+      - "run_daily.py"
+      - ".github/workflows/daily.yml"
 
 permissions:
   contents: write
@@ -26,16 +32,25 @@ jobs:
           cache: pip
       - run: pip install -r requirements.txt
       - name: Radar berechnen und Seite bauen
+        id: radar
+        continue-on-error: true
         env:
           SEC_CONTACT: ${{ secrets.SEC_CONTACT }}
           FINNHUB_KEY: ${{ secrets.FINNHUB_KEY }}
           FRED_KEY: ${{ secrets.FRED_KEY }}
           ALPHAVANTAGE_KEY: ${{ secrets.ALPHAVANTAGE_KEY }}
           FMP_KEY: ${{ secrets.FMP_KEY }}
-        run: python run_daily.py
-      - name: Ergebnis speichern (Verlauf, Bilanz, Seite)
         run: |
+          set -o pipefail
+          python -u run_daily.py 2>&1 | tee run.log
+      - name: Ergebnis und Protokoll speichern
+        if: always()
+        run: |
+          cp run.log data/last_run.log 2>/dev/null || true
           git config user.name "aktien-radar-bot"
           git config user.email "aktien-radar-bot@users.noreply.github.com"
           git add data docs
-          git diff --cached --quiet || (git commit -m "Tageslauf $(date -u +%F)" && git push)
+          git diff --cached --quiet || (git commit -m "Tageslauf $(date -u +%F) (${{ steps.radar.outcome }})" && git pull --rebase -q && git push)
+      - name: Fehlschlag melden
+        if: steps.radar.outcome == 'failure'
+        run: exit 1

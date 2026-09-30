@@ -18,28 +18,37 @@ FIELDS = ["Open", "High", "Low", "Close", "Volume"]
 
 
 # ---------------------------------------------------------------- Kurse
-def download_prices(tickers, period="6y", chunk=100, use_cache=False):
+def download_prices(tickers, period="6y", chunk=50, use_cache=False):
     """Tageskurse (bereinigt um Splits/Dividenden). Gibt {feld: DataFrame[datum x ticker]} zurueck."""
     cache_file = CACHE / f"prices_{period}.pkl"
     if use_cache and cache_file.exists():
         return pd.read_pickle(cache_file)
-    frames = []
+    frames, failed = [], 0
     for i in range(0, len(tickers), chunk):
         part = tickers[i:i + chunk]
-        for attempt in range(3):
+        df = None
+        for attempt in range(4):
             try:
                 df = yf.download(part, period=period, interval="1d", auto_adjust=True, group_by="column",
                                  threads=True, progress=False)
-                break
-            except Exception:  # noqa: BLE001
-                time.sleep(3 * (attempt + 1))
-                df = None
+                if df is not None and not df.empty:
+                    break
+            except Exception as e:  # noqa: BLE001
+                print(f"Yahoo-Kursabruf fehlgeschlagen ({type(e).__name__}: {str(e)[:120]})", flush=True)
+            time.sleep(5 * (attempt + 1))
         if df is None or df.empty:
+            failed += 1
+            print(f"Kein Ergebnis von Yahoo fuer Paket {i // chunk + 1} ({len(part)} Aktien)", flush=True)
             continue
         if not isinstance(df.columns, pd.MultiIndex):
             df.columns = pd.MultiIndex.from_product([df.columns, part[:1]])
         frames.append(df)
-    wide = pd.concat(frames, axis=1)
+        time.sleep(1)
+    if not frames:
+        raise RuntimeError("Yahoo liefert keine Kursdaten (vermutlich gesperrt oder gedrosselt).")
+    if failed:
+        print(f"WARNUNG: {failed} Kurspakete fehlgeschlagen, die Aktien darin fehlen heute.", flush=True)
+    wide = pd.concat(frames, axis=1, sort=True)
     wide = wide.loc[:, ~wide.columns.duplicated()]
     if wide.index.tz is not None:
         wide.index = wide.index.tz_localize(None)
@@ -292,10 +301,17 @@ def _key(name):
 
 
 def _get_json(url, params):
-    r = requests.get(url, params=params, headers=UA, timeout=25)
+    """Holt JSON. Fehlermeldungen enthalten nie die Adresse (dort steht der API-Schluessel)."""
+    try:
+        r = requests.get(url, params=params, headers=UA, timeout=25)
+    except requests.RequestException as e:
+        raise RuntimeError(type(e).__name__) from None
     if r.status_code != 200:
         raise RuntimeError(f"HTTP {r.status_code}")
-    return r.json()
+    try:
+        return r.json()
+    except ValueError:
+        raise RuntimeError("keine gueltige Antwort") from None
 
 
 def fred_macro():
