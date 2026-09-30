@@ -1,0 +1,4284 @@
+{
+ "MMM": {
+  "name": "3M",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "AOS": {
+  "name": "A. O. Smith",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "ABT": {
+  "name": "Abbott Laboratories",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "ABBV": {
+  "name": "AbbVie",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "ACN": {
+  "name": "Accenture",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "ADBE": {
+  "name": "Adobe Inc.",
+  "indices": [
+   "S&P 500",
+   "Nasdaq-100"
+  ],
+  "region": "US"
+ },
+ "AMD": {
+  "name": "Advanced Micro Devices",
+  "indices": [
+   "S&P 500",
+   "Nasdaq-100"
+  ],
+  "region": "US"
+ },
+ "AES": {
+  "name": "AES Corporation",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "AFL": {
+  "name": "Aflac",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "A": {
+  "name": "Agilent Technologies",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "APD": {
+  "name": "Air Products",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "ABNB": {
+  "name": "Airbnb",
+  "indices": [
+   "S&P 500",
+   "Nasdaq-100"
+  ],
+  "region": "US"
+ },
+ "AKAM": {
+  "name": "Akamai Technologies",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "ALB": {
+  "name": "Albemarle Corporation",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "ARE": {
+  "name": "Alexandria Real Estate Equities",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "ALGN": {
+  "name": "Align Technology",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "ALLE": {
+  "name": "Allegion",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "LNT": {
+  "name": "Alliant Energy",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "ALL": {
+  "name": "Allstate",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "GOOGL": {
+  "name": "Alphabet Inc. (Class A)",
+  "indices": [
+   "S&P 500",
+   "Nasdaq-100"
+  ],
+  "region": "US"
+ },
+ "GOOG": {
+  "name": "Alphabet Inc. (Class C)",
+  "indices": [
+   "S&P 500",
+   "Nasdaq-100"
+  ],
+  "region": "US"
+ },
+ "MO": {
+  "name": "Altria",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "AMZN": {
+  "name": "Amazon",
+  "indices": [
+   "S&P 500",
+   "Nasdaq-100"
+  ],
+  "region": "US"
+ },
+ "AMCR": {
+  "name": "Amcor",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "AEE": {
+  "name": "Ameren",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "AEP": {
+  "name": "American Electric Power",
+  "indices": [
+   "S&P 500",
+   "Nasdaq-100"
+  ],
+  "region": "US"
+ },
+ "AXP": {
+  "name": "American Express",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "AIG": {
+  "name": "American International Group",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "AMT": {
+  "name": "American Tower",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "AWK": {
+  "name": "American Water Works",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "AMP": {
+  "name": "Ameriprise Financial",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "AME": {
+  "name": "Ametek",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "AMGN": {
+  "name": "Amgen",
+  "indices": [
+   "S&P 500",
+   "Nasdaq-100"
+  ],
+  "region": "US"
+ },
+ "APH": {
+  "name": "Amphenol",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "ADI": {
+  "name": "Analog Devices",
+  "indices": [
+   "S&P 500",
+   "Nasdaq-100"
+  ],
+  "region": "US"
+ },
+ "AON": {
+  "name": "Aon plc",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "APA": {
+  "name": "APA Corporation",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "APO": {
+  "name": "Apollo Global Management",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "AAPL": {
+  "name": "Apple Inc.",
+  "indices": [
+   "S&P 500",
+   "Nasdaq-100"
+  ],
+  "region": "US"
+ },
+ "AMAT": {
+  "name": "Applied Materials",
+  "indices": [
+   "S&P 500",
+   "Nasdaq-100"
+  ],
+  "region": "US"
+ },
+ "APP": {
+  "name": "AppLovin",
+  "indices": [
+   "S&P 500",
+   "Nasdaq-100"
+  ],
+  "region": "US"
+ },
+ "APTV": {
+  "name": "Aptiv",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "ACGL": {
+  "name": "Arch Capital Group",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "ADM": {
+  "name": "Archer Daniels Midland",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "ARES": {
+  "name": "Ares Management",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "ANET": {
+  "name": "Arista Networks",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "AJG": {
+  "name": "Arthur J. Gallagher & Co.",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "AIZ": {
+  "name": "Assurant",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "T": {
+  "name": "AT&T",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "ATO": {
+  "name": "Atmos Energy",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "ADSK": {
+  "name": "Autodesk",
+  "indices": [
+   "S&P 500",
+   "Nasdaq-100"
+  ],
+  "region": "US"
+ },
+ "ADP": {
+  "name": "Automatic Data Processing",
+  "indices": [
+   "S&P 500",
+   "Nasdaq-100"
+  ],
+  "region": "US"
+ },
+ "AZO": {
+  "name": "AutoZone",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "AVY": {
+  "name": "Avery Dennison",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "AXON": {
+  "name": "Axon Enterprise",
+  "indices": [
+   "S&P 500",
+   "Nasdaq-100"
+  ],
+  "region": "US"
+ },
+ "BKR": {
+  "name": "Baker Hughes",
+  "indices": [
+   "S&P 500",
+   "Nasdaq-100"
+  ],
+  "region": "US"
+ },
+ "BALL": {
+  "name": "Ball Corporation",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "BAC": {
+  "name": "Bank of America",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "BAX": {
+  "name": "Baxter International",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "BDX": {
+  "name": "Becton Dickinson",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "BRK-B": {
+  "name": "Berkshire Hathaway",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "BBY": {
+  "name": "Best Buy",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "TECH": {
+  "name": "Bio-Techne",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "BIIB": {
+  "name": "Biogen",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "BLK": {
+  "name": "BlackRock",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "BX": {
+  "name": "Blackstone Inc.",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "XYZ": {
+  "name": "Block, Inc.",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "BE": {
+  "name": "Bloom Energy",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "BNY": {
+  "name": "BNY Mellon",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "BA": {
+  "name": "Boeing",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "BKNG": {
+  "name": "Booking Holdings",
+  "indices": [
+   "S&P 500",
+   "Nasdaq-100"
+  ],
+  "region": "US"
+ },
+ "BSX": {
+  "name": "Boston Scientific",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "BMY": {
+  "name": "Bristol Myers Squibb",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "AVGO": {
+  "name": "Broadcom",
+  "indices": [
+   "S&P 500",
+   "Nasdaq-100"
+  ],
+  "region": "US"
+ },
+ "BR": {
+  "name": "Broadridge Financial Solutions",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "BRO": {
+  "name": "Brown & Brown",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "BF-B": {
+  "name": "Brown–Forman",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "BG": {
+  "name": "Bunge Global",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "BXP": {
+  "name": "BXP, Inc.",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "CHRW": {
+  "name": "C.H. Robinson",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "CDNS": {
+  "name": "Cadence Design Systems",
+  "indices": [
+   "S&P 500",
+   "Nasdaq-100"
+  ],
+  "region": "US"
+ },
+ "CPT": {
+  "name": "Camden Property Trust",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "COF": {
+  "name": "Capital One",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "CAH": {
+  "name": "Cardinal Health",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "CCL": {
+  "name": "Carnival Corporation",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "CARR": {
+  "name": "Carrier Global",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "CVNA": {
+  "name": "Carvana",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "CASY": {
+  "name": "Casey's",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "CAT": {
+  "name": "Caterpillar Inc.",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "CBOE": {
+  "name": "Cboe Global Markets",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "CBRE": {
+  "name": "CBRE Group",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "CDW": {
+  "name": "CDW Corporation",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "COR": {
+  "name": "Cencora",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "CNC": {
+  "name": "Centene Corporation",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "CNP": {
+  "name": "CenterPoint Energy",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "CF": {
+  "name": "CF Industries",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "CRL": {
+  "name": "Charles River Laboratories",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "SCHW": {
+  "name": "Charles Schwab Corporation",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "CHTR": {
+  "name": "Charter Communications",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "CVX": {
+  "name": "Chevron Corporation",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "CMG": {
+  "name": "Chipotle Mexican Grill",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "CB": {
+  "name": "Chubb Limited",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "CHD": {
+  "name": "Church & Dwight",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "CIEN": {
+  "name": "Ciena",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "CI": {
+  "name": "Cigna",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "CINF": {
+  "name": "Cincinnati Financial",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "CTAS": {
+  "name": "Cintas",
+  "indices": [
+   "S&P 500",
+   "Nasdaq-100"
+  ],
+  "region": "US"
+ },
+ "CSCO": {
+  "name": "Cisco",
+  "indices": [
+   "S&P 500",
+   "Nasdaq-100"
+  ],
+  "region": "US"
+ },
+ "C": {
+  "name": "Citigroup",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "CFG": {
+  "name": "Citizens Financial Group",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "CLX": {
+  "name": "Clorox",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "CME": {
+  "name": "CME Group",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "CMS": {
+  "name": "CMS Energy",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "KO": {
+  "name": "Coca-Cola Company (The)",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "CTSH": {
+  "name": "Cognizant",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "COHR": {
+  "name": "Coherent Corp.",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "COIN": {
+  "name": "Coinbase",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "CL": {
+  "name": "Colgate-Palmolive",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "CMCSA": {
+  "name": "Comcast",
+  "indices": [
+   "S&P 500",
+   "Nasdaq-100"
+  ],
+  "region": "US"
+ },
+ "FIX": {
+  "name": "Comfort Systems USA",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "COP": {
+  "name": "ConocoPhillips",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "ED": {
+  "name": "Consolidated Edison",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "STZ": {
+  "name": "Constellation Brands",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "CEG": {
+  "name": "Constellation Energy",
+  "indices": [
+   "S&P 500",
+   "Nasdaq-100"
+  ],
+  "region": "US"
+ },
+ "COO": {
+  "name": "Cooper Companies (The)",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "CPRT": {
+  "name": "Copart",
+  "indices": [
+   "S&P 500",
+   "Nasdaq-100"
+  ],
+  "region": "US"
+ },
+ "GLW": {
+  "name": "Corning Inc.",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "CPAY": {
+  "name": "Corpay",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "CTVA": {
+  "name": "Corteva",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "CSGP": {
+  "name": "CoStar Group",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "COST": {
+  "name": "Costco",
+  "indices": [
+   "S&P 500",
+   "Nasdaq-100"
+  ],
+  "region": "US"
+ },
+ "CRH": {
+  "name": "CRH plc",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "CRWD": {
+  "name": "CrowdStrike",
+  "indices": [
+   "S&P 500",
+   "Nasdaq-100"
+  ],
+  "region": "US"
+ },
+ "CCI": {
+  "name": "Crown Castle",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "CSX": {
+  "name": "CSX Corporation",
+  "indices": [
+   "S&P 500",
+   "Nasdaq-100"
+  ],
+  "region": "US"
+ },
+ "CMI": {
+  "name": "Cummins",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "CVS": {
+  "name": "CVS Health",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "DHR": {
+  "name": "Danaher Corporation",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "DRI": {
+  "name": "Darden Restaurants",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "DDOG": {
+  "name": "Datadog",
+  "indices": [
+   "S&P 500",
+   "Nasdaq-100"
+  ],
+  "region": "US"
+ },
+ "DVA": {
+  "name": "DaVita",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "DECK": {
+  "name": "Deckers Brands",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "DE": {
+  "name": "Deere & Company",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "DELL": {
+  "name": "Dell Technologies",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "DAL": {
+  "name": "Delta Air Lines",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "DVN": {
+  "name": "Devon Energy",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "DXCM": {
+  "name": "Dexcom",
+  "indices": [
+   "S&P 500",
+   "Nasdaq-100"
+  ],
+  "region": "US"
+ },
+ "FANG": {
+  "name": "Diamondback Energy",
+  "indices": [
+   "S&P 500",
+   "Nasdaq-100"
+  ],
+  "region": "US"
+ },
+ "DLR": {
+  "name": "Digital Realty",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "DG": {
+  "name": "Dollar General",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "DLTR": {
+  "name": "Dollar Tree",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "D": {
+  "name": "Dominion Energy",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "DPZ": {
+  "name": "Domino's",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "DASH": {
+  "name": "DoorDash",
+  "indices": [
+   "S&P 500",
+   "Nasdaq-100"
+  ],
+  "region": "US"
+ },
+ "DOV": {
+  "name": "Dover Corporation",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "DOW": {
+  "name": "Dow Inc.",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "DHI": {
+  "name": "D. R. Horton",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "DTE": {
+  "name": "DTE Energy",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "DUK": {
+  "name": "Duke Energy",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "DD": {
+  "name": "DuPont",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "ETN": {
+  "name": "Eaton Corporation",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "EBAY": {
+  "name": "eBay Inc.",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "ECHO": {
+  "name": "EchoStar",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "ECL": {
+  "name": "Ecolab",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "EIX": {
+  "name": "Edison International",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "EW": {
+  "name": "Edwards Lifesciences",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "ELV": {
+  "name": "Elevance Health",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "EME": {
+  "name": "Emcor",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "EMR": {
+  "name": "Emerson Electric",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "ETR": {
+  "name": "Entergy",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "EOG": {
+  "name": "EOG Resources",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "EQT": {
+  "name": "EQT Corporation",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "EFX": {
+  "name": "Equifax",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "EQIX": {
+  "name": "Equinix",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "ERIE": {
+  "name": "Erie Indemnity",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "ESS": {
+  "name": "Essex Property Trust",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "EL": {
+  "name": "Estée Lauder Companies (The)",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "EG": {
+  "name": "Everest Group",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "EVRG": {
+  "name": "Evergy",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "P": {
+  "name": "Everpure",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "ES": {
+  "name": "Eversource Energy",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "EXC": {
+  "name": "Exelon",
+  "indices": [
+   "S&P 500",
+   "Nasdaq-100"
+  ],
+  "region": "US"
+ },
+ "EXE": {
+  "name": "Expand Energy",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "EXPE": {
+  "name": "Expedia Group",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "EXPD": {
+  "name": "Expeditors International",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "EXR": {
+  "name": "Extra Space Storage",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "XOM": {
+  "name": "ExxonMobil",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "FFIV": {
+  "name": "F5, Inc.",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "FDS": {
+  "name": "FactSet",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "FICO": {
+  "name": "Fair Isaac",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "FAST": {
+  "name": "Fastenal",
+  "indices": [
+   "S&P 500",
+   "Nasdaq-100"
+  ],
+  "region": "US"
+ },
+ "FRT": {
+  "name": "Federal Realty Investment Trust",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "FDX": {
+  "name": "FedEx",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "FDXF": {
+  "name": "FedEx Freight",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "FERG": {
+  "name": "Ferguson Enterprises",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "FIS": {
+  "name": "Fidelity National Information Services",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "FITB": {
+  "name": "Fifth Third Bancorp",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "FSLR": {
+  "name": "First Solar",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "FE": {
+  "name": "FirstEnergy",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "FISV": {
+  "name": "Fiserv",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "FLEX": {
+  "name": "Flex Ltd.",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "F": {
+  "name": "Ford Motor Company",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "FTNT": {
+  "name": "Fortinet",
+  "indices": [
+   "S&P 500",
+   "Nasdaq-100"
+  ],
+  "region": "US"
+ },
+ "FTV": {
+  "name": "Fortive",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "FOXA": {
+  "name": "Fox Corporation (Class A)",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "FOX": {
+  "name": "Fox Corporation (Class B)",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "BEN": {
+  "name": "Franklin Resources",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "FCX": {
+  "name": "Freeport-McMoRan",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "GRMN": {
+  "name": "Garmin",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "IT": {
+  "name": "Gartner",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "GE": {
+  "name": "GE Aerospace",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "GEHC": {
+  "name": "GE HealthCare",
+  "indices": [
+   "S&P 500",
+   "Nasdaq-100"
+  ],
+  "region": "US"
+ },
+ "GEV": {
+  "name": "GE Vernova",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "GEN": {
+  "name": "Gen Digital",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "GNRC": {
+  "name": "Generac",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "GD": {
+  "name": "General Dynamics",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "GIS": {
+  "name": "General Mills",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "GM": {
+  "name": "General Motors",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "GPC": {
+  "name": "Genuine Parts Company",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "GILD": {
+  "name": "Gilead Sciences",
+  "indices": [
+   "S&P 500",
+   "Nasdaq-100"
+  ],
+  "region": "US"
+ },
+ "GPN": {
+  "name": "Global Payments",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "GL": {
+  "name": "Globe Life",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "GDDY": {
+  "name": "GoDaddy",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "GS": {
+  "name": "Goldman Sachs",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "HAL": {
+  "name": "Halliburton",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "HIG": {
+  "name": "Hartford (The)",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "HAS": {
+  "name": "Hasbro",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "HCA": {
+  "name": "HCA Healthcare",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "DOC": {
+  "name": "Healthpeak Properties",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "HSIC": {
+  "name": "Henry Schein",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "HSY": {
+  "name": "Hershey Company (The)",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "HPE": {
+  "name": "Hewlett Packard Enterprise",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "HLT": {
+  "name": "Hilton Worldwide",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "HD": {
+  "name": "Home Depot (The)",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "HONA": {
+  "name": "Honeywell Aerospace",
+  "indices": [
+   "S&P 500",
+   "Nasdaq-100"
+  ],
+  "region": "US"
+ },
+ "HON": {
+  "name": "Honeywell Technologies",
+  "indices": [
+   "S&P 500",
+   "Nasdaq-100"
+  ],
+  "region": "US"
+ },
+ "HRL": {
+  "name": "Hormel Foods",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "HST": {
+  "name": "Host Hotels & Resorts",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "HWM": {
+  "name": "Howmet Aerospace",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "HPQ": {
+  "name": "HP Inc.",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "HUBB": {
+  "name": "Hubbell Incorporated",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "HUM": {
+  "name": "Humana",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "HBAN": {
+  "name": "Huntington Bancshares",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "HII": {
+  "name": "Huntington Ingalls Industries",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "IBM": {
+  "name": "IBM",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "IEX": {
+  "name": "IDEX Corporation",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "IDXX": {
+  "name": "Idexx Laboratories",
+  "indices": [
+   "S&P 500",
+   "Nasdaq-100"
+  ],
+  "region": "US"
+ },
+ "ITW": {
+  "name": "Illinois Tool Works",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "ILMN": {
+  "name": "Illumina, Inc.",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "INCY": {
+  "name": "Incyte",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "IR": {
+  "name": "Ingersoll Rand",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "PODD": {
+  "name": "Insulet Corporation",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "INTC": {
+  "name": "Intel",
+  "indices": [
+   "S&P 500",
+   "Nasdaq-100"
+  ],
+  "region": "US"
+ },
+ "IBKR": {
+  "name": "Interactive Brokers",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "ICE": {
+  "name": "Intercontinental Exchange",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "IFF": {
+  "name": "International Flavors & Fragrances",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "IP": {
+  "name": "International Paper",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "INTU": {
+  "name": "Intuit",
+  "indices": [
+   "S&P 500",
+   "Nasdaq-100"
+  ],
+  "region": "US"
+ },
+ "ISRG": {
+  "name": "Intuitive Surgical",
+  "indices": [
+   "S&P 500",
+   "Nasdaq-100"
+  ],
+  "region": "US"
+ },
+ "IVZ": {
+  "name": "Invesco",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "INVH": {
+  "name": "Invitation Homes",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "IQV": {
+  "name": "IQVIA",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "IRM": {
+  "name": "Iron Mountain",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "JBHT": {
+  "name": "J.B. Hunt",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "JBL": {
+  "name": "Jabil",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "JKHY": {
+  "name": "Jack Henry & Associates",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "J": {
+  "name": "Jacobs Solutions",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "JNJ": {
+  "name": "Johnson & Johnson",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "JCI": {
+  "name": "Johnson Controls",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "JPM": {
+  "name": "JPMorgan Chase",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "KVUE": {
+  "name": "Kenvue",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "KDP": {
+  "name": "Keurig Dr Pepper",
+  "indices": [
+   "S&P 500",
+   "Nasdaq-100"
+  ],
+  "region": "US"
+ },
+ "KEY": {
+  "name": "KeyCorp",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "KEYS": {
+  "name": "Keysight Technologies",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "KMB": {
+  "name": "Kimberly-Clark",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "KIM": {
+  "name": "Kimco Realty",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "KMI": {
+  "name": "Kinder Morgan",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "KKR": {
+  "name": "KKR & Co.",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "KLAC": {
+  "name": "KLA Corporation",
+  "indices": [
+   "S&P 500",
+   "Nasdaq-100"
+  ],
+  "region": "US"
+ },
+ "KHC": {
+  "name": "Kraft Heinz",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "KR": {
+  "name": "Kroger",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "LHX": {
+  "name": "L3Harris",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "LH": {
+  "name": "Labcorp",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "LRCX": {
+  "name": "Lam Research",
+  "indices": [
+   "S&P 500",
+   "Nasdaq-100"
+  ],
+  "region": "US"
+ },
+ "LVS": {
+  "name": "Las Vegas Sands",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "LDOS": {
+  "name": "Leidos",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "LEN": {
+  "name": "Lennar",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "LII": {
+  "name": "Lennox International",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "LLY": {
+  "name": "Lilly (Eli)",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "LIN": {
+  "name": "Linde plc",
+  "indices": [
+   "S&P 500",
+   "Nasdaq-100"
+  ],
+  "region": "US"
+ },
+ "LYV": {
+  "name": "Live Nation Entertainment",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "LMT": {
+  "name": "Lockheed Martin",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "L": {
+  "name": "Loews Corporation",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "LOW": {
+  "name": "Lowe's",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "LULU": {
+  "name": "Lululemon Athletica",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "LITE": {
+  "name": "Lumentum",
+  "indices": [
+   "S&P 500",
+   "Nasdaq-100"
+  ],
+  "region": "US"
+ },
+ "LYB": {
+  "name": "LyondellBasell",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "MTB": {
+  "name": "M&T Bank",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "MPC": {
+  "name": "Marathon Petroleum",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "MAR": {
+  "name": "Marriott International",
+  "indices": [
+   "S&P 500",
+   "Nasdaq-100"
+  ],
+  "region": "US"
+ },
+ "MRSH": {
+  "name": "Marsh McLennan",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "MLM": {
+  "name": "Martin Marietta Materials",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "MRVL": {
+  "name": "Marvell Technology",
+  "indices": [
+   "S&P 500",
+   "Nasdaq-100"
+  ],
+  "region": "US"
+ },
+ "MAS": {
+  "name": "Masco",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "MA": {
+  "name": "Mastercard",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "MKC": {
+  "name": "McCormick & Company",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "MCD": {
+  "name": "McDonald's",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "MCK": {
+  "name": "McKesson Corporation",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "MDT": {
+  "name": "Medtronic",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "MRK": {
+  "name": "Merck & Co.",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "META": {
+  "name": "Meta Platforms",
+  "indices": [
+   "S&P 500",
+   "Nasdaq-100"
+  ],
+  "region": "US"
+ },
+ "MET": {
+  "name": "MetLife",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "MTD": {
+  "name": "Mettler Toledo",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "MGM": {
+  "name": "MGM Resorts",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "MCHP": {
+  "name": "Microchip Technology",
+  "indices": [
+   "S&P 500",
+   "Nasdaq-100"
+  ],
+  "region": "US"
+ },
+ "MU": {
+  "name": "Micron Technology",
+  "indices": [
+   "S&P 500",
+   "Nasdaq-100"
+  ],
+  "region": "US"
+ },
+ "MSFT": {
+  "name": "Microsoft",
+  "indices": [
+   "S&P 500",
+   "Nasdaq-100"
+  ],
+  "region": "US"
+ },
+ "MAA": {
+  "name": "Mid-America Apartment Communities",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "MRNA": {
+  "name": "Moderna",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "MDLZ": {
+  "name": "Mondelez International",
+  "indices": [
+   "S&P 500",
+   "Nasdaq-100"
+  ],
+  "region": "US"
+ },
+ "MPWR": {
+  "name": "Monolithic Power Systems",
+  "indices": [
+   "S&P 500",
+   "Nasdaq-100"
+  ],
+  "region": "US"
+ },
+ "MNST": {
+  "name": "Monster Beverage",
+  "indices": [
+   "S&P 500",
+   "Nasdaq-100"
+  ],
+  "region": "US"
+ },
+ "MCO": {
+  "name": "Moody's Corporation",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "MS": {
+  "name": "Morgan Stanley",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "MOS": {
+  "name": "Mosaic Company (The)",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "MSI": {
+  "name": "Motorola Solutions",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "MSCI": {
+  "name": "MSCI",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "NDAQ": {
+  "name": "Nasdaq, Inc.",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "NTAP": {
+  "name": "NetApp",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "NFLX": {
+  "name": "Netflix",
+  "indices": [
+   "S&P 500",
+   "Nasdaq-100"
+  ],
+  "region": "US"
+ },
+ "NEM": {
+  "name": "Newmont",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "NWSA": {
+  "name": "News Corp (Class A)",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "NWS": {
+  "name": "News Corp (Class B)",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "NEE": {
+  "name": "NextEra Energy",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "NKE": {
+  "name": "Nike, Inc.",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "NI": {
+  "name": "NiSource",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "NDSN": {
+  "name": "Nordson Corporation",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "NSC": {
+  "name": "Norfolk Southern",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "NTRS": {
+  "name": "Northern Trust",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "NOC": {
+  "name": "Northrop Grumman",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "NCLH": {
+  "name": "Norwegian Cruise Line Holdings",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "NRG": {
+  "name": "NRG Energy",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "NUE": {
+  "name": "Nucor",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "NVDA": {
+  "name": "Nvidia",
+  "indices": [
+   "S&P 500",
+   "Nasdaq-100"
+  ],
+  "region": "US"
+ },
+ "NVR": {
+  "name": "NVR, Inc.",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "NXPI": {
+  "name": "NXP Semiconductors",
+  "indices": [
+   "S&P 500",
+   "Nasdaq-100"
+  ],
+  "region": "US"
+ },
+ "ORLY": {
+  "name": "O'Reilly Automotive",
+  "indices": [
+   "S&P 500",
+   "Nasdaq-100"
+  ],
+  "region": "US"
+ },
+ "OXY": {
+  "name": "Occidental Petroleum",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "ODFL": {
+  "name": "Old Dominion",
+  "indices": [
+   "S&P 500",
+   "Nasdaq-100"
+  ],
+  "region": "US"
+ },
+ "OMC": {
+  "name": "Omnicom Group",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "ON": {
+  "name": "ON Semiconductor",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "OKE": {
+  "name": "Oneok",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "ORCL": {
+  "name": "Oracle Corporation",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "OTIS": {
+  "name": "Otis Worldwide",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "PCAR": {
+  "name": "Paccar",
+  "indices": [
+   "S&P 500",
+   "Nasdaq-100"
+  ],
+  "region": "US"
+ },
+ "PKG": {
+  "name": "Packaging Corporation of America",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "PLTR": {
+  "name": "Palantir Technologies",
+  "indices": [
+   "S&P 500",
+   "Nasdaq-100"
+  ],
+  "region": "US"
+ },
+ "PANW": {
+  "name": "Palo Alto Networks",
+  "indices": [
+   "S&P 500",
+   "Nasdaq-100"
+  ],
+  "region": "US"
+ },
+ "PSKY": {
+  "name": "Paramount Skydance Corporation",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "PH": {
+  "name": "Parker Hannifin",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "PAYX": {
+  "name": "Paychex",
+  "indices": [
+   "S&P 500",
+   "Nasdaq-100"
+  ],
+  "region": "US"
+ },
+ "PYPL": {
+  "name": "PayPal",
+  "indices": [
+   "S&P 500",
+   "Nasdaq-100"
+  ],
+  "region": "US"
+ },
+ "PNR": {
+  "name": "Pentair",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "PEP": {
+  "name": "PepsiCo",
+  "indices": [
+   "S&P 500",
+   "Nasdaq-100"
+  ],
+  "region": "US"
+ },
+ "PFE": {
+  "name": "Pfizer",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "PCG": {
+  "name": "PG&E Corporation",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "PM": {
+  "name": "Philip Morris International",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "PSX": {
+  "name": "Phillips 66",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "PNW": {
+  "name": "Pinnacle West Capital",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "PNC": {
+  "name": "PNC Financial Services",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "PPG": {
+  "name": "PPG Industries",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "PPL": {
+  "name": "PPL Corporation",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "PFG": {
+  "name": "Principal Financial Group",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "PG": {
+  "name": "Procter & Gamble",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "PGR": {
+  "name": "Progressive Corporation",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "PLD": {
+  "name": "Prologis",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "PRU": {
+  "name": "Prudential Financial",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "PEG": {
+  "name": "Public Service Enterprise Group",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "PTC": {
+  "name": "PTC Inc.",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "PSA": {
+  "name": "Public Storage",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "PHM": {
+  "name": "PulteGroup",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "PWR": {
+  "name": "Quanta Services",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "QCOM": {
+  "name": "Qualcomm",
+  "indices": [
+   "S&P 500",
+   "Nasdaq-100"
+  ],
+  "region": "US"
+ },
+ "DGX": {
+  "name": "Quest Diagnostics",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "Q": {
+  "name": "Qnity Electronics",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "RL": {
+  "name": "Ralph Lauren Corporation",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "RJF": {
+  "name": "Raymond James Financial",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "RDDT": {
+  "name": "Reddit",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "RTX": {
+  "name": "RTX Corporation",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "O": {
+  "name": "Realty Income",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "REG": {
+  "name": "Regency Centers",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "REGN": {
+  "name": "Regeneron Pharmaceuticals",
+  "indices": [
+   "S&P 500",
+   "Nasdaq-100"
+  ],
+  "region": "US"
+ },
+ "RF": {
+  "name": "Regions Financial Corporation",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "RSG": {
+  "name": "Republic Services",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "RMD": {
+  "name": "ResMed|",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "RVTY": {
+  "name": "Revvity",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "HOOD": {
+  "name": "Robinhood Markets",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "ROK": {
+  "name": "Rockwell Automation",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "ROL": {
+  "name": "Rollins, Inc.",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "ROP": {
+  "name": "Roper Technologies",
+  "indices": [
+   "S&P 500",
+   "Nasdaq-100"
+  ],
+  "region": "US"
+ },
+ "ROST": {
+  "name": "Ross Stores",
+  "indices": [
+   "S&P 500",
+   "Nasdaq-100"
+  ],
+  "region": "US"
+ },
+ "RCL": {
+  "name": "Royal Caribbean Group",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "SPGI": {
+  "name": "S&P Global",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "CRM": {
+  "name": "Salesforce",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "SNDK": {
+  "name": "Sandisk",
+  "indices": [
+   "S&P 500",
+   "Nasdaq-100"
+  ],
+  "region": "US"
+ },
+ "SBAC": {
+  "name": "SBA Communications",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "SLB": {
+  "name": "Schlumberger",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "STX": {
+  "name": "Seagate Technology",
+  "indices": [
+   "S&P 500",
+   "Nasdaq-100"
+  ],
+  "region": "US"
+ },
+ "SRE": {
+  "name": "Sempra",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "NOW": {
+  "name": "ServiceNow",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "SHW": {
+  "name": "Sherwin-Williams",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "SPG": {
+  "name": "Simon Property Group",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "SWKS": {
+  "name": "Skyworks Solutions",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "SJM": {
+  "name": "J.M. Smucker Company (The)",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "SW": {
+  "name": "Smurfit Westrock",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "SNA": {
+  "name": "Snap-on",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "SOLV": {
+  "name": "Solventum",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "SO": {
+  "name": "Southern Company",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "LUV": {
+  "name": "Southwest Airlines",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "SWK": {
+  "name": "Stanley Black & Decker",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "SBUX": {
+  "name": "Starbucks",
+  "indices": [
+   "S&P 500",
+   "Nasdaq-100"
+  ],
+  "region": "US"
+ },
+ "STT": {
+  "name": "State Street Corporation",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "STLD": {
+  "name": "Steel Dynamics",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "STE": {
+  "name": "Steris",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "SYK": {
+  "name": "Stryker Corporation",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "SMCI": {
+  "name": "Supermicro",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "SYF": {
+  "name": "Synchrony Financial",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "SNPS": {
+  "name": "Synopsys",
+  "indices": [
+   "S&P 500",
+   "Nasdaq-100"
+  ],
+  "region": "US"
+ },
+ "SYY": {
+  "name": "Sysco",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "TMUS": {
+  "name": "T-Mobile US",
+  "indices": [
+   "S&P 500",
+   "Nasdaq-100"
+  ],
+  "region": "US"
+ },
+ "TROW": {
+  "name": "T. Rowe Price",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "TTWO": {
+  "name": "Take-Two Interactive",
+  "indices": [
+   "S&P 500",
+   "Nasdaq-100"
+  ],
+  "region": "US"
+ },
+ "TPR": {
+  "name": "Tapestry, Inc.",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "TRGP": {
+  "name": "Targa Resources",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "TGT": {
+  "name": "Target Corporation",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "TEL": {
+  "name": "TE Connectivity",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "TDY": {
+  "name": "Teledyne Technologies",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "TER": {
+  "name": "Teradyne",
+  "indices": [
+   "S&P 500",
+   "Nasdaq-100"
+  ],
+  "region": "US"
+ },
+ "TSLA": {
+  "name": "Tesla, Inc.",
+  "indices": [
+   "S&P 500",
+   "Nasdaq-100"
+  ],
+  "region": "US"
+ },
+ "TXN": {
+  "name": "Texas Instruments",
+  "indices": [
+   "S&P 500",
+   "Nasdaq-100"
+  ],
+  "region": "US"
+ },
+ "TPL": {
+  "name": "Texas Pacific Land Corporation",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "TXT": {
+  "name": "Textron",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "TMO": {
+  "name": "Thermo Fisher Scientific",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "TJX": {
+  "name": "TJX Companies",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "TKO": {
+  "name": "TKO Group Holdings",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "TSCO": {
+  "name": "Tractor Supply",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "TT": {
+  "name": "Trane Technologies",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "TDG": {
+  "name": "TransDigm Group",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "TRV": {
+  "name": "Travelers Companies (The)",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "TRMB": {
+  "name": "Trimble Inc.",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "TFC": {
+  "name": "Truist Financial",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "TYL": {
+  "name": "Tyler Technologies",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "TSN": {
+  "name": "Tyson Foods",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "USB": {
+  "name": "U.S. Bancorp",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "UBER": {
+  "name": "Uber",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "UDR": {
+  "name": "UDR, Inc.",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "ULTA": {
+  "name": "Ulta Beauty",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "UNP": {
+  "name": "Union Pacific Corporation",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "UAL": {
+  "name": "United Airlines Holdings",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "UPS": {
+  "name": "United Parcel Service",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "URI": {
+  "name": "United Rentals",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "UNH": {
+  "name": "UnitedHealth Group",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "UHS": {
+  "name": "Universal Health Services",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "VLO": {
+  "name": "Valero Energy",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "VEEV": {
+  "name": "Veeva Systems",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "VTR": {
+  "name": "Ventas",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "VLTO": {
+  "name": "Veralto",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "VRSN": {
+  "name": "Verisign",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "VRSK": {
+  "name": "Verisk Analytics",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "VZ": {
+  "name": "Verizon",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "VRTX": {
+  "name": "Vertex Pharmaceuticals",
+  "indices": [
+   "S&P 500",
+   "Nasdaq-100"
+  ],
+  "region": "US"
+ },
+ "VRT": {
+  "name": "Vertiv",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "VTRS": {
+  "name": "Viatris",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "VICI": {
+  "name": "Vici Properties",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "V": {
+  "name": "Visa Inc.",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "VST": {
+  "name": "Vistra Corp.",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "VMRK": {
+  "name": "Vivmark Residential",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "VMC": {
+  "name": "Vulcan Materials Company",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "WRB": {
+  "name": "W. R. Berkley Corporation",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "GWW": {
+  "name": "W. W. Grainger",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "WAB": {
+  "name": "Wabtec",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "WMT": {
+  "name": "Walmart",
+  "indices": [
+   "S&P 500",
+   "Nasdaq-100"
+  ],
+  "region": "US"
+ },
+ "DIS": {
+  "name": "Walt Disney Company (The)",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "WBD": {
+  "name": "Warner Bros. Discovery",
+  "indices": [
+   "S&P 500",
+   "Nasdaq-100"
+  ],
+  "region": "US"
+ },
+ "WM": {
+  "name": "Waste Management",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "WAT": {
+  "name": "Waters Corporation",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "WEC": {
+  "name": "WEC Energy Group",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "WFC": {
+  "name": "Wells Fargo",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "WELL": {
+  "name": "Welltower",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "WST": {
+  "name": "West Pharmaceutical Services",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "WDC": {
+  "name": "Western Digital",
+  "indices": [
+   "S&P 500",
+   "Nasdaq-100"
+  ],
+  "region": "US"
+ },
+ "WY": {
+  "name": "Weyerhaeuser",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "WSM": {
+  "name": "Williams-Sonoma, Inc.",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "WMB": {
+  "name": "Williams Companies",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "WTW": {
+  "name": "Willis Towers Watson",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "WDAY": {
+  "name": "Workday, Inc.",
+  "indices": [
+   "S&P 500",
+   "Nasdaq-100"
+  ],
+  "region": "US"
+ },
+ "WYNN": {
+  "name": "Wynn Resorts",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "XEL": {
+  "name": "Xcel Energy",
+  "indices": [
+   "S&P 500",
+   "Nasdaq-100"
+  ],
+  "region": "US"
+ },
+ "XYL": {
+  "name": "Xylem Inc.",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "YUM": {
+  "name": "Yum! Brands",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "ZBRA": {
+  "name": "Zebra Technologies",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "ZBH": {
+  "name": "Zimmer Biomet",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "ZTS": {
+  "name": "Zoetis",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "ALNY": {
+  "name": "Alnylam Pharmaceuticals",
+  "indices": [
+   "Nasdaq-100"
+  ],
+  "region": "US"
+ },
+ "ARM": {
+  "name": "Arm Holdings",
+  "indices": [
+   "Nasdaq-100"
+  ],
+  "region": "US"
+ },
+ "ASML": {
+  "name": "ASML Holding",
+  "indices": [
+   "Nasdaq-100"
+  ],
+  "region": "US"
+ },
+ "ALAB": {
+  "name": "Astera Labs",
+  "indices": [
+   "Nasdaq-100"
+  ],
+  "region": "US"
+ },
+ "CCEP": {
+  "name": "Coca-Cola Europacific Partners",
+  "indices": [
+   "Nasdaq-100"
+  ],
+  "region": "US"
+ },
+ "CRWV": {
+  "name": "CoreWeave",
+  "indices": [
+   "Nasdaq-100"
+  ],
+  "region": "US"
+ },
+ "FER": {
+  "name": "Ferrovial",
+  "indices": [
+   "Nasdaq-100"
+  ],
+  "region": "US"
+ },
+ "MELI": {
+  "name": "Mercado Libre",
+  "indices": [
+   "Nasdaq-100"
+  ],
+  "region": "US"
+ },
+ "MSTR": {
+  "name": "MicroStrategy",
+  "indices": [
+   "Nasdaq-100"
+  ],
+  "region": "US"
+ },
+ "NBIS": {
+  "name": "Nebius Group",
+  "indices": [
+   "Nasdaq-100"
+  ],
+  "region": "US"
+ },
+ "PDD": {
+  "name": "PDD Holdings",
+  "indices": [
+   "Nasdaq-100"
+  ],
+  "region": "US"
+ },
+ "RKLB": {
+  "name": "Rocket Lab",
+  "indices": [
+   "Nasdaq-100"
+  ],
+  "region": "US"
+ },
+ "SHOP": {
+  "name": "Shopify",
+  "indices": [
+   "Nasdaq-100"
+  ],
+  "region": "US"
+ },
+ "SPCX": {
+  "name": "SpaceX",
+  "indices": [
+   "Nasdaq-100"
+  ],
+  "region": "US"
+ },
+ "TRI": {
+  "name": "Thomson Reuters",
+  "indices": [
+   "Nasdaq-100"
+  ],
+  "region": "US"
+ },
+ "ADS.DE": {
+  "name": "Adidas",
+  "indices": [
+   "DAX"
+  ],
+  "region": "EU"
+ },
+ "AIR.PA": {
+  "name": "Airbus",
+  "indices": [
+   "DAX"
+  ],
+  "region": "EU"
+ },
+ "ALV.DE": {
+  "name": "Allianz",
+  "indices": [
+   "DAX"
+  ],
+  "region": "EU"
+ },
+ "BAS.DE": {
+  "name": "BASF",
+  "indices": [
+   "DAX"
+  ],
+  "region": "EU"
+ },
+ "BAYN.DE": {
+  "name": "Bayer",
+  "indices": [
+   "DAX"
+  ],
+  "region": "EU"
+ },
+ "BEI.DE": {
+  "name": "Beiersdorf",
+  "indices": [
+   "DAX"
+  ],
+  "region": "EU"
+ },
+ "BMW.DE": {
+  "name": "BMW",
+  "indices": [
+   "DAX"
+  ],
+  "region": "EU"
+ },
+ "BNR.DE": {
+  "name": "Brenntag",
+  "indices": [
+   "DAX"
+  ],
+  "region": "EU"
+ },
+ "CBK.DE": {
+  "name": "Commerzbank",
+  "indices": [
+   "DAX"
+  ],
+  "region": "EU"
+ },
+ "CON.DE": {
+  "name": "Continental",
+  "indices": [
+   "DAX"
+  ],
+  "region": "EU"
+ },
+ "DTG.DE": {
+  "name": "Daimler Truck",
+  "indices": [
+   "DAX"
+  ],
+  "region": "EU"
+ },
+ "DBK.DE": {
+  "name": "Deutsche Bank",
+  "indices": [
+   "DAX"
+  ],
+  "region": "EU"
+ },
+ "DB1.DE": {
+  "name": "Deutsche Börse",
+  "indices": [
+   "DAX"
+  ],
+  "region": "EU"
+ },
+ "DHL.DE": {
+  "name": "Deutsche Post",
+  "indices": [
+   "DAX"
+  ],
+  "region": "EU"
+ },
+ "DTE.DE": {
+  "name": "Deutsche Telekom",
+  "indices": [
+   "DAX"
+  ],
+  "region": "EU"
+ },
+ "EOAN.DE": {
+  "name": "E.ON",
+  "indices": [
+   "DAX"
+  ],
+  "region": "EU"
+ },
+ "FRE.DE": {
+  "name": "Fresenius",
+  "indices": [
+   "DAX"
+  ],
+  "region": "EU"
+ },
+ "FME.DE": {
+  "name": "Fresenius Medical Care",
+  "indices": [
+   "DAX",
+   "MDAX"
+  ],
+  "region": "EU"
+ },
+ "G1A.DE": {
+  "name": "GEA Group",
+  "indices": [
+   "DAX",
+   "MDAX"
+  ],
+  "region": "EU"
+ },
+ "HNR1.DE": {
+  "name": "Hannover Re",
+  "indices": [
+   "DAX"
+  ],
+  "region": "EU"
+ },
+ "HEI.DE": {
+  "name": "Heidelberg Materials",
+  "indices": [
+   "DAX"
+  ],
+  "region": "EU"
+ },
+ "HEN3.DE": {
+  "name": "Henkel",
+  "indices": [
+   "DAX"
+  ],
+  "region": "EU"
+ },
+ "IFX.DE": {
+  "name": "Infineon Technologies",
+  "indices": [
+   "DAX"
+  ],
+  "region": "EU"
+ },
+ "MBG.DE": {
+  "name": "Mercedes-Benz Group",
+  "indices": [
+   "DAX"
+  ],
+  "region": "EU"
+ },
+ "MRK.DE": {
+  "name": "Merck",
+  "indices": [
+   "DAX"
+  ],
+  "region": "EU"
+ },
+ "MTX.DE": {
+  "name": "MTU Aero Engines",
+  "indices": [
+   "DAX"
+  ],
+  "region": "EU"
+ },
+ "MUV2.DE": {
+  "name": "Munich Re",
+  "indices": [
+   "DAX"
+  ],
+  "region": "EU"
+ },
+ "PAH3.DE": {
+  "name": "Porsche SE",
+  "indices": [
+   "DAX"
+  ],
+  "region": "EU"
+ },
+ "QIA.DE": {
+  "name": "Qiagen",
+  "indices": [
+   "DAX"
+  ],
+  "region": "EU"
+ },
+ "RHM.DE": {
+  "name": "Rheinmetall",
+  "indices": [
+   "DAX"
+  ],
+  "region": "EU"
+ },
+ "RWE.DE": {
+  "name": "RWE",
+  "indices": [
+   "DAX"
+  ],
+  "region": "EU"
+ },
+ "SAP.DE": {
+  "name": "SAP",
+  "indices": [
+   "DAX"
+  ],
+  "region": "EU"
+ },
+ "G24.DE": {
+  "name": "Scout24",
+  "indices": [
+   "DAX",
+   "MDAX"
+  ],
+  "region": "EU"
+ },
+ "SIE.DE": {
+  "name": "Siemens",
+  "indices": [
+   "DAX"
+  ],
+  "region": "EU"
+ },
+ "ENR.DE": {
+  "name": "Siemens Energy",
+  "indices": [
+   "DAX"
+  ],
+  "region": "EU"
+ },
+ "SHL.DE": {
+  "name": "Siemens Healthineers",
+  "indices": [
+   "DAX"
+  ],
+  "region": "EU"
+ },
+ "SY1.DE": {
+  "name": "Symrise",
+  "indices": [
+   "DAX"
+  ],
+  "region": "EU"
+ },
+ "VOW3.DE": {
+  "name": "Volkswagen Group",
+  "indices": [
+   "DAX"
+  ],
+  "region": "EU"
+ },
+ "VNA.DE": {
+  "name": "Vonovia",
+  "indices": [
+   "DAX"
+  ],
+  "region": "EU"
+ },
+ "ZAL.DE": {
+  "name": "Zalando",
+  "indices": [
+   "DAX"
+  ],
+  "region": "EU"
+ },
+ "AIXA.DE": {
+  "name": "Aixtron",
+  "indices": [
+   "MDAX"
+  ],
+  "region": "EU"
+ },
+ "AT1.DE": {
+  "name": "Aroundtown",
+  "indices": [
+   "MDAX"
+  ],
+  "region": "EU"
+ },
+ "NDA.DE": {
+  "name": "Aurubis",
+  "indices": [
+   "MDAX"
+  ],
+  "region": "EU"
+ },
+ "BC8.DE": {
+  "name": "Bechtle",
+  "indices": [
+   "MDAX"
+  ],
+  "region": "EU"
+ },
+ "BFSA.DE": {
+  "name": "Befesa",
+  "indices": [
+   "MDAX"
+  ],
+  "region": "EU"
+ },
+ "GBF.DE": {
+  "name": "Bilfinger",
+  "indices": [
+   "MDAX"
+  ],
+  "region": "EU"
+ },
+ "AFX.DE": {
+  "name": "Carl Zeiss Meditec",
+  "indices": [
+   "MDAX"
+  ],
+  "region": "EU"
+ },
+ "EVD.DE": {
+  "name": "CTS Eventim",
+  "indices": [
+   "MDAX"
+  ],
+  "region": "EU"
+ },
+ "DHER.DE": {
+  "name": "Delivery Hero",
+  "indices": [
+   "MDAX"
+  ],
+  "region": "EU"
+ },
+ "LHA.DE": {
+  "name": "Lufthansa",
+  "indices": [
+   "MDAX"
+  ],
+  "region": "EU"
+ },
+ "EVK.DE": {
+  "name": "Evonik",
+  "indices": [
+   "MDAX"
+  ],
+  "region": "EU"
+ },
+ "EVT.DE": {
+  "name": "Evotec",
+  "indices": [
+   "MDAX"
+  ],
+  "region": "EU"
+ },
+ "FRA.DE": {
+  "name": "Fraport",
+  "indices": [
+   "MDAX"
+  ],
+  "region": "EU"
+ },
+ "FNTN.DE": {
+  "name": "Freenet",
+  "indices": [
+   "MDAX"
+  ],
+  "region": "EU"
+ },
+ "GXI.DE": {
+  "name": "Gerresheimer",
+  "indices": [
+   "MDAX"
+  ],
+  "region": "EU"
+ },
+ "HLE.DE": {
+  "name": "Hella",
+  "indices": [
+   "MDAX"
+  ],
+  "region": "EU"
+ },
+ "HFG.DE": {
+  "name": "HelloFresh",
+  "indices": [
+   "MDAX"
+  ],
+  "region": "EU"
+ },
+ "HAG.DE": {
+  "name": "Hensoldt",
+  "indices": [
+   "MDAX"
+  ],
+  "region": "EU"
+ },
+ "HOT.DE": {
+  "name": "Hochtief",
+  "indices": [
+   "MDAX"
+  ],
+  "region": "EU"
+ },
+ "BOSS.DE": {
+  "name": "Hugo Boss",
+  "indices": [
+   "MDAX"
+  ],
+  "region": "EU"
+ },
+ "JEN.DE": {
+  "name": "Jenoptik",
+  "indices": [
+   "MDAX"
+  ],
+  "region": "EU"
+ },
+ "JUN3.DE": {
+  "name": "Jungheinrich",
+  "indices": [
+   "MDAX"
+  ],
+  "region": "EU"
+ },
+ "KGX.DE": {
+  "name": "KION Group",
+  "indices": [
+   "MDAX"
+  ],
+  "region": "EU"
+ },
+ "KBX.DE": {
+  "name": "Knorr-Bremse",
+  "indices": [
+   "MDAX"
+  ],
+  "region": "EU"
+ },
+ "KRN.DE": {
+  "name": "Krones",
+  "indices": [
+   "MDAX"
+  ],
+  "region": "EU"
+ },
+ "LXS.DE": {
+  "name": "Lanxess",
+  "indices": [
+   "MDAX"
+  ],
+  "region": "EU"
+ },
+ "LEG.DE": {
+  "name": "LEG Immobilien",
+  "indices": [
+   "MDAX"
+  ],
+  "region": "EU"
+ },
+ "NDX1.DE": {
+  "name": "Nordex",
+  "indices": [
+   "MDAX"
+  ],
+  "region": "EU"
+ },
+ "PUM.DE": {
+  "name": "Puma",
+  "indices": [
+   "MDAX"
+  ],
+  "region": "EU"
+ },
+ "RAA.DE": {
+  "name": "Rational",
+  "indices": [
+   "MDAX"
+  ],
+  "region": "EU"
+ },
+ "RDC.DE": {
+  "name": "Redcare Pharmacy",
+  "indices": [
+   "MDAX"
+  ],
+  "region": "EU"
+ },
+ "RRTL.DE": {
+  "name": "RTL Group",
+  "indices": [
+   "MDAX"
+  ],
+  "region": "EU"
+ },
+ "WAF.DE": {
+  "name": "Siltronic",
+  "indices": [
+   "MDAX"
+  ],
+  "region": "EU"
+ },
+ "STM.DE": {
+  "name": "Stabilus",
+  "indices": [
+   "MDAX"
+  ],
+  "region": "EU"
+ },
+ "TLX.DE": {
+  "name": "Talanx",
+  "indices": [
+   "MDAX"
+  ],
+  "region": "EU"
+ },
+ "TMV.DE": {
+  "name": "TeamViewer",
+  "indices": [
+   "MDAX"
+  ],
+  "region": "EU"
+ },
+ "TKA.DE": {
+  "name": "ThyssenKrupp",
+  "indices": [
+   "MDAX"
+  ],
+  "region": "EU"
+ },
+ "8TRA.DE": {
+  "name": "Traton",
+  "indices": [
+   "MDAX"
+  ],
+  "region": "EU"
+ },
+ "TUI1.DE": {
+  "name": "TUI",
+  "indices": [
+   "MDAX"
+  ],
+  "region": "EU"
+ },
+ "UTDI.DE": {
+  "name": "United Internet",
+  "indices": [
+   "MDAX"
+  ],
+  "region": "EU"
+ },
+ "WCH.DE": {
+  "name": "Wacker Chemie",
+  "indices": [
+   "MDAX"
+  ],
+  "region": "EU"
+ }
+}

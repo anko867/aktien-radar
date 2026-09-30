@@ -1,0 +1,61 @@
+{
+ "asof": "2026-09-29",
+ "top": [
+  "MSTR",
+  "ALNY",
+  "ALB",
+  "NRG",
+  "CIEN",
+  "GNRC",
+  "COHR",
+  "CCL",
+  "IFX.DE",
+  "RCL",
+  "FLEX",
+  "TUI1.DE",
+  "G24.DE",
+  "DASH",
+  "HWM"
+ ],
+ "watch": [
+  "APP",
+  "ORCL",
+  "AXON",
+  "FSLR",
+  "ON",
+  "RHM.DE",
+  "NCLH",
+  "AMAT",
+  "CRWV",
+  "RKLB",
+  "AIXA.DE",
+  "VST",
+  "APTV",
+  "RDDT",
+  "WYNN",
+  "CRH",
+  "AVGO",
+  "KLAC",
+  "MCHP",
+  "GLW",
+  "WDC",
+  "EVD.DE",
+  "ZAL.DE",
+  "VRT",
+  "COIN"
+ ],
+ "counts": {
+  "universe": 599,
+  "data": 599,
+  "liquid": 572,
+  "dd": 174,
+  "pass": 24
+ },
+ "notes": [
+  "S&P 500: 503 Aktien von Wikipedia gelesen",
+  "Nasdaq-100: 101 Aktien von Wikipedia gelesen",
+  "DAX: 40 Aktien von Wikipedia gelesen",
+  "MDAX: 44 Aktien von Wikipedia gelesen",
+  "SEC EDGAR: Zugriff abgelehnt (403 Client Error: Forbidden for url: https://www.sec.gov/files/company_tickers.j). Die SEC verlangt eine Kontakt-E-Mail im Programmkopf; ohne Freigabe bleibt die Insider-Auswertung aus."
+ ]
+}
