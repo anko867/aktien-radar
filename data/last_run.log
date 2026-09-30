@@ -1,0 +1,16 @@
+[    0s] Python 3.12.14, pandas 3.0.6, numpy 2.5.3, yfinance 1.7.0
+[    1s] Aktienliste: 599 Aktien
+Traceback (most recent call last):
+  File "/home/runner/work/aktien-radar/aktien-radar/run_daily.py", line 35, in <module>
+    prices = data.download_prices(list(uni), "6y", use_cache=use_cache)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/work/aktien-radar/aktien-radar/radar/data.py", line 59, in download_prices
+    pd.to_pickle(out, cache_file)
+  File "/opt/hostedtoolcache/Python/3.12.14/x64/lib/python3.12/site-packages/pandas/io/pickle.py", line 119, in to_pickle
+    with get_handle(
+         ^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.12.14/x64/lib/python3.12/site-packages/pandas/io/common.py", line 797, in get_handle
+    check_parent_directory(str(handle))
+  File "/opt/hostedtoolcache/Python/3.12.14/x64/lib/python3.12/site-packages/pandas/io/common.py", line 656, in check_parent_directory
+    raise OSError(rf"Cannot save file into a non-existent directory: '{parent}'")
+OSError: Cannot save file into a non-existent directory: '/home/runner/work/aktien-radar/aktien-radar/cache'
