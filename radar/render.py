@@ -263,7 +263,8 @@ def card(rank, tk, r, uni, info, det, news, ins, hist, real, prices, usd_eur, ki
     if ins:
         ins_txt = (f'{ins["buys"]} Käufe und {ins["sells"]} Verkäufe in {ins["form4_filings"]} Meldungen (Form 4, {ins["days"]} Tage)'
                    + (" — nur die neuesten 12 Meldungen ausgewertet" if ins["capped"] else "")
-                   + (f'; Kaufvolumen {big(ins["buy_value"], "$")}' if ins["buys"] else ""))
+                   + (f'; Kaufvolumen {big(ins["buy_value"], "$")}' if ins["buys"] else "")
+                   + ". Gezählt werden nur Käufe und Verkäufe am offenen Markt, andere Meldungen (z. B. Aktienvergütung) nicht")
     else:
         ins_txt = "nur für US-Firmen verfügbar oder keine Daten" if "." in tk else "keine Daten (SEC-Abruf heute nicht möglich)"
     sec_ins = f'<section><h4>{T("Insider", "insider")}-Meldungen (SEC)</h4><p>{ins_txt}</p></section>'
