@@ -1,19 +1,19 @@
 [    0s] Python 3.12.14, pandas 3.0.6, numpy 2.5.3, yfinance 1.7.0
 [    1s] Aktienliste: 599 Aktien
-[   43s] Kurse: 599 Aktien, Datenstand 2026-09-30
-[   44s] Handelbar: 573, Kandidaten fuer Analystendaten: 339
-[   50s] Top: 15 (alle Filter), Beobachtung: 25
+[   67s] Kurse: 599 Aktien, Datenstand 2026-09-30
+[   68s] Handelbar: 573, Kandidaten fuer Analystendaten: 339
+[   82s] Top: 15 (alle Filter), Beobachtung: 25
 HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"No fundamentals data found for symbol: IFX.DE"}}}
 HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"No fundamentals data found for symbol: ZAL.DE"}}}
 HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"No fundamentals data found for symbol: TUI1.DE"}}}
 HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"No fundamentals data found for symbol: ENR.DE"}}}
 HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"No fundamentals data found for symbol: RHM.DE"}}}
 HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"No fundamentals data found for symbol: AIXA.DE"}}}
-[   51s] Analystenverlauf geladen
-[   54s] Nachrichten geladen (33 mit Treffern)
-[  117s] SEC-Insiderdaten: 34 von 34
-[  121s] FRED: OK: 3 von 3 Reihen
-[  206s] Finnhub: OK: 34 von 34 Aktien
-[  221s] Alpha Vantage: OK: 11 von 11 Aktien
-[  233s] Financial Modeling Prep: OK: 34 Gegenproben
-[  233s] Seite geschrieben: docs/index.html (719 KB)
+[   84s] Analystenverlauf geladen
+[   87s] Nachrichten geladen (33 mit Treffern)
+[  163s] SEC-Insiderdaten: 34 von 34
+[  164s] FRED: OK: 3 von 3 Reihen
+[  250s] Finnhub: OK: 34 von 34 Aktien
+[  264s] Alpha Vantage: OK: 11 von 11 Aktien
+[  271s] Financial Modeling Prep: OK: 34 Gegenproben
+[  271s] Seite geschrieben: docs/index.html (719 KB)
