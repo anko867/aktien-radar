@@ -1,5 +1,6 @@
 """Datenabruf: Kurse, Analystendaten, Nachrichten, Wechselkurs, SEC-Insidermeldungen."""
 import datetime as dt
+import json
 import os
 import re
 import time
@@ -12,7 +13,7 @@ import pandas as pd
 import requests
 import yfinance as yf
 
-from .config import CACHE, UA
+from .config import CACHE, DATA, UA
 
 FIELDS = ["Open", "High", "Low", "Close", "Volume"]
 
@@ -367,13 +368,21 @@ def finnhub_extra(tickers):
     return out, msg
 
 
-def alpha_sentiment(tickers, max_calls=20):
-    """Nachrichten-Stimmung je Aktie (Alpha Vantage, kostenlos nur 25 Abrufe pro Tag)."""
+def alpha_sentiment(tickers, asof, max_calls=20):
+    """Nachrichten-Stimmung je Aktie (Alpha Vantage, kostenlos nur 25 Abrufe pro Tag).
+    Ergebnisse werden pro Datenstand zwischengespeichert, damit zweite Laeufe am selben Tag keine Abrufe verbrauchen."""
     k = _key("ALPHAVANTAGE_KEY")
     if not k:
         return {}, "kein Schlüssel hinterlegt"
-    out, note = {}, None
-    for tk in tickers[:max_calls]:
+    cache_f = DATA / "alpha_cache.json"
+    try:
+        cache = json.loads(cache_f.read_text(encoding="utf-8")) if cache_f.exists() else {}
+    except ValueError:
+        cache = {}
+    if cache.get("asof") != asof:
+        cache = {"asof": asof, "data": {}}
+    note, fetched = None, 0
+    for tk in [t for t in tickers if t not in cache["data"]][:max_calls]:
         try:
             j = _get_json("https://www.alphavantage.co/query",
                           {"function": "NEWS_SENTIMENT", "tickers": tk, "limit": 50, "apikey": k})
@@ -388,10 +397,12 @@ def alpha_sentiment(tickers, max_calls=20):
             for ts in art.get("ticker_sentiment", []):
                 if ts.get("ticker") == tk and float(ts.get("relevance_score", 0)) >= 0.3:
                     scores.append(float(ts["ticker_sentiment_score"]))
-        if scores:
-            out[tk] = {"mean": sum(scores) / len(scores), "n": len(scores)}
+        cache["data"][tk] = {"mean": sum(scores) / len(scores), "n": len(scores)} if scores else None
+        fetched += 1
         time.sleep(1.0)
-    msg = f"OK: {len(out)} von {min(len(tickers), max_calls)} Aktien" if out else "keine Daten"
+    cache_f.write_text(json.dumps(cache, ensure_ascii=False), encoding="utf-8")
+    out = {t: cache["data"][t] for t in tickers if cache["data"].get(t)}
+    msg = f"OK: {len(out)} von {min(len(tickers), max_calls)} Aktien ({fetched} neu abgerufen, Rest aus dem Zwischenspeicher dieses Tages)" if out else "keine Daten"
     return out, msg + (f" ({note})" if note else "")
 
 

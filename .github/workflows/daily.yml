@@ -2,9 +2,11 @@ name: Tägliches Aktien-Radar
 
 on:
   schedule:
-    # 05:00 UTC = 07:00 Uhr Sommerzeit / 06:00 Uhr Winterzeit in Deutschland; Dienstag bis Samstag
-    # (dann liegen die Schlusskurse vom Vortag vor). GitHub startet geplante Läufe teils mit Verspätung.
-    - cron: "0 5 * * 2-6"
+    # Dienstag bis Samstag (dann liegen die Schlusskurse vom Vortag vor). GitHub startet geplante Läufe zur vollen
+    # Stunde oft stark verspätet (am 01.10.2026: 6,5 Stunden). Darum ungerade Minuten und zwei Versuche:
+    # 03:23 UTC = 05:23 Uhr Sommerzeit / 04:23 Uhr Winterzeit, und 05:43 UTC = 07:43 / 06:43 Uhr.
+    - cron: "23 3 * * 2-6"
+    - cron: "43 5 * * 2-6"
   workflow_dispatch: {}
   push:
     # Testlauf nach Aenderungen am Programm (Ergebnis-Dateien in data/ und docs/ loesen keinen Lauf aus)
