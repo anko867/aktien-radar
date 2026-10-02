@@ -126,5 +126,7 @@ html = build_page(ctx)
 (DOCS / "robots.txt").write_text("User-agent: *\nDisallow: /\n", encoding="utf-8")
 log(f"Seite geschrieben: docs/index.html ({len(html) / 1024:.0f} KB)")
 
-latest = {"asof": str(asof.date()), "top": list(top.index), "watch": list(watch.index), "counts": counts, "notes": notes}
+import datetime as _dt  # noqa: E402
+
+latest = {"run_utc_date": _dt.datetime.now(_dt.timezone.utc).strftime("%Y-%m-%d"), "asof": str(asof.date()), "top": list(top.index), "watch": list(watch.index), "counts": counts, "notes": notes}
 (DATA / "latest.json").write_text(json.dumps(latest, ensure_ascii=False, indent=1), encoding="utf-8")

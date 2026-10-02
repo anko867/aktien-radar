@@ -2,11 +2,17 @@ name: Tägliches Aktien-Radar
 
 on:
   schedule:
-    # Dienstag bis Samstag (dann liegen die Schlusskurse vom Vortag vor). GitHub startet geplante Läufe zur vollen
-    # Stunde oft stark verspätet (am 01.10.2026: 6,5 Stunden). Darum ungerade Minuten und zwei Versuche:
-    # 03:23 UTC = 05:23 Uhr Sommerzeit / 04:23 Uhr Winterzeit, und 05:43 UTC = 07:43 / 06:43 Uhr.
+    # Dienstag bis Samstag (dann liegen die Schlusskurse vom Vortag vor). GitHub startet geplante Läufe oft stark
+    # verspätet oder lässt sie ganz aus (01.10.2026: 6,5 Stunden Verspätung, 02.10.2026: beide Versuche ausgefallen).
+    # Darum mehrere Versuche zu ungeraden Minuten; der Vorab-Check überspringt alle weiteren, sobald heute schon
+    # ein Lauf erfolgreich war. UTC: 03:23, 04:11, 04:47, 05:23, 05:43, 06:17
+    # = 05:23, 06:11, 06:47, 07:23, 07:43, 08:17 Uhr Sommerzeit (eine Stunde früher im Winter).
     - cron: "23 3 * * 2-6"
+    - cron: "11 4 * * 2-6"
+    - cron: "47 4 * * 2-6"
+    - cron: "23 5 * * 2-6"
     - cron: "43 5 * * 2-6"
+    - cron: "17 6 * * 2-6"
   workflow_dispatch: {}
   push:
     # Testlauf nach Aenderungen am Programm (Ergebnis-Dateien in data/ und docs/ loesen keinen Lauf aus)
@@ -28,13 +34,26 @@ jobs:
     timeout-minutes: 40
     steps:
       - uses: actions/checkout@v4
+      - name: Schon heute erledigt?
+        id: guard
+        run: |
+          done=$(python3 -c 'import json,datetime;j=json.load(open("data/latest.json",encoding="utf-8"));print(j.get("run_utc_date")==datetime.datetime.now(datetime.timezone.utc).strftime("%Y-%m-%d"))')
+          if [ "${{ github.event_name }}" = "schedule" ] && [ "$done" = "True" ]; then
+            echo "skip=true" >> "$GITHUB_OUTPUT"
+            echo "Heute schon aktualisiert, dieser Versuch wird übersprungen."
+          else
+            echo "skip=false" >> "$GITHUB_OUTPUT"
+          fi
       - uses: actions/setup-python@v5
+        if: steps.guard.outputs.skip != 'true'
         with:
           python-version: "3.12"
           cache: pip
       - run: pip install -r requirements.txt
+        if: steps.guard.outputs.skip != 'true'
       - name: Radar berechnen und Seite bauen
         id: radar
+        if: steps.guard.outputs.skip != 'true'
         continue-on-error: true
         env:
           SEC_CONTACT: ${{ secrets.SEC_CONTACT }}
@@ -46,7 +65,7 @@ jobs:
           set -o pipefail
           python -u run_daily.py 2>&1 | tee run.log
       - name: Ergebnis und Protokoll speichern
-        if: always()
+        if: always() && steps.guard.outputs.skip != 'true'
         run: |
           cp run.log data/last_run.log 2>/dev/null || true
           git config user.name "aktien-radar-bot"
