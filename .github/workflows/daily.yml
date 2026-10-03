@@ -2,17 +2,17 @@ name: Tägliches Aktien-Radar
 
 on:
   schedule:
-    # Dienstag bis Samstag (dann liegen die Schlusskurse vom Vortag vor). GitHub startet geplante Läufe oft stark
-    # verspätet oder lässt sie ganz aus (01.10.2026: 6,5 Stunden Verspätung, 02.10.2026: beide Versuche ausgefallen).
-    # Darum mehrere Versuche zu ungeraden Minuten; der Vorab-Check überspringt alle weiteren, sobald heute schon
-    # ein Lauf erfolgreich war. UTC: 03:23, 04:11, 04:47, 05:23, 05:43, 06:17
-    # = 05:23, 06:11, 06:47, 07:23, 07:43, 08:17 Uhr Sommerzeit (eine Stunde früher im Winter).
+    # GitHub startet geplante Läufe für dieses Repository stark verspätet (Oktober 2026: frühester Start jeweils
+    # erst gegen 09:16 bis 11:27 UTC, egal wie früh angesetzt). Darum Versuche am Vorabend/nachts, wenn weniger
+    # los ist, plus morgens als Reserve. Alle Zeiten UTC, ungerade Minuten. Der Vorab-Check (tools/guard.py)
+    # überspringt jeden Versuch, wenn die Daten schon aktuell sind.
+    # Mo-Fr 22:47 (= 00:47 Uhr Sommerzeit / 23:47 Winterzeit, US-Schlusskurse sind dann endgültig)
+    - cron: "47 22 * * 1-5"
+    # Di-Sa 00:23, 03:23, 04:47, 05:43
+    - cron: "23 0 * * 2-6"
     - cron: "23 3 * * 2-6"
-    - cron: "11 4 * * 2-6"
     - cron: "47 4 * * 2-6"
-    - cron: "23 5 * * 2-6"
     - cron: "43 5 * * 2-6"
-    - cron: "17 6 * * 2-6"
   workflow_dispatch: {}
   push:
     # Testlauf nach Aenderungen am Programm (Ergebnis-Dateien in data/ und docs/ loesen keinen Lauf aus)
@@ -20,6 +20,7 @@ on:
       - "radar/**"
       - "run_daily.py"
       - ".github/workflows/daily.yml"
+      - "tools/**"
 
 permissions:
   contents: write
@@ -34,13 +35,12 @@ jobs:
     timeout-minutes: 40
     steps:
       - uses: actions/checkout@v4
-      - name: Schon heute erledigt?
+      - name: Daten schon aktuell?
         id: guard
         run: |
-          done=$(python3 -c 'import json,datetime;j=json.load(open("data/latest.json",encoding="utf-8"));print(j.get("run_utc_date")==datetime.datetime.now(datetime.timezone.utc).strftime("%Y-%m-%d"))')
-          if [ "${{ github.event_name }}" = "schedule" ] && [ "$done" = "True" ]; then
+          if [ "${{ github.event_name }}" = "schedule" ] && [ "$(python3 tools/guard.py)" = "True" ]; then
             echo "skip=true" >> "$GITHUB_OUTPUT"
-            echo "Heute schon aktualisiert, dieser Versuch wird übersprungen."
+            echo "Daten sind schon auf dem Stand des letzten Handelstags, dieser Versuch wird übersprungen."
           else
             echo "skip=false" >> "$GITHUB_OUTPUT"
           fi
