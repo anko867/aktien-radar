@@ -44,6 +44,7 @@ def price_metrics(prices, cfg=CFG):
 def history_hit_rate(prices, tickers, years=5, cfg=CFG):
     """Wie oft erreichte die Aktie in den letzten `years` Jahren innerhalb des Fensters +20 % (Start: jeder Handelstag)."""
     out = {}
+    tickers = list(dict.fromkeys(tickers))  # Duplikate entfernen
     c, o = prices["Close"], prices["Open"]
     cut = c.index[-1] - pd.DateOffset(years=years)
     fo = forward_outcomes(o[tickers], c[tickers], cfg["horizon"], cfg["target"])
@@ -125,8 +126,8 @@ def select(df, cfg=CFG):
     ok = df[df["passed"]].sort_values("score", ascending=False)
     top = ok.head(cfg["n_top"])
     rest = df[~df.index.isin(top.index) & df["f1"] & df["dd"].ge(cfg["loose_dd"])]
+    # `rest` enthaelt schon die Aktien, die alle Filter bestehen, aber nicht mehr in die Top-N passen (n_fail == 0)
     watch_pool = rest[rest["n_fail"] <= 1].sort_values("score", ascending=False)
-    if len(ok) > cfg["n_top"]:
-        watch_pool = pd.concat([ok.iloc[cfg["n_top"]:], watch_pool]).sort_values("score", ascending=False)
     watch = watch_pool.head(cfg["n_watch"])
+    assert not watch.index.duplicated().any() and not set(watch.index) & set(top.index)
     return top, watch

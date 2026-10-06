@@ -150,7 +150,8 @@ def card(rank, tk, r, uni, info, det, news, ins, hist, real, prices, usd_eur, ki
     cls = {"realistisch": "good", "möglich": "mid", "unwahrscheinlich": "bad"}[real["label"]]
     fails = ""
     if kind == "watch":
-        fails = f'<span class="warn">Nicht erfüllt: {esc(", ".join(r["fail_list"]))}</span>'
+        fails = (f'<span class="warn">Nicht erfüllt: {esc(", ".join(r["fail_list"]))}</span>' if r["fail_list"]
+                 else '<span class="warn">Alle Filter erfüllt, aber nicht unter den besten 15</span>')
     up = pc(r["upside"], 0)
     head = (f'<summary><span class="rk">{rank}</span>'
             f'<span class="nm"><b>{esc(tk)}</b> {esc(name)}<small>{esc(SECTOR_DE.get(i.get("sector"), i.get("sector") or ""))} · {esc(", ".join(uni[tk]["indices"]))}</small></span>'
@@ -412,7 +413,7 @@ details.inner{margin-top:8px}details.inner>summary{cursor:pointer;font-size:.85r
 @media (max-width:520px){.card>summary{grid-template-columns:24px 1fr auto}.tbl{font-size:.82rem}}
 """
 
-JS = """(function(){var a=document.body.getAttribute('data-asof'),b=document.getElementById('stale');if(a&&b&&(Date.now()-Date.parse(a))/864e5>4){b.hidden=false}})();document.addEventListener('click',function(e){var t=e.target.closest('.t');document.querySelectorAll('.t.open').forEach(function(x){if(x!==t)x.classList.remove('open')});if(t){t.classList.toggle('open')}});"""
+JS = """(function(){var a=document.body.getAttribute('data-built'),b=document.getElementById('stale');if(a&&b&&(Date.now()-Date.parse(a))/864e5>4){b.hidden=false}})();document.addEventListener('click',function(e){var t=e.target.closest('.t');document.querySelectorAll('.t.open').forEach(function(x){if(x!==t)x.classList.remove('open')});if(t){t.classList.toggle('open')}});"""
 
 
 def build_page(ctx):
@@ -447,8 +448,8 @@ def build_page(ctx):
     head = (f'<header><h1>Mein Aktien-Radar</h1><p class="muted">Datenstand: Schlusskurse vom {asof.strftime("%d.%m.%Y")} · erstellt {now.strftime("%d.%m.%Y %H:%M")} Uhr (Berlin)<br>'
             f'Ziel: Aktien mit Analysten-Kaufempfehlung, deutlich unter dem Hoch, mit Chance auf +20 % in {CFG["horizon"]} Handelstagen (ca. 4 Wochen). Keine Anlageberatung.</p></header>')
     doc = (f'<!doctype html><html lang="de"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow">'
-           f'<title>Mein Aktien-Radar</title><style>{CSS}</style></head><body data-asof="{asof.strftime("%Y-%m-%d")}"><main>{head}'
-           f'<div id="stale" class="stale" hidden>Achtung: Die Daten sind älter als 4 Tage. Der tägliche Lauf hat vermutlich nicht funktioniert.</div>{nav}'
+           f'<title>Mein Aktien-Radar</title><style>{CSS}</style></head><body data-built="{pd.Timestamp.now(tz="UTC").strftime("%Y-%m-%dT%H:%M:%SZ")}"><main>{head}'
+           f'<div id="stale" class="stale" hidden>Achtung: Diese Seite wurde seit mehr als 4 Tagen nicht aktualisiert. Der tägliche Lauf hat vermutlich nicht funktioniert.</div>{nav}'
            f'{section_market(ctx["market"])}{section_changes(ctx["diff"], ctx["names"])}{tops}{watchs}'
            f'{section_bilanz(ctx["picks"], ctx["picks_summary"])}{section_backtest(ctx["market"]["backtest"])}{section_sources(ctx["source_status"], ctx["notes"])}'
            f'</main><script>{JS}</script></body></html>')
