@@ -1,22 +1,25 @@
 [    0s] Python 3.12.14, pandas 3.0.6, numpy 2.5.3, yfinance 1.7.0
-[    1s] Aktienliste: 599 Aktien
-[   51s] Kurse: 599 Aktien, Datenstand 2026-10-02
-[   51s] Handelbar: 573, Kandidaten fuer Analystendaten: 320
-[   60s] Top: 15 (alle Filter), Beobachtung: 25
-HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"No fundamentals data found for symbol: IFX.DE"}}}
+[    0s] Aktienliste: 599 Aktien
+[   63s] Kurse: 599 Aktien, Datenstand 2026-10-05
+[   63s] Handelbar: 573, Kandidaten fuer Analystendaten: 317
+[   75s] Top: 15 (alle Filter), Beobachtung: 25
 HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"No fundamentals data found for symbol: ZAL.DE"}}}
-HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"No fundamentals data found for symbol: TUI1.DE"}}}
-HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"No fundamentals data found for symbol: LEG.DE"}}}
 HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"No fundamentals data found for symbol: RHM.DE"}}}
-HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"No fundamentals data found for symbol: GBF.DE"}}}
+HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"No fundamentals data found for symbol: IFX.DE"}}}
+HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"No fundamentals data found for symbol: IFX.DE"}}}
 HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"No fundamentals data found for symbol: KGX.DE"}}}
-HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"No fundamentals data found for symbol: EVD.DE"}}}
-HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"No fundamentals data found for symbol: AIXA.DE"}}}
-[   62s] Analystenverlauf geladen
-[   65s] Nachrichten geladen (33 mit Treffern)
-[  107s] SEC-Insiderdaten: 30 von 30
-[  107s] FRED: OK: 3 von 3 Reihen
-[  177s] Finnhub: OK: 30 von 30 Aktien
-[  187s] Alpha Vantage: OK: 10 von 10 Aktien (10 neu abgerufen, Rest aus dem Zwischenspeicher dieses Tages)
-[  190s] Financial Modeling Prep: OK: 30 Gegenproben
-[  190s] Seite geschrieben: docs/index.html (709 KB)
+[   77s] Analystenverlauf geladen
+[   80s] Nachrichten geladen (34 mit Treffern)
+[  135s] SEC-Insiderdaten: 33 von 33
+[  136s] FRED: OK: 3 von 3 Reihen
+[  217s] Finnhub: OK: 33 von 35 Aktien
+[  232s] Alpha Vantage: OK: 14 von 14 Aktien (14 neu abgerufen, Rest aus dem Zwischenspeicher dieses Tages)
+[  235s] Financial Modeling Prep: OK: 33 Gegenproben
+Traceback (most recent call last):
+  File "/home/runner/work/aktien-radar/aktien-radar/run_daily.py", line 83, in <module>
+    hist = screen.history_hit_rate(prices, shown, CFG["hist_years"])
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/work/aktien-radar/aktien-radar/radar/screen.py", line 55, in history_hit_rate
+    out[t] = {"freq": float(s.mean()) if ok else None, "days": int(len(s)),
+                      ^^^^^^^^^^^^^^^
+TypeError: float() argument must be a string or a real number, not 'Series'
