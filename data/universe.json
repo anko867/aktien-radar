@@ -3465,8 +3465,7 @@
  "WBD": {
   "name": "Warner Bros. Discovery",
   "indices": [
-   "S&P 500",
-   "Nasdaq-100"
+   "S&P 500"
   ],
   "region": "US"
  },
