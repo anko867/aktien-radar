@@ -368,9 +368,10 @@ def finnhub_extra(tickers):
     return out, msg
 
 
-def alpha_sentiment(tickers, asof, max_calls=20):
-    """Nachrichten-Stimmung je Aktie (Alpha Vantage, kostenlos nur 25 Abrufe pro Tag).
-    Ergebnisse werden pro Datenstand zwischengespeichert, damit zweite Laeufe am selben Tag keine Abrufe verbrauchen."""
+def alpha_price_check(tickers, yahoo_close, asof, max_calls=20):
+    """Gegenprobe des Schlusskurses (Alpha Vantage GLOBAL_QUOTE, kostenlos 25 Abrufe pro Tag, 1 pro Sekunde).
+    OVERVIEW und NEWS_SENTIMENT sind bei Alpha Vantage seit Oktober 2026 Premium. Ergebnisse werden pro Datenstand
+    zwischengespeichert. Weitergegeben wird nur die Abweichung zu Yahoo."""
     k = _key("ALPHAVANTAGE_KEY")
     if not k:
         return {}, "kein Schlüssel hinterlegt"
@@ -379,29 +380,41 @@ def alpha_sentiment(tickers, asof, max_calls=20):
         cache = json.loads(cache_f.read_text(encoding="utf-8")) if cache_f.exists() else {}
     except ValueError:
         cache = {}
-    if cache.get("asof") != asof:
-        cache = {"asof": asof, "data": {}}
+    if cache.get("asof") != asof or cache.get("kind") != "quote":
+        cache = {"asof": asof, "kind": "quote", "data": {}}
     note, fetched = None, 0
     for tk in [t for t in tickers if t not in cache["data"]][:max_calls]:
         try:
-            j = _get_json("https://www.alphavantage.co/query",
-                          {"function": "NEWS_SENTIMENT", "tickers": tk, "limit": 50, "apikey": k})
+            j = _get_json("https://www.alphavantage.co/query", {"function": "GLOBAL_QUOTE", "symbol": tk, "apikey": k})
         except Exception as e:  # noqa: BLE001
             note = str(e)
             continue
-        if "feed" not in j:
+        q = j.get("Global Quote")
+        if not q:
             note = (j.get("Information") or j.get("Note") or "keine Antwortdaten")[:90]
+            if "second" in note:
+                time.sleep(2.0)
+                continue
             break
-        scores = []
-        for art in j["feed"]:
-            for ts in art.get("ticker_sentiment", []):
-                if ts.get("ticker") == tk and float(ts.get("relevance_score", 0)) >= 0.3:
-                    scores.append(float(ts["ticker_sentiment_score"]))
-        cache["data"][tk] = {"mean": sum(scores) / len(scores), "n": len(scores)} if scores else None
+        try:
+            day = q["07. latest trading day"]
+            if day == asof:
+                px = float(q["05. price"])
+            elif day > asof:
+                px = float(q["08. previous close"])  # liegt schon ein neuerer Handelstag vor
+            else:
+                px = None
+        except (KeyError, ValueError):
+            px = None
+        cache["data"][tk] = px
         fetched += 1
-        time.sleep(1.0)
+        time.sleep(1.3)
     cache_f.write_text(json.dumps(cache, ensure_ascii=False), encoding="utf-8")
-    out = {t: cache["data"][t] for t in tickers if cache["data"].get(t)}
+    out = {}
+    for t in tickers:
+        av, ym = cache["data"].get(t), yahoo_close.get(t)
+        if av and ym:
+            out[t] = {"dev": av / ym - 1}
     msg = f"OK: {len(out)} von {min(len(tickers), max_calls)} Aktien ({fetched} neu abgerufen, Rest aus dem Zwischenspeicher dieses Tages)" if out else "keine Daten"
     return out, msg + (f" ({note})" if note else "")
 

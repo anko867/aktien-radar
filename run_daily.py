@@ -75,7 +75,8 @@ macro, macro_msg = data.fred_macro()
 log(f"FRED: {macro_msg}")
 fh, fh_msg = data.finnhub_extra(us_shown)
 log(f"Finnhub: {fh_msg}")
-av, av_msg = data.alpha_sentiment([t for t in top.index if uni[t]["region"] == "US"], str(asof.date()))
+av_tk = [t for t in top.index if uni[t]["region"] == "US"]
+av, av_msg = data.alpha_price_check(av_tk, {t: float(prices["Close"][t].iloc[-1]) for t in av_tk}, str(asof.date()))
 log(f"Alpha Vantage: {av_msg}")
 fmp, fmp_msg = data.fmp_marketcap_check(us_shown, {t: (info.get(t) or {}).get("marketCap") for t in us_shown})
 log(f"Financial Modeling Prep: {fmp_msg}")
@@ -112,7 +113,7 @@ source_status = [
     ("Stooq", "Ersatz-Kursquelle", "nicht verwendet: Die Seite sperrt automatische Abrufe per Bot-Schutz"),
     ("FRED (US-Notenbank St. Louis)", "Zinskurve, Leitzins, Risikoaufschlag", macro_msg),
     ("Finnhub", "Analystenurteile als Zweitquelle, Gewinnüberraschungen (US-Aktien)", fh_msg),
-    ("Alpha Vantage", "Nachrichten-Stimmung (nur Top-Liste, 25 Abrufe pro Tag)", av_msg),
+    ("Alpha Vantage", "unabhängige Gegenprobe des Schlusskurses (nur Top-Liste, 25 Abrufe pro Tag; Firmen- und Stimmungsabfragen sind seit Okt. 2026 Premium)", av_msg),
     ("Financial Modeling Prep", "stille Gegenprobe des Börsenwerts (Zahlen werden nicht angezeigt)", fmp_msg),
 ]
 counts = {"universe": len(uni), "data": prices["Close"].shape[1], "liquid": int(rows["f_liquid_price"].sum()),

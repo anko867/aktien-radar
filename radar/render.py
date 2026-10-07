@@ -229,10 +229,10 @@ def card(rank, tk, r, uni, info, det, news, ins, hist, real, prices, usd_eur, ki
         bits.append(f'<h5>Gewinn je Aktie: Erwartung gegen Ergebnis (letzte 4 Quartale)</h5><table class="mini"><tr><th>Quartalsende</th><th>Erwartet</th><th>Tatsächlich</th><th>Überraschung</th></tr>{rows_e}</table>')
     av = ex.get("av")
     if av:
-        m_ = av["mean"]
-        lab = ("bearish (negativ)" if m_ <= -0.35 else "eher negativ" if m_ <= -0.15 else "neutral" if m_ < 0.15 else "eher positiv" if m_ < 0.35 else "bullish (positiv)")
-        bits.append(f'<p><b>Nachrichten-Stimmung (Alpha Vantage)</b>: {de(m_, 2, True)} = {lab}, aus {av["n"]} Artikeln. '
-                    f'<span class="muted small">Skala −1 bis +1; Einstufung nach der Konvention des Anbieters; maschinell berechnet.</span></p>')
+        if abs(av["dev"]) > 0.02:
+            bits.append(f'<p class="warn"><b>Hinweis:</b> Der Schlusskurs weicht zwischen Yahoo und einer zweiten Quelle um {de(av["dev"] * 100, 1, True)} % ab. Bitte selbst prüfen.</p>')
+        else:
+            bits.append('<p class="muted small">✓ Schlusskurs von einer zweiten Quelle bestätigt (Abweichung unter 2 %).</p>')
     fm = ex.get("fmp")
     if fm:
         if abs(fm["dev"]) > 0.15:
