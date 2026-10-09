@@ -919,13 +919,6 @@
   ],
   "region": "US"
  },
- "CTVA": {
-  "name": "Corteva",
-  "indices": [
-   "S&P 500"
-  ],
-  "region": "US"
- },
  "CSGP": {
   "name": "CoStar Group",
   "indices": [
@@ -2569,13 +2562,6 @@
   ],
   "region": "US"
  },
- "PSKY": {
-  "name": "Paramount Skydance Corporation",
-  "indices": [
-   "S&P 500"
-  ],
-  "region": "US"
- },
  "PH": {
   "name": "Parker Hannifin",
   "indices": [
@@ -2956,6 +2942,13 @@
   ],
   "region": "US"
  },
+ "SKYD": {
+  "name": "Skydance Corporation",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
  "SWKS": {
   "name": "Skyworks Solutions",
   "indices": [
@@ -3236,6 +3229,13 @@
   ],
   "region": "US"
  },
+ "TWLO": {
+  "name": "Twilio",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
  "TYL": {
   "name": "Tyler Technologies",
   "indices": [
@@ -3426,6 +3426,13 @@
   ],
   "region": "US"
  },
+ "VYLR": {
+  "name": "Vylor",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
  "WRB": {
   "name": "W. R. Berkley Corporation",
   "indices": [
@@ -3457,13 +3464,6 @@
  },
  "DIS": {
   "name": "Walt Disney Company (The)",
-  "indices": [
-   "S&P 500"
-  ],
-  "region": "US"
- },
- "WBD": {
-  "name": "Warner Bros. Discovery",
   "indices": [
    "S&P 500"
   ],
