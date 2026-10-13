@@ -2274,7 +2274,8 @@
  "MRNA": {
   "name": "Moderna",
   "indices": [
-   "S&P 500"
+   "S&P 500",
+   "Nasdaq-100"
   ],
   "region": "US"
  },
