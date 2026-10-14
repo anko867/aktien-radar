@@ -1,18 +1,17 @@
 [    0s] Python 3.12.15, pandas 3.0.6, numpy 2.5.4, yfinance 1.7.0
-[    1s] Aktienliste: 599 Aktien
-[   68s] Kurse: 599 Aktien, Datenstand 2026-10-12
-[   69s] Handelbar: 571, Kandidaten fuer Analystendaten: 297
-[   83s] Top: 15 (alle Filter), Beobachtung: 25
+[    0s] Aktienliste: 599 Aktien
+[   75s] Kurse: 599 Aktien, Datenstand 2026-10-13
+[   76s] Handelbar: 571, Kandidaten fuer Analystendaten: 297
+[   88s] Top: 15 (alle Filter), Beobachtung: 25
 HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"No fundamentals data found for symbol: EVD.DE"}}}
-HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"No fundamentals data found for symbol: IFX.DE"}}}
 HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"No fundamentals data found for symbol: RHM.DE"}}}
 HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"No fundamentals data found for symbol: KGX.DE"}}}
-HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"No fundamentals data found for symbol: AIXA.DE"}}}
-[   85s] Analystenverlauf geladen
-[   88s] Nachrichten geladen (35 mit Treffern)
-[  160s] SEC-Insiderdaten: 34 von 34
-[  161s] FRED: OK: 3 von 3 Reihen
-[  246s] Finnhub: OK: 34 von 34 Aktien
-[  264s] Alpha Vantage: OK: 12 von 12 Aktien (12 neu abgerufen, Rest aus dem Zwischenspeicher dieses Tages)
-[  271s] Financial Modeling Prep: OK: 34 Gegenproben
-[  271s] Seite geschrieben: docs/index.html (728 KB)
+HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"No fundamentals data found for symbol: IFX.DE"}}}
+[   90s] Analystenverlauf geladen
+[   94s] Nachrichten geladen (36 mit Treffern)
+[  154s] SEC-Insiderdaten: 35 von 35
+[  155s] FRED: OK: 3 von 3 Reihen
+[  241s] Finnhub: OK: 35 von 35 Aktien
+[  260s] Alpha Vantage: OK: 13 von 13 Aktien (13 neu abgerufen, Rest aus dem Zwischenspeicher dieses Tages)
+[  272s] Financial Modeling Prep: OK: 35 Gegenproben
+[  272s] Seite geschrieben: docs/index.html (733 KB)
