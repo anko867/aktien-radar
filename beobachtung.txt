@@ -1,0 +1,4 @@
+# Meine festen Aktien: stehen immer auf der Beobachtungsliste, auch wenn sie die Filter nicht bestehen.
+# Eine Aktie pro Zeile, mit dem Börsenkürzel von Yahoo Finance (finance.yahoo.com).
+# Beispiele: AAPL (Apple), SAP.DE (SAP an der Börse Xetra), ASML.AS (ASML in Amsterdam)
+# Alles hinter einem # ist nur ein Kommentar. Zeilen mit # am Anfang werden ignoriert.

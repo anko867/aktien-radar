@@ -26,3 +26,8 @@ Alle Startwerte stehen in `radar/config.py`.
 `.github/workflows/daily.yml` startet `run_daily.py` Dienstag bis Samstag gegen 7 Uhr deutscher Zeit und speichert
 das Ergebnis im Repository. GitHub Pages veröffentlicht den Ordner `docs/`.
 Optionales Secret `SEC_CONTACT` (Kontakt-E-Mail), damit die SEC-Insiderdaten abgerufen werden dürfen.
+
+## Feste Aktien auf der Beobachtungsliste
+In der Datei `beobachtung.txt` stehen die Aktien, die immer auf der Beobachtungsliste erscheinen, unabhängig von den Filtern
+(eine Aktie pro Zeile, Börsenkürzel von Yahoo Finance, z. B. `AAPL` oder `SAP.DE`). Änderung speichern (auf GitHub: Stift-Symbol,
+dann „Commit changes“), danach startet automatisch ein Lauf und die Seite ist wenige Minuten später aktuell.

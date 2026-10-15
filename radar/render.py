@@ -140,7 +140,7 @@ def target_range(price, lo, mean, med, hi, sym):
 
 
 # ---------------------------------------------------------------- Karte pro Aktie
-def card(rank, tk, r, uni, info, det, news, ins, hist, real, prices, usd_eur, kind, ex=None):
+def card(rank, tk, r, uni, info, det, news, ins, hist, real, prices, usd_eur, kind, ex=None, note=None):
     i = info or {}
     sym = cur_sym(i, tk)
     name = i.get("longName") or i.get("shortName") or uni[tk]["name"]
@@ -149,7 +149,9 @@ def card(rank, tk, r, uni, info, det, news, ins, hist, real, prices, usd_eur, ki
     chg = float(r["day_chg"])
     cls = {"realistisch": "good", "möglich": "mid", "unwahrscheinlich": "bad"}[real["label"]]
     fails = ""
-    if kind == "watch":
+    if kind == "fest":
+        fails = f'<span class="warn">{esc(note or "")}</span>'
+    elif kind == "watch":
         fails = (f'<span class="warn">Nicht erfüllt: {esc(", ".join(r["fail_list"]))}</span>' if r["fail_list"]
                  else '<span class="warn">Alle Filter erfüllt, aber nicht unter den besten 15</span>')
     up = pc(r["upside"], 0)
@@ -276,7 +278,7 @@ def card(rank, tk, r, uni, info, det, news, ins, hist, real, prices, usd_eur, ki
     fl = [("Handelbarkeit/Größe", bool(r["f1"])), ("Analysten", bool(r["f2"])), ("Abstand zum Hoch", bool(r["f3"])), ("Erholungssignal", bool(r["f4"]))]
     sec_f = '<section><h4>Filter-Check</h4><p>' + " · ".join(f"{mk(ok)} {n}" for n, ok in fl) + "</p></section>"
     body = f'<div class="body">{sec_price}{sec_real}{sec_an}{sec_ex}{sec_kv}{sec_co}{sec_ins}{sec_news}{sec_f}</div>'
-    return f'<details class="card {kind}" id="t-{esc(tk)}">{head}{body}</details>'
+    return f'<details class="card {kind}" id="{"f" if kind == "fest" else "t"}-{esc(tk)}">{head}{body}</details>'
 
 
 # ---------------------------------------------------------------- Abschnitte
@@ -409,6 +411,7 @@ table{border-collapse:collapse;width:100%}.tbl th,.tbl td,.mini th,.mini td{padd
 details.inner{margin-top:8px}details.inner>summary{cursor:pointer;font-size:.85rem;color:var(--acc)}
 .t{border-bottom:1px dotted var(--mut);cursor:help;position:relative}.t.open::after,.t:hover::after{content:attr(data-tip);position:absolute;left:0;top:1.5em;z-index:20;width:min(280px,80vw);background:var(--ink);color:var(--bg);padding:8px 10px;border-radius:8px;font-size:.78rem;line-height:1.4;font-weight:400;box-shadow:0 4px 14px rgba(0,0,0,.25)}
 .stale{background:var(--badbg);color:var(--bad);padding:9px 12px;border-radius:8px;margin:10px 0;font-weight:600}
+.card.fest{border-left:4px solid var(--acc)}
 .lead{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--acc);padding:10px 14px;border-radius:8px}
 @media (max-width:520px){.card>summary{grid-template-columns:24px 1fr auto}.tbl{font-size:.82rem}}
 """
@@ -440,7 +443,26 @@ def build_page(ctx):
               f'→ {counts["dd"]} mit mind. {int(CFG["min_dd"] * 100)} % Abstand zum Hoch → {counts["pass"]} bestehen alle vier Filter.</p>')
     tops = (f'<section id="top"><h2>Top-Kandidaten des Tages ({n_pass})</h2>{short}{funnel}'
             f'<p class="muted small">Sortiert nach {T("Punktwert", "score")}. Tippe auf eine Zeile für Kursverlauf, Analysten, Kennzahlen und Nachrichten.</p>{cards(top, "top")}</section>')
-    watchs = (f'<section id="beobachtung"><h2>Beobachtungsliste ({len(watch)})</h2><p class="muted small">Aktien, die höchstens einen Filter verfehlen, nach Punktwert. '
+    fest_blk = ""
+    fest = ctx.get("fest")
+    if (fest is not None and len(fest)) or ctx.get("fest_missing"):
+        top_rank = {tk: i for i, tk in enumerate(top.index, 1)}
+        parts = []
+        for tk, r in fest.iterrows():
+            if tk in top_rank:
+                nt = f"Steht heute auch in der Top-Liste (Platz {top_rank[tk]})"
+            elif r["fail_list"]:
+                nt = "Nicht erfüllt: " + ", ".join(r["fail_list"])
+            else:
+                nt = "Alle Filter erfüllt"
+            parts.append(card("★", tk, r, uni, info.get(tk), det.get(tk), news.get(tk), ins.get(tk), hist.get(tk),
+                              ctx["realism"][tk], prices, fx, "fest", ctx.get("extras", {}).get(tk), nt))
+        miss = (f'<p class="warn">Keine Kursdaten gefunden für: {esc(", ".join(ctx["fest_missing"]))}. Kürzel bei Yahoo Finance prüfen.</p>'
+                if ctx.get("fest_missing") else "")
+        fest_blk = (f'<h3>Meine festen Aktien</h3><p class="muted small">Diese Aktien stehen immer hier, unabhängig von den Filtern '
+                    f'(Liste ändern: Datei beobachtung.txt im Repository). Die Karte zeigt, welche Filter sie heute bestehen.</p>{"".join(parts)}{miss}')
+    watchs = (f'<section id="beobachtung"><h2>Beobachtungsliste</h2>{fest_blk}<h3>Automatische Kandidaten ({len(watch)})</h3>'
+              f'<p class="muted small">Aktien, die höchstens einen Filter verfehlen, nach Punktwert. '
               f'Das Fehlende steht jeweils in der Zeile.</p>{cards(watch, "watch", n_pass + 1)}</section>')
 
     nav = ('<nav><a href="#markt">Markt</a><a href="#aenderungen">Änderungen</a><a href="#top">Top</a><a href="#beobachtung">Beobachtung</a>'

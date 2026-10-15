@@ -21,6 +21,7 @@ on:
       - "run_daily.py"
       - ".github/workflows/daily.yml"
       - "tools/**"
+      - "beobachtung.txt"
 
 permissions:
   contents: write

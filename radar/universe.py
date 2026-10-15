@@ -5,7 +5,7 @@ import json
 import pandas as pd
 import requests
 
-from .config import DATA, UA
+from .config import DATA, ROOT, UA
 
 WIKI = "https://en.wikipedia.org/wiki/"
 CACHE_FILE = DATA / "universe.json"
@@ -91,3 +91,25 @@ def build():
     if len(uni) > 300:
         CACHE_FILE.write_text(json.dumps(uni, ensure_ascii=False, indent=1), encoding="utf-8")
     return uni, notes
+
+
+PINNED_FILE = ROOT / "beobachtung.txt"
+
+
+def load_pinned():
+    """Feste Beobachtungsliste: eine Aktie pro Zeile (Yahoo-Kuerzel), '#' beginnt einen Kommentar."""
+    if not PINNED_FILE.exists():
+        return []
+    out = []
+    for line in PINNED_FILE.read_text(encoding="utf-8").splitlines():
+        tk = line.split("#", 1)[0].strip().split()[:1]
+        if tk and tk[0].upper() not in out:
+            out.append(tk[0].upper())
+    return out
+
+
+def add_pinned(uni, pinned):
+    """Haengt Aktien der festen Liste an, die nicht in den Indizes stehen (Name wird spaeter aus Yahoo gelesen)."""
+    for tk in pinned:
+        if tk not in uni:
+            uni[tk] = {"name": tk, "indices": ["Eigene Liste"], "region": "US" if "." not in tk else "EU"}

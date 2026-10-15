@@ -121,11 +121,11 @@ def realism(row, hist):
     return {"criteria": crit, "met": n, "label": label}
 
 
-def select(df, cfg=CFG):
+def select(df, cfg=CFG, exclude=()):
     """Top-N (alle vier Filter bestanden, nach Punktwert), danach Beobachtungsliste (knapp gescheitert)."""
     ok = df[df["passed"]].sort_values("score", ascending=False)
     top = ok.head(cfg["n_top"])
-    rest = df[~df.index.isin(top.index) & df["f1"] & df["dd"].ge(cfg["loose_dd"])]
+    rest = df[~df.index.isin(top.index) & ~df.index.isin(list(exclude)) & df["f1"] & df["dd"].ge(cfg["loose_dd"])]
     # `rest` enthaelt schon die Aktien, die alle Filter bestehen, aber nicht mehr in die Top-N passen (n_fail == 0)
     watch_pool = rest[rest["n_fail"] <= 1].sort_values("score", ascending=False)
     watch = watch_pool.head(cfg["n_watch"])

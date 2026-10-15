@@ -30,6 +30,8 @@ log(f"Python {platform.python_version()}, pandas {pd.__version__}, numpy {numpy.
 # 1. Aktienliste
 uni, unotes = universe.build()
 notes += unotes
+pinned = universe.load_pinned()
+universe.add_pinned(uni, pinned)
 names = {t: v["name"] for t, v in uni.items()}
 log(f"Aktienliste: {len(uni)} Aktien")
 
@@ -54,16 +56,25 @@ loose = rows[rows["f_liquid_price"] & (rows["dd"] >= CFG["loose_dd"])]
 log(f"Handelbar: {int(rows['f_liquid_price'].sum())}, Kandidaten fuer Analystendaten: {len(loose)}")
 
 # 4. Stufe B: Analystendaten nur fuer Kandidaten
-info = data.fetch_info(list(loose.index))
+need_info = list(dict.fromkeys(list(loose.index) + [t for t in pinned if t in rows.index]))
+info = data.fetch_info(need_info)
+for t in pinned:  # Namen fuer Aktien, die nicht in den Indexlisten stehen
+    if info.get(t) and uni[t]["name"] == t:
+        uni[t]["name"] = info[t].get("longName") or info[t].get("shortName") or t
+        names[t] = uni[t]["name"]
 bad = [t for t, v in info.items() if not v]
 if bad:
     notes.append(f"Keine Yahoo-Kennzahlen/Analystendaten ({len(bad)}): " + ", ".join(bad))
 df = screen.evaluate(rows, info)
-top, watch = screen.select(df)
+top, watch = screen.select(df, exclude=pinned)
+fest = [t for t in pinned if t in df.index]
+fest_missing = [t for t in pinned if t not in df.index]
+if fest_missing:
+    notes.append("Eigene Liste: keine Kursdaten gefunden für " + ", ".join(fest_missing) + " (Kürzel bei Yahoo Finance prüfen)")
 log(f"Top: {len(top)} (alle Filter), Beobachtung: {len(watch)}")
 
 # 5. Details fuer die angezeigten Aktien
-shown = list(top.index) + list(watch.index)
+shown = list(dict.fromkeys(list(top.index) + list(watch.index) + fest))
 details = data.fetch_details(shown)
 log("Analystenverlauf geladen")
 news = data.fetch_news([(t, info[t].get("shortName") or uni[t]["name"], uni[t]["region"]) for t in shown if info.get(t)])
@@ -120,7 +131,8 @@ counts = {"universe": len(uni), "data": prices["Close"].shape[1], "liquid": int(
           "dd": int((rows["f_liquid_price"] & (rows["dd"] >= CFG["min_dd"])).sum()), "pass": int(df["passed"].sum())}
 ctx = dict(asof=asof, top=top, watch=watch, uni=uni, info=info, details=details, news=news, insiders=ins, hist=hist,
            realism=realism, prices=prices, fx=fx, market=mk, diff=diff, names=names, picks=picks, picks_summary=psum,
-           source_status=source_status, notes=notes, counts=counts, extras=extras)
+           source_status=source_status, notes=notes, counts=counts, extras=extras,
+           fest=df.loc[fest], fest_missing=fest_missing)
 html = build_page(ctx)
 (DOCS / "index.html").write_text(html, encoding="utf-8")
 (DOCS / ".nojekyll").write_text("", encoding="utf-8")
