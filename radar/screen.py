@@ -34,6 +34,9 @@ def price_metrics(prices, cfg=CFG):
         "bars": c.iloc[-252:].notna().sum(),
     })
     rows["day_chg"] = rows["price"] / rows["prev_close"] - 1
+    # Aktien ohne echten Kurs am Datenstand-Tag: Tagesaenderung unbekannt (nicht "0 %")
+    rows["stale_date"] = pd.Series(prices.get("_stale", {}), dtype=object).reindex(rows.index)
+    rows.loc[rows["stale_date"].notna(), "day_chg"] = np.nan
     rows["f_liquid_price"] = (rows["price"] >= cfg["min_price"]) & (rows["turnover20"] >= cfg["min_turnover"]) & (
         rows["bars"] >= 240)
     rows["recovery"] = (rows["price"] > rows["sma20"]) | ((rows["rsi_min10"] < 30) & (rows["rsi"] > rows["rsi_prev"]))

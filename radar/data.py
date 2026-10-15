@@ -85,8 +85,18 @@ def clean(prices):
 
 
 def trim_to_asof(prices):
+    """Schneidet auf den letzten abgeschlossenen Handelstag. Aktien, fuer die Yahoo an diesem Tag keinen Kurs liefert
+    (Feiertag oder Datenluecke), werden in prices["_stale"] mit dem Datum ihres letzten echten Kurses vermerkt."""
     asof = last_complete_date(prices["Close"].index)
-    return clean({k: v.loc[:asof] for k, v in prices.items()}), asof
+    trimmed = {k: v.loc[:asof] for k, v in prices.items()}
+    stale = {}
+    for tk in trimmed["Close"].columns:
+        lv = trimmed["Close"][tk].last_valid_index()
+        if lv is not None and lv < asof:
+            stale[tk] = str(lv.date())
+    out = clean(trimmed)
+    out["_stale"] = stale
+    return out, asof
 
 
 # ---------------------------------------------------------------- Yahoo: Kennzahlen/Analysten

@@ -164,7 +164,11 @@ def card(rank, tk, r, uni, info, det, news, ins, hist, real, prices, usd_eur, ki
 
     perf = "".join(f"<td>{pc(r[k])}</td>" for k in ("ret5", "ret20", "ret60", "ret120", "ret250"))
     chart = price_chart(prices["Close"][tk], float(r["hi52"]), r["t_mean"], sym)
-    sec_price = (f'<section><h4>Kursverlauf</h4>{chart}'
+    stale_note = ""
+    if pd.notna(r.get("stale_date")):
+        stale_note = (f'<p class="warn"><b>Hinweis:</b> Der angezeigte Kurs ist vom {esc(r["stale_date"])}. Für den Datenstand-Tag liegt bei Yahoo '
+                      f'für diese Aktie kein Kurs vor (Feiertag oder Datenlücke), die Tagesänderung ist deshalb unbekannt.</p>')
+    sec_price = (f'<section><h4>Kursverlauf</h4>{stale_note}{chart}'
                  f'<table class="mini perf"><tr><th>1 W.</th><th>1 M.</th><th>3 M.</th><th>6 M.</th><th>12 M.</th></tr><tr>{perf}</tr></table>'
                  f'<p class="muted small">Schlusskurse, bereinigt um Splits und Dividenden. RSI heute: {de(r["rsi"], 0)}. '
                  f'Kurs {"über" if r["price"] > r["sma20"] else "unter"} dem 20-Tage-Durchschnitt ({de(r["sma20"], 2)} {sym}).</p></section>')
