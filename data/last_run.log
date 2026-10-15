@@ -1,17 +1,17 @@
 [    0s] Python 3.12.15, pandas 3.0.6, numpy 2.5.4, yfinance 1.7.0
 [    1s] Aktienliste: 599 Aktien
-[   69s] Kurse: 599 Aktien, Datenstand 2026-10-14
-[   70s] Handelbar: 571, Kandidaten fuer Analystendaten: 306
-[   84s] Top: 15 (alle Filter), Beobachtung: 25
+[   55s] Kurse: 599 Aktien, Datenstand 2026-10-14
+[   56s] Handelbar: 571, Kandidaten fuer Analystendaten: 308
+[   66s] Top: 15 (alle Filter), Beobachtung: 25
 HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"No fundamentals data found for symbol: EVD.DE"}}}
 HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"No fundamentals data found for symbol: RHM.DE"}}}
 HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"No fundamentals data found for symbol: KGX.DE"}}}
 HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"No fundamentals data found for symbol: IFX.DE"}}}
-[   86s] Analystenverlauf geladen
-[   90s] Nachrichten geladen (35 mit Treffern)
-[  174s] SEC-Insiderdaten: 35 von 35
-[  176s] FRED: OK: 3 von 3 Reihen
-[  266s] Finnhub: OK: 35 von 35 Aktien
-[  285s] Alpha Vantage: OK: 13 von 13 Aktien (13 neu abgerufen, Rest aus dem Zwischenspeicher dieses Tages)
-[  293s] Financial Modeling Prep: OK: 35 Gegenproben
-[  293s] Seite geschrieben: docs/index.html (732 KB)
+[   69s] Analystenverlauf geladen
+[   72s] Nachrichten geladen (35 mit Treffern)
+[  181s] SEC-Insiderdaten: 35 von 35
+[  182s] FRED: OK: 3 von 3 Reihen
+[  267s] Finnhub: OK: 35 von 35 Aktien
+[  271s] Alpha Vantage: OK: 13 von 13 Aktien (3 neu abgerufen, Rest aus dem Zwischenspeicher dieses Tages)
+[  277s] Financial Modeling Prep: OK: 35 Gegenproben
+[  277s] Seite geschrieben: docs/index.html (732 KB)
