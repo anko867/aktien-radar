@@ -7,3 +7,4 @@ AAPL      # Apple
 EIN.DE    # Einhell Germany (Yahoo führt kein EIN3.DE; EIN.DE kostet fast dasselbe wie die Wiener Vorzugsaktie EIN.VI)
 BVB.DE    # Borussia Dortmund
 SHA0.DE   # Schaeffler
+ANTHRO    # Anthropic
