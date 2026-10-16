@@ -1,20 +1,26 @@
 [    0s] Python 3.12.15, pandas 3.0.6, numpy 2.5.4, yfinance 1.7.0
-[    1s] Aktienliste: 602 Aktien
-[   61s] Kurse: 602 Aktien, Datenstand 2026-10-15
-[   62s] Handelbar: 571, Kandidaten fuer Analystendaten: 284
-[   72s] Top: 15 (alle Filter), Beobachtung: 25
+[    0s] Aktienliste: 603 Aktien
+HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"Quote not found for symbol: ANTHRO"}}}
+$ANTHRO: No data found, symbol may be delisted
+
+1 Failed download:
+['ANTHRO']: No data found, symbol may be delisted
+[   64s] Kurse: 602 Aktien, Datenstand 2026-10-15
+[   65s] Handelbar: 572, Kandidaten fuer Analystendaten: 285
+[   75s] Top: 15 (alle Filter), Beobachtung: 25
 HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"No fundamentals data found for symbol: RHM.DE"}}}
-HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"No fundamentals data found for symbol: EVD.DE"}}}
-HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"No fundamentals data found for symbol: KGX.DE"}}}
+HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"No fundamentals data found for symbol: LEG.DE"}}}
+HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"No fundamentals data found for symbol: GBF.DE"}}}
 HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"No fundamentals data found for symbol: IFX.DE"}}}
+HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"No fundamentals data found for symbol: KGX.DE"}}}
 HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"No fundamentals data found for symbol: BVB.DE"}}}
 HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"No fundamentals data found for symbol: EIN.DE"}}}
 HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"No fundamentals data found for symbol: SHA0.DE"}}}
-[   75s] Analystenverlauf geladen
-[   78s] Nachrichten geladen (37 mit Treffern)
-[  162s] SEC-Insiderdaten: 36 von 36
-[  163s] FRED: OK: 3 von 3 Reihen
-[  265s] Finnhub: OK: 36 von 36 Aktien
-[  282s] Alpha Vantage: OK: 12 von 12 Aktien (12 neu abgerufen, Rest aus dem Zwischenspeicher dieses Tages)
-[  289s] Financial Modeling Prep: OK: 36 Gegenproben
-[  289s] Seite geschrieben: docs/index.html (799 KB)
+[   77s] Analystenverlauf geladen
+[   80s] Nachrichten geladen (36 mit Treffern)
+[  144s] SEC-Insiderdaten: 36 von 36
+[  145s] FRED: OK: 3 von 3 Reihen
+[  248s] Finnhub: OK: 36 von 36 Aktien
+[  256s] Alpha Vantage: OK: 13 von 13 Aktien (4 neu abgerufen, Rest aus dem Zwischenspeicher dieses Tages)
+[  267s] Financial Modeling Prep: OK: 36 Gegenproben
+[  267s] Seite geschrieben: docs/index.html (795 KB)
