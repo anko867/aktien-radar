@@ -3,8 +3,8 @@
 # Beispiele: AAPL (Apple), SAP.DE (SAP an der Börse Xetra), ASML.AS (ASML in Amsterdam)
 # Alles hinter einem # ist nur ein Kommentar. Zeilen mit # am Anfang werden ignoriert.
 
-AAPL      # Apple
-EIN.DE    # Einhell Germany (Yahoo führt kein EIN3.DE; EIN.DE kostet fast dasselbe wie die Wiener Vorzugsaktie EIN.VI)
-BVB.DE    # Borussia Dortmund
-SHA0.DE   # Schaeffler
-ANTHRO    # Anthropic
+AAPL          # Apple
+EIN.DE        # Einhell Germany (Yahoo führt kein EIN3.DE; EIN.DE kostet fast dasselbe wie die Wiener Vorzugsaktie EIN.VI)
+BVB.DE        # Borussia Dortmund
+SHA0.DE       # Schaeffler
+NETANTHRO000  # Anthropic
