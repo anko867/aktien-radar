@@ -84,10 +84,24 @@ def clean(prices):
     return out
 
 
-def trim_to_asof(prices):
-    """Schneidet auf den letzten abgeschlossenen Handelstag. Aktien, fuer die Yahoo an diesem Tag keinen Kurs liefert
-    (Feiertag oder Datenluecke), werden in prices["_stale"] mit dem Datum ihres letzten echten Kurses vermerkt."""
-    asof = last_complete_date(prices["Close"].index)
+def trim_to_asof(prices, min_coverage=0.5):
+    """Schneidet auf den letzten Handelstag, fuer den Yahoo wirklich Kurse hat.
+    Nach Boersenschluss liefert Yahoo fuer den neuesten Tag zunaechst nur das Volumen, die Kurse (Open/High/Low/Close)
+    sind leer, bis die Tagesdaten abgeschlossen sind (mehrere Stunden). Darum zaehlt nicht nur die Uhrzeit:
+    Der Datenstand ist der letzte Tag, fuer den mindestens `min_coverage` der Aktien einen Schlusskurs haben.
+    Aktien, die an diesem Tag allein keinen Kurs haben (z. B. deutsche Werte, die Yahoo spaeter abschliesst), werden in
+    prices["_stale"] mit dem Datum ihres letzten echten Kurses vermerkt."""
+    clock_asof = last_complete_date(prices["Close"].index)
+    c_all = prices["Close"].loc[:clock_asof]
+    recent = c_all.iloc[-8:]
+    active = recent.columns[recent.notna().any()]
+    cov = recent[active].notna().mean(axis=1)
+    good = cov[cov >= min_coverage]
+    asof = good.index[-1] if len(good) else clock_asof
+    note = None
+    if asof < clock_asof:
+        note = (f"Für den {clock_asof:%d.%m.%Y} hatte Yahoo nur bei {cov.loc[clock_asof] * 100:.0f} % der Aktien Kurse "
+                f"(Feiertag oder Tagesdaten noch nicht abgeschlossen). Datenstand ist deshalb der {asof:%d.%m.%Y}.")
     trimmed = {k: v.loc[:asof] for k, v in prices.items()}
     stale = {}
     for tk in trimmed["Close"].columns:
@@ -96,6 +110,7 @@ def trim_to_asof(prices):
             stale[tk] = str(lv.date())
     out = clean(trimmed)
     out["_stale"] = stale
+    out["_asof_note"] = note
     return out, asof
 
 

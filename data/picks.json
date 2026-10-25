@@ -866,7 +866,7 @@
  {
   "ticker": "TYL",
   "name": "Tyler Technologies",
-  "signal_date": "2026-10-13",
+  "signal_date": "2026-10-12",
   "score": 56.0,
   "price_at_signal": 339.94,
   "entry_date": "2026-10-14",
@@ -884,7 +884,7 @@
  {
   "ticker": "AZO",
   "name": "AutoZone",
-  "signal_date": "2026-10-13",
+  "signal_date": "2026-10-12",
   "score": 50.0,
   "price_at_signal": 2898.8501,
   "entry_date": "2026-10-14",
@@ -902,7 +902,7 @@
  {
   "ticker": "SYK",
   "name": "Stryker Corporation",
-  "signal_date": "2026-10-13",
+  "signal_date": "2026-10-12",
   "score": 47.4,
   "price_at_signal": 282.6,
   "entry_date": "2026-10-14",
@@ -992,7 +992,7 @@
  {
   "ticker": "SNDK",
   "name": "Sandisk",
-  "signal_date": "2026-10-19",
+  "signal_date": "2026-10-16",
   "score": 77.8,
   "price_at_signal": 1299.3,
   "entry_date": "2026-10-20",
@@ -1010,7 +1010,7 @@
  {
   "ticker": "WY",
   "name": "Weyerhaeuser",
-  "signal_date": "2026-10-19",
+  "signal_date": "2026-10-16",
   "score": 56.0,
   "price_at_signal": 19.61,
   "entry_date": "2026-10-20",
@@ -1028,7 +1028,7 @@
  {
   "ticker": "TPR",
   "name": "Tapestry, Inc.",
-  "signal_date": "2026-10-19",
+  "signal_date": "2026-10-16",
   "score": 54.5,
   "price_at_signal": 120.18,
   "entry_date": "2026-10-20",
@@ -1046,7 +1046,7 @@
  {
   "ticker": "BA",
   "name": "Boeing",
-  "signal_date": "2026-10-21",
+  "signal_date": "2026-10-20",
   "score": 54.1,
   "price_at_signal": 190.47,
   "entry_date": "2026-10-22",
@@ -1064,7 +1064,7 @@
  {
   "ticker": "KLAC",
   "name": "KLA Corporation",
-  "signal_date": "2026-10-22",
+  "signal_date": "2026-10-21",
   "score": 67.4,
   "price_at_signal": 163.43,
   "entry_date": "2026-10-23",
@@ -1082,7 +1082,7 @@
  {
   "ticker": "ECHO",
   "name": "EchoStar",
-  "signal_date": "2026-10-22",
+  "signal_date": "2026-10-21",
   "score": 67.1,
   "price_at_signal": 92.64,
   "entry_date": "2026-10-23",
@@ -1100,7 +1100,7 @@
  {
   "ticker": "NDX1.DE",
   "name": "Nordex",
-  "signal_date": "2026-10-22",
+  "signal_date": "2026-10-21",
   "score": 52.7,
   "price_at_signal": 38.24,
   "entry_date": "2026-10-23",
@@ -1118,7 +1118,7 @@
  {
   "ticker": "STX",
   "name": "Seagate Technology",
-  "signal_date": "2026-10-23",
+  "signal_date": "2026-10-22",
   "score": 84.6,
   "price_at_signal": 642.14,
   "entry_date": null,
@@ -1136,7 +1136,7 @@
  {
   "ticker": "AXON",
   "name": "Axon Enterprise",
-  "signal_date": "2026-10-23",
+  "signal_date": "2026-10-22",
   "score": 83.2,
   "price_at_signal": 414.6,
   "entry_date": null,
@@ -1154,7 +1154,7 @@
  {
   "ticker": "UAL",
   "name": "United Airlines Holdings",
-  "signal_date": "2026-10-23",
+  "signal_date": "2026-10-22",
   "score": 63.5,
   "price_at_signal": 102.0,
   "entry_date": null,

@@ -2,17 +2,16 @@ name: Tägliches Aktien-Radar
 
 on:
   schedule:
-    # GitHub startet geplante Läufe für dieses Repository stark verspätet (Oktober 2026: frühester Start jeweils
-    # erst gegen 09:16 bis 11:27 UTC, egal wie früh angesetzt). Darum Versuche am Vorabend/nachts, wenn weniger
-    # los ist, plus morgens als Reserve. Alle Zeiten UTC, ungerade Minuten. Der Vorab-Check (tools/guard.py)
-    # überspringt jeden Versuch, wenn die Daten schon aktuell sind.
-    # Mo-Fr 22:47 (= 00:47 Uhr Sommerzeit / 23:47 Winterzeit, US-Schlusskurse sind dann endgültig)
-    - cron: "47 22 * * 1-5"
-    # Di-Sa 00:23, 03:23, 04:47, 05:43
-    - cron: "23 0 * * 2-6"
-    - cron: "23 3 * * 2-6"
-    - cron: "47 4 * * 2-6"
+    # Yahoo schliesst die Tagesdaten der US-Boersen erst ca. 6 Stunden nach Handelsschluss ab (ab ca. 02:00 UTC).
+    # Frueher gestartete Laeufe (22:47/00:23 UTC im Oktober 2026) bekamen leere Kurse. GitHub startet geplante Laeufe
+    # zudem mit Verspaetung. Darum mehrere Versuche zwischen 02:23 und 07:17 UTC (ungerade Minuten); der Vorab-Check
+    # (tools/guard.py) ueberspringt alle weiteren, sobald die Daten des letzten Handelstags vorliegen.
+    # = 04:23 bis 09:17 Uhr Sommerzeit (eine Stunde frueher im Winter), Dienstag bis Samstag.
+    - cron: "23 2 * * 2-6"
+    - cron: "47 3 * * 2-6"
+    - cron: "43 4 * * 2-6"
     - cron: "43 5 * * 2-6"
+    - cron: "17 7 * * 2-6"
   workflow_dispatch: {}
   push:
     # Testlauf nach Aenderungen am Programm (Ergebnis-Dateien in data/ und docs/ loesen keinen Lauf aus)

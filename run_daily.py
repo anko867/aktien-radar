@@ -38,6 +38,12 @@ log(f"Aktienliste: {len(uni)} Aktien")
 # 2. Kurse
 prices = data.download_prices(list(uni), "6y", use_cache=use_cache)
 prices, asof = data.trim_to_asof(prices)
+if prices.get("_asof_note"):
+    notes.append(prices["_asof_note"])
+    print(prices["_asof_note"], flush=True)
+n_stale = len(prices.get("_stale", {}))
+if n_stale:
+    notes.append(f"{n_stale} Aktien haben für den Datenstand-Tag bei Yahoo noch keinen Kurs; ihre Karten zeigen den letzten echten Kurs mit Hinweis.")
 missing = [t for t in uni if t not in prices["Close"].columns]
 if missing:
     notes.append(f"Ohne Kursdaten bei Yahoo ({len(missing)}): " + ", ".join(missing))
