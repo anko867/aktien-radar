@@ -2720,8 +2720,8 @@
   ],
   "region": "US"
  },
- "PWR": {
-  "name": "Quanta Services",
+ "Q": {
+  "name": "Qnity Electronics",
   "indices": [
    "S&P 500"
   ],
@@ -2735,15 +2735,15 @@
   ],
   "region": "US"
  },
- "DGX": {
-  "name": "Quest Diagnostics",
+ "PWR": {
+  "name": "Quanta Services",
   "indices": [
    "S&P 500"
   ],
   "region": "US"
  },
- "Q": {
-  "name": "Qnity Electronics",
+ "DGX": {
+  "name": "Quest Diagnostics",
   "indices": [
    "S&P 500"
   ],
@@ -2765,13 +2765,6 @@
  },
  "RDDT": {
   "name": "Reddit",
-  "indices": [
-   "S&P 500"
-  ],
-  "region": "US"
- },
- "RTX": {
-  "name": "RTX Corporation",
   "indices": [
    "S&P 500"
   ],
@@ -2871,6 +2864,13 @@
   ],
   "region": "US"
  },
+ "RTX": {
+  "name": "RTX Corporation",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
  "SPGI": {
   "name": "S&P Global",
   "indices": [
@@ -2944,7 +2944,7 @@
   "region": "US"
  },
  "SKYD": {
-  "name": "Skydance Corporation",
+  "name": "Skydance",
   "indices": [
    "S&P 500"
   ],

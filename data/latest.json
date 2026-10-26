@@ -1,5 +1,5 @@
 {
- "run_utc_date": "2026-10-25",
+ "run_utc_date": "2026-10-26",
  "asof": "2026-10-23",
  "top": [
   "AXON",
@@ -16,7 +16,7 @@
   "EVD.DE",
   "IP",
   "LOW",
-  "XYL"
+  "LHX"
  ],
  "watch": [
   "WDC",
@@ -50,14 +50,14 @@
   "data": 602,
   "liquid": 571,
   "dd": 149,
-  "pass": 17
+  "pass": 18
  },
  "notes": [
   "S&P 500: 503 Aktien von Wikipedia gelesen",
   "Nasdaq-100: 101 Aktien von Wikipedia gelesen",
   "DAX: 40 Aktien von Wikipedia gelesen",
   "MDAX: 44 Aktien von Wikipedia gelesen",
-  "Ohne Kursdaten bei Yahoo (1): NETANTHRO000",
-  "Eigene Liste: keine Kursdaten gefunden für NETANTHRO000 (Kürzel bei Yahoo Finance prüfen)"
+  "Ohne Kursdaten bei Yahoo (1): ANT",
+  "Eigene Liste: keine Kursdaten gefunden für ANT (Kürzel bei Yahoo Finance prüfen)"
  ]
 }
