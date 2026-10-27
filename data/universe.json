@@ -2692,15 +2692,15 @@
   ],
   "region": "US"
  },
- "PEG": {
-  "name": "Public Service Enterprise Group",
+ "PTC": {
+  "name": "PTC Inc.",
   "indices": [
    "S&P 500"
   ],
   "region": "US"
  },
- "PTC": {
-  "name": "PTC Inc.",
+ "PEG": {
+  "name": "Public Service Enterprise Group",
   "indices": [
    "S&P 500"
   ],
