@@ -1,22 +1,23 @@
 {
  "run_utc_date": "2026-10-31",
+ "run_utc": "2026-10-31T21:43:15Z",
+ "stale_count": 0,
  "asof": "2026-10-30",
  "top": [
-  "AIXA.DE",
   "VRT",
   "AXON",
   "RHM.DE",
-  "KGX.DE",
   "ECHO",
-  "ENR.DE",
   "MCHP",
   "LVS",
   "TMUS",
-  "CRH",
   "HEI.DE",
+  "CRH",
   "TPR",
   "KKR",
-  "NDX1.DE"
+  "NDX1.DE",
+  "TUI1.DE",
+  "XYL"
  ],
  "watch": [
   "WDC",
@@ -33,12 +34,12 @@
   "NRG",
   "MSTR",
   "WYNN",
+  "IFX.DE",
   "ALAB",
   "NBIS",
   "MRVL",
-  "IFX.DE",
+  "AIXA.DE",
   "MU",
-  "RDDT",
   "FSLR",
   "ALNY",
   "GLW",
@@ -47,18 +48,17 @@
  ],
  "counts": {
   "universe": 603,
-  "data": 601,
-  "liquid": 570,
-  "dd": 152,
-  "pass": 17
+  "data": 602,
+  "liquid": 571,
+  "dd": 151,
+  "pass": 14
  },
  "notes": [
   "S&P 500: 503 Aktien von Wikipedia gelesen",
   "Nasdaq-100: 101 Aktien von Wikipedia gelesen",
   "DAX: 40 Aktien von Wikipedia gelesen",
   "MDAX: 44 Aktien von Wikipedia gelesen",
-  "84 Aktien haben für den Datenstand-Tag bei Yahoo noch keinen Kurs; ihre Karten zeigen den letzten echten Kurs mit Hinweis.",
-  "Ohne Kursdaten bei Yahoo (2): AMGN, ANT",
+  "Ohne Kursdaten bei Yahoo (1): ANT",
   "Eigene Liste: keine Kursdaten gefunden für ANT (Kürzel bei Yahoo Finance prüfen)"
  ]
 }
