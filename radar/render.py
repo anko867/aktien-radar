@@ -148,6 +148,11 @@ def card(rank, tk, r, uni, info, det, news, ins, hist, real, prices, usd_eur, ki
     eur = f' <small class="muted">≈ {de(price * usd_eur["rate"], 2)} €</small>' if sym == "$" and usd_eur else ""
     chg = float(r["day_chg"])
     cls = {"realistisch": "good", "möglich": "mid", "unwahrscheinlich": "bad"}[real["label"]]
+    if pd.notna(r.get("stale_date")):
+        d_ = str(r["stale_date"])
+        chg_html = f'<em class="muted">Kurs vom {d_[8:10]}.{d_[5:7]}.</em>'
+    else:
+        chg_html = f'<em class="{"up" if chg >= 0 else "dn"}">{pc(chg)}</em>'
     fails = ""
     if kind == "fest":
         fails = f'<span class="warn">{esc(note or "")}</span>'
@@ -157,7 +162,7 @@ def card(rank, tk, r, uni, info, det, news, ins, hist, real, prices, usd_eur, ki
     up = pc(r["upside"], 0)
     head = (f'<summary><span class="rk">{rank}</span>'
             f'<span class="nm"><b>{esc(tk)}</b> {esc(name)}<small>{esc(SECTOR_DE.get(i.get("sector"), i.get("sector") or ""))} · {esc(", ".join(uni[tk]["indices"]))}</small></span>'
-            f'<span class="px">{money(price, sym)}{eur}<em class="{"up" if chg >= 0 else "dn"}">{pc(chg)}</em></span>'
+            f'<span class="px">{money(price, sym)}{eur}{chg_html}</span>'
             f'<span class="sc"><b>{r["score"]:.0f}</b><small>Punkte</small></span>'
             f'<span class="badge {cls}">{real["label"]}</span>'
             f'<span class="sub">Kursziel {up} · {pc(-r["dd"], 0)} vom Hoch{" · " + fails if fails else ""}</span></summary>')

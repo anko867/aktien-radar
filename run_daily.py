@@ -147,5 +147,7 @@ log(f"Seite geschrieben: docs/index.html ({len(html) / 1024:.0f} KB)")
 
 import datetime as _dt  # noqa: E402
 
-latest = {"run_utc_date": _dt.datetime.now(_dt.timezone.utc).strftime("%Y-%m-%d"), "asof": str(asof.date()), "top": list(top.index), "watch": list(watch.index), "counts": counts, "notes": notes}
+_now = _dt.datetime.now(_dt.timezone.utc)
+latest = {"run_utc_date": _now.strftime("%Y-%m-%d"), "run_utc": _now.strftime("%Y-%m-%dT%H:%M:%SZ"),
+          "stale_count": n_stale, "asof": str(asof.date()), "top": list(top.index), "watch": list(watch.index), "counts": counts, "notes": notes}
 (DATA / "latest.json").write_text(json.dumps(latest, ensure_ascii=False, indent=1), encoding="utf-8")

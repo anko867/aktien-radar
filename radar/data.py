@@ -48,6 +48,27 @@ def download_prices(tickers, period="6y", chunk=50, use_cache=False):
         time.sleep(1)
     if not frames:
         raise RuntimeError("Yahoo liefert keine Kursdaten (vermutlich gesperrt oder gedrosselt).")
+    # Sporadische Fehler wie "database is locked" (yfinance, parallele Abrufe) betreffen einzelne Aktien: nachladen
+    have = {c[1] for fr in frames for c in fr.columns if fr[c[0]][c[1]].notna().any()}
+    missing = [t for t in tickers if t not in have]
+    for attempt in range(2):
+        if not missing:
+            break
+        time.sleep(3)
+        for i in range(0, len(missing), 10):
+            part = missing[i:i + 10]
+            try:
+                df = yf.download(part, period=period, interval="1d", auto_adjust=True, group_by="column",
+                                 threads=False, progress=False)
+            except Exception:  # noqa: BLE001
+                continue
+            if df is None or df.empty:
+                continue
+            if not isinstance(df.columns, pd.MultiIndex):
+                df.columns = pd.MultiIndex.from_product([df.columns, part[:1]])
+            frames.append(df)
+        have = {c[1] for fr in frames for c in fr.columns if fr[c[0]][c[1]].notna().any()}
+        missing = [t for t in tickers if t not in have]
     if failed:
         print(f"WARNUNG: {failed} Kurspakete fehlgeschlagen, die Aktien darin fehlen heute.", flush=True)
     wide = pd.concat(frames, axis=1, sort=True)
