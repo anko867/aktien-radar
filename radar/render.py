@@ -421,11 +421,13 @@ details.inner{margin-top:8px}details.inner>summary{cursor:pointer;font-size:.85r
 .t{border-bottom:1px dotted var(--mut);cursor:help;position:relative}.t.open::after,.t:hover::after{content:attr(data-tip);position:absolute;left:0;top:1.5em;z-index:20;width:min(280px,80vw);background:var(--ink);color:var(--bg);padding:8px 10px;border-radius:8px;font-size:.78rem;line-height:1.4;font-weight:400;box-shadow:0 4px 14px rgba(0,0,0,.25)}
 .stale{background:var(--badbg);color:var(--bad);padding:9px 12px;border-radius:8px;margin:10px 0;font-weight:600}
 .card.fest{border-left:4px solid var(--acc)}
+#totop{position:fixed;right:16px;bottom:18px;width:46px;height:46px;border-radius:50%;background:var(--acc);color:var(--bg);font-size:24px;line-height:46px;text-align:center;text-decoration:none;box-shadow:0 2px 10px rgba(0,0,0,.3);opacity:0;pointer-events:none;transition:opacity .2s;z-index:30}
+#totop.show{opacity:.92;pointer-events:auto}
 .lead{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--acc);padding:10px 14px;border-radius:8px}
 @media (max-width:520px){.card>summary{grid-template-columns:24px 1fr auto}.tbl{font-size:.82rem}}
 """
 
-JS = """(function(){var a=document.body.getAttribute('data-built'),b=document.getElementById('stale');if(a&&b&&(Date.now()-Date.parse(a))/864e5>4){b.hidden=false}})();document.addEventListener('click',function(e){var t=e.target.closest('.t');document.querySelectorAll('.t.open').forEach(function(x){if(x!==t)x.classList.remove('open')});if(t){t.classList.toggle('open')}});"""
+JS = """(function(){var a=document.body.getAttribute('data-built'),b=document.getElementById('stale');if(a&&b&&(Date.now()-Date.parse(a))/864e5>4){b.hidden=false}})();(function(){var b=document.getElementById('totop');if(!b)return;function f(){b.classList.toggle('show',window.scrollY>500)}window.addEventListener('scroll',f,{passive:true});f();b.addEventListener('click',function(e){e.preventDefault();window.scrollTo({top:0,behavior:'smooth'})})})();document.addEventListener('click',function(e){var t=e.target.closest('.t');document.querySelectorAll('.t.open').forEach(function(x){if(x!==t)x.classList.remove('open')});if(t){t.classList.toggle('open')}});"""
 
 
 def build_page(ctx):
@@ -483,5 +485,5 @@ def build_page(ctx):
            f'<div id="stale" class="stale" hidden>Achtung: Diese Seite wurde seit mehr als 4 Tagen nicht aktualisiert. Der tägliche Lauf hat vermutlich nicht funktioniert.</div>{nav}'
            f'{section_market(ctx["market"])}{section_changes(ctx["diff"], ctx["names"])}{tops}{watchs}'
            f'{section_bilanz(ctx["picks"], ctx["picks_summary"])}{section_backtest(ctx["market"]["backtest"])}{section_sources(ctx["source_status"], ctx["notes"])}'
-           f'</main><script>{JS}</script></body></html>')
+           f'</main><a id="totop" href="#" aria-label="Nach oben springen" title="Nach oben">↑</a><script>{JS}</script></body></html>')
     return doc
