@@ -1924,13 +1924,6 @@
   ],
   "region": "US"
  },
- "KVUE": {
-  "name": "Kenvue",
-  "indices": [
-   "S&P 500"
-  ],
-  "region": "US"
- },
  "KDP": {
   "name": "Keurig Dr Pepper",
   "indices": [
@@ -2484,6 +2477,13 @@
  },
  "OXY": {
   "name": "Occidental Petroleum",
+  "indices": [
+   "S&P 500"
+  ],
+  "region": "US"
+ },
+ "OKTA": {
+  "name": "Okta, Inc.",
   "indices": [
    "S&P 500"
   ],
