@@ -1,5 +1,5 @@
 [    0s] Python 3.12.16, pandas 3.1.1, numpy 2.5.4, yfinance 1.8.0
-[    1s] Aktienliste: 603 Aktien
+[    0s] Aktienliste: 603 Aktien
 HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"Quote not found for symbol: ANT"}}}
 $ANT: No data found, symbol may be delisted
 
@@ -14,21 +14,20 @@ $ANT: No data found, symbol may be delisted
 
 1 Failed download:
 ['ANT']: No data found, symbol may be delisted
-[   75s] Kurse: 602 Aktien, Datenstand 2026-11-10
-[   76s] Handelbar: 572, Kandidaten fuer Analystendaten: 232
-[   89s] Top: 15 (alle Filter), Beobachtung: 25
-HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"No fundamentals data found for symbol: RHM.DE"}}}
-HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"No fundamentals data found for symbol: AIXA.DE"}}}
-HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"No fundamentals data found for symbol: KGX.DE"}}}
+[   58s] Kurse: 602 Aktien, Datenstand 2026-11-11
+[   59s] Handelbar: 572, Kandidaten fuer Analystendaten: 231
+[   65s] Top: 15 (alle Filter), Beobachtung: 25
 HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"No fundamentals data found for symbol: IFX.DE"}}}
+HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"No fundamentals data found for symbol: AIXA.DE"}}}
+HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"No fundamentals data found for symbol: ENR.DE"}}}
+HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"No fundamentals data found for symbol: EIN.DE"}}}
 HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"No fundamentals data found for symbol: BVB.DE"}}}
 HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"No fundamentals data found for symbol: SHA0.DE"}}}
-HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"No fundamentals data found for symbol: EIN.DE"}}}
-[   92s] Analystenverlauf geladen
-[   94s] Nachrichten geladen (38 mit Treffern)
-[  168s] SEC-Insiderdaten: 37 von 37
-[  169s] FRED: OK: 3 von 3 Reihen
-[  259s] Finnhub: OK: 37 von 37 Aktien
-[  276s] Alpha Vantage: OK: 12 von 12 Aktien (12 neu abgerufen, Rest aus dem Zwischenspeicher dieses Tages)
-[  282s] Financial Modeling Prep: OK: 37 Gegenproben
-[  282s] Seite geschrieben: docs/index.html (806 KB)
+[   67s] Analystenverlauf geladen
+[   70s] Nachrichten geladen (40 mit Treffern)
+[  137s] SEC-Insiderdaten: 38 von 38
+[  142s] FRED: OK: 3 von 3 Reihen
+[  230s] Finnhub: OK: 38 von 38 Aktien
+[  249s] Alpha Vantage: OK: 14 von 14 Aktien (14 neu abgerufen, Rest aus dem Zwischenspeicher dieses Tages)
+[  251s] Financial Modeling Prep: OK: 38 Gegenproben
+[  252s] Seite geschrieben: docs/index.html (814 KB)
