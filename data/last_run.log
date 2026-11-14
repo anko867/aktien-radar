@@ -1,5 +1,8 @@
 [    0s] Python 3.12.16, pandas 3.1.1, numpy 2.5.4, yfinance 1.8.0
-[    0s] Aktienliste: 603 Aktien
+[    1s] Aktienliste: 603 Aktien
+
+1 Failed download:
+['ARES']: OperationalError('database is locked')
 $ANT: possibly delisted; no price data found  (period=6y)
 
 1 Failed download:
@@ -12,20 +15,20 @@ $ANT: possibly delisted; no price data found  (period=6y)
 
 1 Failed download:
 ['ANT']: possibly delisted; no price data found  (period=6y)
-[   57s] Kurse: 602 Aktien, Datenstand 2026-11-12
-[   57s] Handelbar: 572, Kandidaten fuer Analystendaten: 246
-[   64s] Top: 15 (alle Filter), Beobachtung: 25
-HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"No fundamentals data found for symbol: IFX.DE"}}}
+[   68s] Kurse: 601 Aktien, Datenstand 2026-11-13
+[   68s] Handelbar: 570, Kandidaten fuer Analystendaten: 237
+[   78s] Top: 15 (alle Filter), Beobachtung: 25
 HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"No fundamentals data found for symbol: AIXA.DE"}}}
-HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"No fundamentals data found for symbol: RHM.DE"}}}
-HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"No fundamentals data found for symbol: EIN.DE"}}}
+HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"No fundamentals data found for symbol: ENR.DE"}}}
+HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"No fundamentals data found for symbol: IFX.DE"}}}
 HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"No fundamentals data found for symbol: SHA0.DE"}}}
 HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"No fundamentals data found for symbol: BVB.DE"}}}
-[   65s] Analystenverlauf geladen
-[   68s] Nachrichten geladen (40 mit Treffern)
-[  154s] SEC-Insiderdaten: 38 von 38
-[  157s] FRED: OK: 3 von 3 Reihen
-[  244s] Finnhub: OK: 38 von 38 Aktien
-[  262s] Alpha Vantage: OK: 13 von 13 Aktien (13 neu abgerufen, Rest aus dem Zwischenspeicher dieses Tages)
-[  264s] Financial Modeling Prep: OK: 38 Gegenproben
-[  264s] Seite geschrieben: docs/index.html (812 KB)
+HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"No fundamentals data found for symbol: EIN.DE"}}}
+[   79s] Analystenverlauf geladen
+[   82s] Nachrichten geladen (39 mit Treffern)
+[  147s] SEC-Insiderdaten: 38 von 38
+[  148s] FRED: OK: 3 von 3 Reihen
+[  241s] Finnhub: OK: 38 von 38 Aktien
+[  259s] Alpha Vantage: OK: 13 von 13 Aktien (13 neu abgerufen, Rest aus dem Zwischenspeicher dieses Tages)
+[  265s] Financial Modeling Prep: OK: 38 Gegenproben
+[  265s] Seite geschrieben: docs/index.html (813 KB)
