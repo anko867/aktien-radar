@@ -1069,15 +1069,15 @@
   "price_at_signal": 163.43,
   "entry_date": "2026-10-22",
   "entry_open": 154.5663,
-  "status": "läuft",
-  "days": 19,
+  "status": "abgeschlossen",
+  "days": 20,
   "hit": false,
   "hit_date": null,
   "days_to_hit": null,
-  "last_gain": -0.06473767454567037,
+  "last_gain": -0.0626673176055359,
   "max_gain": 0.08158913600863094,
   "min_gain": -0.161498726282003,
-  "sp_gain": -0.05371032746670101
+  "sp_gain": -0.05588894447702242
  },
  {
   "ticker": "ECHO",
@@ -1087,15 +1087,15 @@
   "price_at_signal": 92.64,
   "entry_date": "2026-10-22",
   "entry_open": 90.85,
-  "status": "läuft",
-  "days": 19,
+  "status": "abgeschlossen",
+  "days": 20,
   "hit": false,
   "hit_date": null,
   "days_to_hit": null,
-  "last_gain": 0.0914695137871182,
+  "last_gain": 0.06681342649172728,
   "max_gain": 0.14650528796409046,
   "min_gain": -0.055696176594159263,
-  "sp_gain": -0.05371032746670101
+  "sp_gain": -0.05588894447702242
  },
  {
   "ticker": "NDX1.DE",
@@ -1105,15 +1105,15 @@
   "price_at_signal": 38.24,
   "entry_date": "2026-10-22",
   "entry_open": 37.5,
-  "status": "läuft",
-  "days": 19,
+  "status": "abgeschlossen",
+  "days": 20,
   "hit": false,
   "hit_date": null,
   "days_to_hit": null,
-  "last_gain": 0.044800008138020875,
+  "last_gain": 0.042666625976562456,
   "max_gain": 0.14613332112630206,
   "min_gain": -0.030399983723958357,
-  "sp_gain": -0.05371032746670101
+  "sp_gain": -0.05588894447702242
  },
  {
   "ticker": "STX",
@@ -1124,14 +1124,14 @@
   "entry_date": "2026-10-23",
   "entry_open": 633.0,
   "status": "läuft",
-  "days": 18,
+  "days": 19,
   "hit": false,
   "hit_date": null,
   "days_to_hit": null,
-  "last_gain": -0.2031595673041321,
+  "last_gain": -0.18499206253702605,
   "max_gain": 0.10658763144253558,
   "min_gain": -0.2717377721415877,
-  "sp_gain": -0.0421352296841514
+  "sp_gain": -0.04434049572769927
  },
  {
   "ticker": "AXON",
@@ -1142,14 +1142,14 @@
   "entry_date": "2026-10-23",
   "entry_open": 412.58,
   "status": "läuft",
-  "days": 18,
+  "days": 19,
   "hit": false,
   "hit_date": null,
   "days_to_hit": null,
-  "last_gain": -0.2762857965588911,
+  "last_gain": -0.2711958596451727,
   "max_gain": 0.06173348695924186,
   "min_gain": -0.2762857965588911,
-  "sp_gain": -0.0421352296841514
+  "sp_gain": -0.04434049572769927
  },
  {
   "ticker": "UAL",
@@ -1160,14 +1160,14 @@
   "entry_date": "2026-10-23",
   "entry_open": 100.87,
   "status": "läuft",
-  "days": 18,
+  "days": 19,
   "hit": false,
   "hit_date": null,
   "days_to_hit": null,
-  "last_gain": 0.05432730820189002,
+  "last_gain": 0.06701689623048024,
   "max_gain": 0.19520168807251181,
   "min_gain": -0.029146449502856497,
-  "sp_gain": -0.0421352296841514
+  "sp_gain": -0.04434049572769927
  },
  {
   "ticker": "WDC",
@@ -1178,14 +1178,14 @@
   "entry_date": "2026-10-27",
   "entry_open": 359.95,
   "status": "läuft",
-  "days": 16,
+  "days": 17,
   "hit": false,
   "hit_date": null,
   "days_to_hit": null,
-  "last_gain": -0.21286296162339435,
+  "last_gain": -0.19936104273376443,
   "max_gain": 0.10131962768132041,
   "min_gain": -0.2671760249098716,
-  "sp_gain": -0.043799701374345856
+  "sp_gain": -0.04600113534993111
  },
  {
   "ticker": "LRCX",
@@ -1196,14 +1196,14 @@
   "entry_date": "2026-10-27",
   "entry_open": 240.93,
   "status": "läuft",
-  "days": 16,
+  "days": 17,
   "hit": false,
   "hit_date": null,
   "days_to_hit": null,
-  "last_gain": -0.12551359794821748,
+  "last_gain": -0.1214460440639743,
   "max_gain": 0.055866878857130375,
   "min_gain": -0.23131198863453561,
-  "sp_gain": -0.043799701374345856
+  "sp_gain": -0.04600113534993111
  },
  {
   "ticker": "AKAM",
@@ -1214,14 +1214,14 @@
   "entry_date": "2026-10-28",
   "entry_open": 99.21,
   "status": "läuft",
-  "days": 15,
+  "days": 16,
   "hit": false,
   "hit_date": null,
   "days_to_hit": null,
-  "last_gain": -0.14686019382399695,
+  "last_gain": -0.07569803654403884,
   "max_gain": 0.0017135185013010812,
   "min_gain": -0.21540170289071847,
-  "sp_gain": -0.04947431016348436
+  "sp_gain": -0.05166267964138582
  },
  {
   "ticker": "NBIS",
@@ -1232,14 +1232,14 @@
   "entry_date": "2026-10-28",
   "entry_open": 173.49,
   "status": "läuft",
-  "days": 15,
+  "days": 16,
   "hit": false,
   "hit_date": null,
   "days_to_hit": null,
-  "last_gain": -0.38881203351920224,
+  "last_gain": -0.38348034066615355,
   "max_gain": 0.051011531295820145,
   "min_gain": -0.38881203351920224,
-  "sp_gain": -0.04947431016348436
+  "sp_gain": -0.05166267964138582
  },
  {
   "ticker": "COHR",
@@ -1250,14 +1250,14 @@
   "entry_date": "2026-10-29",
   "entry_open": 243.68,
   "status": "läuft",
-  "days": 14,
+  "days": 15,
   "hit": false,
   "hit_date": null,
   "days_to_hit": null,
-  "last_gain": -0.13468480405404892,
+  "last_gain": -0.1265594109686451,
   "max_gain": -0.026510143012328458,
   "min_gain": -0.30334865557590784,
-  "sp_gain": -0.05209855866493074
+  "sp_gain": -0.05428088640678608
  },
  {
   "ticker": "FLEX",
@@ -1268,14 +1268,14 @@
   "entry_date": "2026-10-29",
   "entry_open": 90.95,
   "status": "läuft",
-  "days": 14,
+  "days": 15,
   "hit": false,
   "hit_date": null,
   "days_to_hit": null,
-  "last_gain": -0.19637164606520363,
+  "last_gain": -0.1771303040232034,
   "max_gain": 0.02330954170112265,
   "min_gain": -0.2663001033973833,
-  "sp_gain": -0.05209855866493074
+  "sp_gain": -0.05428088640678608
  },
  {
   "ticker": "ALNY",
@@ -1286,14 +1286,14 @@
   "entry_date": "2026-10-29",
   "entry_open": 185.59,
   "status": "läuft",
-  "days": 14,
+  "days": 15,
   "hit": false,
   "hit_date": null,
   "days_to_hit": null,
-  "last_gain": -0.15674334237783227,
+  "last_gain": -0.1949997475915548,
   "max_gain": -0.062449466924874186,
-  "min_gain": -0.18293010193519166,
-  "sp_gain": -0.05209855866493074
+  "min_gain": -0.1949997475915548,
+  "sp_gain": -0.05428088640678608
  },
  {
   "ticker": "FSLR",
@@ -1304,14 +1304,14 @@
   "entry_date": "2026-10-29",
   "entry_open": 176.0,
   "status": "läuft",
-  "days": 14,
+  "days": 15,
   "hit": false,
   "hit_date": null,
   "days_to_hit": null,
-  "last_gain": -0.13085226579145948,
+  "last_gain": -0.14215911518443713,
   "max_gain": 0.14284090562300245,
-  "min_gain": -0.13085226579145948,
-  "sp_gain": -0.05209855866493074
+  "min_gain": -0.14215911518443713,
+  "sp_gain": -0.05428088640678608
  },
  {
   "ticker": "KGX.DE",
@@ -1322,14 +1322,14 @@
   "entry_date": "2026-10-30",
   "entry_open": 34.06,
   "status": "läuft",
-  "days": 13,
+  "days": 14,
   "hit": false,
   "hit_date": null,
   "days_to_hit": null,
-  "last_gain": -0.05079270324378049,
+  "last_gain": -0.07428069831581008,
   "max_gain": 0.03581906508560939,
-  "min_gain": -0.05079270324378049,
-  "sp_gain": -0.0492022222757702
+  "min_gain": -0.07428069831581008,
+  "sp_gain": -0.051391218174225206
  },
  {
   "ticker": "AIXA.DE",
@@ -1340,14 +1340,14 @@
   "entry_date": "2026-11-02",
   "entry_open": 33.3,
   "status": "läuft",
-  "days": 12,
+  "days": 13,
   "hit": false,
   "hit_date": null,
   "days_to_hit": null,
-  "last_gain": -0.05945944707508366,
+  "last_gain": -0.04264264591074185,
   "max_gain": 0.029729780815279883,
   "min_gain": -0.13123120216234918,
-  "sp_gain": -0.031601297167099474
+  "sp_gain": -0.03383081519736264
  },
  {
   "ticker": "ENR.DE",
@@ -1358,14 +1358,14 @@
   "entry_date": "2026-11-02",
   "entry_open": 128.98,
   "status": "läuft",
-  "days": 12,
+  "days": 13,
   "hit": false,
   "hit_date": null,
   "days_to_hit": null,
-  "last_gain": -0.030857465183566246,
+  "last_gain": -0.017987223928356277,
   "max_gain": 0.02930686078856648,
   "min_gain": -0.11738253908482521,
-  "sp_gain": -0.031601297167099474
+  "sp_gain": -0.03383081519736264
  },
  {
   "ticker": "MCHP",
@@ -1376,14 +1376,14 @@
   "entry_date": "2026-11-02",
   "entry_open": 79.24,
   "status": "läuft",
-  "days": 12,
+  "days": 13,
   "hit": false,
   "hit_date": null,
   "days_to_hit": null,
-  "last_gain": -0.24999997592947143,
+  "last_gain": -0.24697122946001615,
   "max_gain": -0.016910605426748826,
   "min_gain": -0.26362947946519133,
-  "sp_gain": -0.031601297167099474
+  "sp_gain": -0.03383081519736264
  },
  {
   "ticker": "HEI.DE",
@@ -1394,14 +1394,14 @@
   "entry_date": "2026-11-02",
   "entry_open": 150.6,
   "status": "läuft",
-  "days": 12,
+  "days": 13,
   "hit": true,
   "hit_date": "2026-11-10",
   "days_to_hit": 7,
-  "last_gain": 0.17828678457204772,
+  "last_gain": 0.17264275528733242,
   "max_gain": 0.2094952623792241,
   "min_gain": 0.039508610272913414,
-  "sp_gain": -0.031601297167099474
+  "sp_gain": -0.03383081519736264
  },
  {
   "ticker": "VRT",
@@ -1412,14 +1412,14 @@
   "entry_date": "2026-11-02",
   "entry_open": 235.73,
   "status": "läuft",
-  "days": 12,
+  "days": 13,
   "hit": false,
   "hit_date": null,
   "days_to_hit": null,
-  "last_gain": -0.19242354147742602,
+  "last_gain": -0.17498833728261498,
   "max_gain": 0.0010181372651507647,
   "min_gain": -0.25028634908301295,
-  "sp_gain": -0.031601297167099474
+  "sp_gain": -0.03383081519736264
  },
  {
   "ticker": "CRH",
@@ -1430,14 +1430,14 @@
   "entry_date": "2026-11-02",
   "entry_open": 92.1159,
   "status": "läuft",
-  "days": 12,
+  "days": 13,
   "hit": false,
   "hit_date": null,
   "days_to_hit": null,
-  "last_gain": -0.016239279775360327,
+  "last_gain": 0.005038253357943168,
   "max_gain": 0.06810812780690156,
   "min_gain": -0.016239279775360327,
-  "sp_gain": -0.031601297167099474
+  "sp_gain": -0.03383081519736264
  },
  {
   "ticker": "TUI1.DE",
@@ -1448,14 +1448,14 @@
   "entry_date": "2026-11-02",
   "entry_open": 6.99,
   "status": "läuft",
-  "days": 12,
+  "days": 13,
   "hit": false,
   "hit_date": null,
   "days_to_hit": null,
-  "last_gain": 0.05751079261935188,
+  "last_gain": 0.04349075645340106,
   "max_gain": 0.10844068650363892,
   "min_gain": 0.04148790388927237,
-  "sp_gain": -0.031601297167099474
+  "sp_gain": -0.03383081519736264
  },
  {
   "ticker": "XYL",
@@ -1466,14 +1466,14 @@
   "entry_date": "2026-11-02",
   "entry_open": 93.0,
   "status": "läuft",
-  "days": 12,
+  "days": 13,
   "hit": false,
   "hit_date": null,
   "days_to_hit": null,
-  "last_gain": 0.017741951891171004,
+  "last_gain": 0.0236558811638945,
   "max_gain": 0.08655917259954626,
   "min_gain": 0.01107525569136425,
-  "sp_gain": -0.031601297167099474
+  "sp_gain": -0.03383081519736264
  },
  {
   "ticker": "WYNN",
@@ -1484,14 +1484,14 @@
   "entry_date": "2026-11-03",
   "entry_open": 77.3719,
   "status": "läuft",
-  "days": 11,
+  "days": 12,
   "hit": false,
   "hit_date": null,
   "days_to_hit": null,
-  "last_gain": 0.05568009824824882,
+  "last_gain": 0.07532542390317132,
   "max_gain": 0.12500005700654526,
   "min_gain": 0.001030951451388873,
-  "sp_gain": -0.026635653829347072
+  "sp_gain": -0.028876604125391947
  },
  {
   "ticker": "NOW",
@@ -1502,14 +1502,14 @@
   "entry_date": "2026-11-03",
   "entry_open": 105.33,
   "status": "läuft",
-  "days": 11,
+  "days": 12,
   "hit": false,
   "hit_date": null,
   "days_to_hit": null,
-  "last_gain": -0.11801006445545337,
+  "last_gain": -0.13994118709697234,
   "max_gain": 0.03636192693889684,
-  "min_gain": -0.11801006445545337,
-  "sp_gain": -0.026635653829347072
+  "min_gain": -0.13994118709697234,
+  "sp_gain": -0.028876604125391947
  },
  {
   "ticker": "HWM",
@@ -1520,14 +1520,14 @@
   "entry_date": "2026-11-03",
   "entry_open": 216.8488,
   "status": "läuft",
-  "days": 11,
+  "days": 12,
   "hit": false,
   "hit_date": null,
   "days_to_hit": null,
-  "last_gain": -0.007142256081573706,
+  "last_gain": 0.019835025059673494,
   "max_gain": 0.03297785176650847,
   "min_gain": -0.07419362568603827,
-  "sp_gain": -0.026635653829347072
+  "sp_gain": -0.028876604125391947
  },
  {
   "ticker": "GEV",
@@ -1538,14 +1538,14 @@
   "entry_date": "2026-11-03",
   "entry_open": 882.27,
   "status": "läuft",
-  "days": 11,
+  "days": 12,
   "hit": false,
   "hit_date": null,
   "days_to_hit": null,
-  "last_gain": -0.1160189557853305,
+  "last_gain": -0.12473511101124635,
   "max_gain": 0.04072448556607511,
   "min_gain": -0.13453932421969472,
-  "sp_gain": -0.026635653829347072
+  "sp_gain": -0.028876604125391947
  },
  {
   "ticker": "PDD",
@@ -1556,14 +1556,14 @@
   "entry_date": "2026-11-03",
   "entry_open": 82.0,
   "status": "läuft",
-  "days": 11,
+  "days": 12,
   "hit": false,
   "hit_date": null,
   "days_to_hit": null,
-  "last_gain": -0.056219519638433635,
+  "last_gain": -0.05548784209460744,
   "max_gain": 0.023780450588319457,
   "min_gain": -0.056219519638433635,
-  "sp_gain": -0.026635653829347072
+  "sp_gain": -0.028876604125391947
  },
  {
   "ticker": "MRVL",
@@ -1574,14 +1574,14 @@
   "entry_date": "2026-11-04",
   "entry_open": 165.26,
   "status": "läuft",
-  "days": 10,
+  "days": 11,
   "hit": false,
   "hit_date": null,
   "days_to_hit": null,
-  "last_gain": -0.09996363041745426,
+  "last_gain": -0.11932713225333802,
   "max_gain": 0.021420843898039887,
   "min_gain": -0.19187941733694325,
-  "sp_gain": -0.03017473286494654
+  "sp_gain": -0.03240753523545481
  },
  {
   "ticker": "APP",
@@ -1592,14 +1592,14 @@
   "entry_date": "2026-11-04",
   "entry_open": 250.96,
   "status": "läuft",
-  "days": 10,
+  "days": 11,
   "hit": true,
   "hit_date": "2026-11-05",
   "days_to_hit": 2,
-  "last_gain": 0.5896556892280407,
+  "last_gain": 0.5576585639312905,
   "max_gain": 0.6545265783887131,
   "min_gain": 0.08284185818434642,
-  "sp_gain": -0.03017473286494654
+  "sp_gain": -0.03240753523545481
  },
  {
   "ticker": "CRWV",
@@ -1610,14 +1610,14 @@
   "entry_date": "2026-11-04",
   "entry_open": 50.49,
   "status": "läuft",
-  "days": 10,
+  "days": 11,
   "hit": true,
   "hit_date": "2026-11-11",
   "days_to_hit": 6,
-  "last_gain": -0.01188358623236585,
+  "last_gain": -0.05268369496898939,
   "max_gain": 0.2036046432472418,
   "min_gain": -0.1352743435135907,
-  "sp_gain": -0.03017473286494654
+  "sp_gain": -0.03240753523545481
  },
  {
   "ticker": "TER",
@@ -1628,14 +1628,14 @@
   "entry_date": "2026-11-04",
   "entry_open": 264.74,
   "status": "läuft",
-  "days": 10,
+  "days": 11,
   "hit": false,
   "hit_date": null,
   "days_to_hit": null,
-  "last_gain": -0.11543400576368879,
+  "last_gain": -0.11154334293948132,
   "max_gain": 0.003928414985590711,
   "min_gain": -0.19641907780979828,
-  "sp_gain": -0.03017473286494654
+  "sp_gain": -0.03240753523545481
  },
  {
   "ticker": "ALB",
@@ -1646,14 +1646,14 @@
   "entry_date": "2026-11-05",
   "entry_open": 99.56,
   "status": "läuft",
-  "days": 9,
+  "days": 10,
   "hit": false,
   "hit_date": null,
   "days_to_hit": null,
-  "last_gain": -0.11942546887519612,
+  "last_gain": -0.13800721374750102,
   "max_gain": -0.003113675835631713,
-  "min_gain": -0.11942546887519612,
-  "sp_gain": -0.045273446564632946
+  "min_gain": -0.13800721374750102,
+  "sp_gain": -0.04747148757669584
  },
  {
   "ticker": "HOOD",
@@ -1664,14 +1664,14 @@
   "entry_date": "2026-11-05",
   "entry_open": 85.745,
   "status": "läuft",
-  "days": 9,
+  "days": 10,
   "hit": false,
   "hit_date": null,
   "days_to_hit": null,
-  "last_gain": -0.19307247973510266,
+  "last_gain": -0.1933057793073245,
   "max_gain": -0.013586808306141007,
-  "min_gain": -0.19307247973510266,
-  "sp_gain": -0.045273446564632946
+  "min_gain": -0.1933057793073245,
+  "sp_gain": -0.04747148757669584
  },
  {
   "ticker": "MPWR",
@@ -1682,14 +1682,14 @@
   "entry_date": "2026-11-05",
   "entry_open": 1202.84,
   "status": "läuft",
-  "days": 9,
+  "days": 10,
   "hit": true,
   "hit_date": "2026-11-11",
   "days_to_hit": 5,
-  "last_gain": 0.09521634843482096,
+  "last_gain": 0.08984575789820326,
   "max_gain": 0.22933223323504492,
   "min_gain": -0.05936775808798045,
-  "sp_gain": -0.045273446564632946
+  "sp_gain": -0.04747148757669584
  },
  {
   "ticker": "GLW",
@@ -1700,14 +1700,14 @@
   "entry_date": "2026-11-09",
   "entry_open": 107.7569,
   "status": "läuft",
-  "days": 7,
+  "days": 8,
   "hit": false,
   "hit_date": null,
   "days_to_hit": null,
-  "last_gain": 0.00680303612695865,
+  "last_gain": 0.0036478204204364317,
   "max_gain": 0.1152670807325269,
   "min_gain": -0.014726900111916352,
-  "sp_gain": -0.0049248703104467495
+  "sp_gain": -0.007215804753687327
  },
  {
   "ticker": "LITE",
@@ -1718,14 +1718,14 @@
   "entry_date": "2026-11-09",
   "entry_open": 547.925,
   "status": "läuft",
-  "days": 7,
+  "days": 8,
   "hit": false,
   "hit_date": null,
   "days_to_hit": null,
-  "last_gain": 0.02198290492038546,
+  "last_gain": 0.005739872430199133,
   "max_gain": 0.18275313591549613,
   "min_gain": -0.0035132323508780816,
-  "sp_gain": -0.0049248703104467495
+  "sp_gain": -0.007215804753687327
  },
  {
   "ticker": "MU",
@@ -1736,14 +1736,14 @@
   "entry_date": "2026-11-09",
   "entry_open": 703.18,
   "status": "läuft",
-  "days": 7,
+  "days": 8,
   "hit": false,
   "hit_date": null,
   "days_to_hit": null,
-  "last_gain": 0.013140291718503505,
+  "last_gain": 0.0029722501738362883,
   "max_gain": 0.15375863398183864,
-  "min_gain": 0.013140291718503505,
-  "sp_gain": -0.0049248703104467495
+  "min_gain": 0.0029722501738362883,
+  "sp_gain": -0.007215804753687327
  },
  {
   "ticker": "ALAB",
@@ -1754,14 +1754,14 @@
   "entry_date": "2026-11-09",
   "entry_open": 199.04,
   "status": "läuft",
-  "days": 7,
+  "days": 8,
   "hit": false,
   "hit_date": null,
   "days_to_hit": null,
-  "last_gain": 0.06310296041523156,
+  "last_gain": 0.0889771267647097,
   "max_gain": 0.16011862666294085,
   "min_gain": 0.016579597885204134,
-  "sp_gain": -0.0049248703104467495
+  "sp_gain": -0.007215804753687327
  },
  {
   "ticker": "ARM",
@@ -1772,14 +1772,14 @@
   "entry_date": "2026-11-09",
   "entry_open": 176.98,
   "status": "läuft",
-  "days": 7,
+  "days": 8,
   "hit": false,
   "hit_date": null,
   "days_to_hit": null,
-  "last_gain": 0.03621880334982941,
+  "last_gain": 0.032659051411636275,
   "max_gain": 0.14905642174059341,
   "min_gain": -0.010905145905599878,
-  "sp_gain": -0.0049248703104467495
+  "sp_gain": -0.007215804753687327
  },
  {
   "ticker": "DDOG",
@@ -1790,14 +1790,14 @@
   "entry_date": "2026-11-09",
   "entry_open": 178.49,
   "status": "läuft",
-  "days": 7,
+  "days": 8,
   "hit": false,
   "hit_date": null,
   "days_to_hit": null,
-  "last_gain": -0.07457007343692734,
+  "last_gain": -0.06375709861944256,
   "max_gain": 0.03344725775657942,
   "min_gain": -0.07457007343692734,
-  "sp_gain": -0.0049248703104467495
+  "sp_gain": -0.007215804753687327
  },
  {
   "ticker": "RKLB",
@@ -1808,14 +1808,14 @@
   "entry_date": "2026-11-10",
   "entry_open": 54.99,
   "status": "läuft",
-  "days": 6,
+  "days": 7,
   "hit": true,
   "hit_date": "2026-11-11",
   "days_to_hit": 2,
-  "last_gain": 0.0010910630435068125,
+  "last_gain": -0.034915474177816264,
   "max_gain": 0.20294598121065688,
-  "min_gain": 0.0010910630435068125,
-  "sp_gain": -0.027736665175510655
+  "min_gain": -0.034915474177816264,
+  "sp_gain": -0.029975080643038554
  },
  {
   "ticker": "NRG",
@@ -1826,14 +1826,14 @@
   "entry_date": "2026-11-10",
   "entry_open": 94.89,
   "status": "läuft",
-  "days": 6,
+  "days": 7,
   "hit": false,
   "hit_date": null,
   "days_to_hit": null,
-  "last_gain": -0.032985533497215114,
+  "last_gain": -0.012962332547693522,
   "max_gain": 0.03330175658589063,
   "min_gain": -0.032985533497215114,
-  "sp_gain": -0.027736665175510655
+  "sp_gain": -0.029975080643038554
  },
  {
   "ticker": "AMAT",
@@ -1844,14 +1844,14 @@
   "entry_date": "2026-11-11",
   "entry_open": 392.98,
   "status": "läuft",
-  "days": 5,
+  "days": 6,
   "hit": false,
   "hit_date": null,
   "days_to_hit": null,
-  "last_gain": -0.11132881769277081,
+  "last_gain": -0.10351677453328445,
   "max_gain": 0.005343721123796774,
   "min_gain": -0.11132881769277081,
-  "sp_gain": -0.02398644667729022
+  "sp_gain": -0.026233496171004567
  },
  {
   "ticker": "AVGO",
@@ -1862,14 +1862,14 @@
   "entry_date": "2026-11-11",
   "entry_open": 350.0,
   "status": "läuft",
-  "days": 5,
+  "days": 6,
   "hit": false,
   "hit_date": null,
   "days_to_hit": null,
-  "last_gain": -0.023999982561383915,
+  "last_gain": 0.011571393694196352,
   "max_gain": 0.04102852957589276,
   "min_gain": -0.04742858886718748,
-  "sp_gain": -0.02398644667729022
+  "sp_gain": -0.026233496171004567
  },
  {
   "ticker": "Q",
@@ -1880,14 +1880,14 @@
   "entry_date": "2026-11-11",
   "entry_open": 129.37,
   "status": "läuft",
-  "days": 5,
+  "days": 6,
   "hit": false,
   "hit_date": null,
   "days_to_hit": null,
-  "last_gain": -0.1150189210406879,
+  "last_gain": -0.10473831594481597,
   "max_gain": -0.02164331396802599,
   "min_gain": -0.1150189210406879,
-  "sp_gain": -0.02398644667729022
+  "sp_gain": -0.026233496171004567
  },
  {
   "ticker": "HPE",
@@ -1898,14 +1898,14 @@
   "entry_date": "2026-11-11",
   "entry_open": 50.9,
   "status": "läuft",
-  "days": 5,
+  "days": 6,
   "hit": false,
   "hit_date": null,
   "days_to_hit": null,
-  "last_gain": -0.09449904182901614,
+  "last_gain": -0.10058944190755847,
   "max_gain": -0.012770167119708797,
-  "min_gain": -0.09449904182901614,
-  "sp_gain": -0.02398644667729022
+  "min_gain": -0.10058944190755847,
+  "sp_gain": -0.026233496171004567
  },
  {
   "ticker": "CEG",
@@ -1916,14 +1916,14 @@
   "entry_date": "2026-11-11",
   "entry_open": 272.4841,
   "status": "läuft",
-  "days": 5,
+  "days": 6,
   "hit": false,
   "hit_date": null,
   "days_to_hit": null,
-  "last_gain": -0.016199494023256822,
+  "last_gain": -0.03576033024732195,
   "max_gain": 0.034811288146755714,
-  "min_gain": -0.016199494023256822,
-  "sp_gain": -0.02398644667729022
+  "min_gain": -0.03576033024732195,
+  "sp_gain": -0.026233496171004567
  },
  {
   "ticker": "IFX.DE",
@@ -1934,14 +1934,14 @@
   "entry_date": "2026-11-12",
   "entry_open": 50.0,
   "status": "läuft",
-  "days": 4,
+  "days": 5,
   "hit": false,
   "hit_date": null,
   "days_to_hit": null,
-  "last_gain": -0.026299972534179705,
+  "last_gain": -0.0158999633789062,
   "max_gain": 0.04220001220703118,
   "min_gain": -0.026299972534179705,
-  "sp_gain": -0.03659747931524837
+  "sp_gain": -0.03881549477105628
  },
  {
   "ticker": "ORCL",
@@ -1952,14 +1952,14 @@
   "entry_date": "2026-11-12",
   "entry_open": 123.33,
   "status": "läuft",
-  "days": 4,
+  "days": 5,
   "hit": false,
   "hit_date": null,
   "days_to_hit": null,
-  "last_gain": -0.06754237985389522,
+  "last_gain": -0.07654262791901822,
   "max_gain": 0.03064946665998569,
-  "min_gain": -0.06754237985389522,
-  "sp_gain": -0.03659747931524837
+  "min_gain": -0.07654262791901822,
+  "sp_gain": -0.03881549477105628
  },
  {
   "ticker": "GNRC",
@@ -1970,14 +1970,14 @@
   "entry_date": "2026-11-13",
   "entry_open": 193.81,
   "status": "läuft",
-  "days": 3,
+  "days": 4,
   "hit": false,
   "hit_date": null,
   "days_to_hit": null,
-  "last_gain": -0.03513749365037222,
-  "max_gain": -0.015685430702375158,
+  "last_gain": 0.0600588181016275,
+  "max_gain": 0.0600588181016275,
   "min_gain": -0.042257894559490916,
-  "sp_gain": -0.03317397929866006
+  "sp_gain": -0.03539987658556831
  },
  {
   "ticker": "CHRW",
@@ -1988,14 +1988,14 @@
   "entry_date": "2026-11-13",
   "entry_open": 134.77,
   "status": "läuft",
-  "days": 3,
+  "days": 4,
   "hit": false,
   "hit_date": null,
   "days_to_hit": null,
-  "last_gain": 0.023595700637898176,
+  "last_gain": 0.02003410894596147,
   "max_gain": 0.023595700637898176,
   "min_gain": -0.0023001969931457644,
-  "sp_gain": -0.03317397929866006
+  "sp_gain": -0.03539987658556831
  },
  {
   "ticker": "VST",
@@ -2006,14 +2006,14 @@
   "entry_date": "2026-11-13",
   "entry_open": 134.735,
   "status": "läuft",
-  "days": 3,
+  "days": 4,
   "hit": false,
   "hit_date": null,
   "days_to_hit": null,
-  "last_gain": -0.05629568449261513,
+  "last_gain": -0.0679481852363869,
   "max_gain": -0.012802954656928933,
-  "min_gain": -0.05629568449261513,
-  "sp_gain": -0.03317397929866006
+  "min_gain": -0.0679481852363869,
+  "sp_gain": -0.03539987658556831
  },
  {
   "ticker": "BKR",
@@ -2024,14 +2024,14 @@
   "entry_date": "2026-11-16",
   "entry_open": 48.44,
   "status": "läuft",
-  "days": 2,
+  "days": 3,
   "hit": false,
   "hit_date": null,
   "days_to_hit": null,
-  "last_gain": -0.020231204996277063,
+  "last_gain": -0.0235342572660574,
   "max_gain": -0.01032204818693594,
-  "min_gain": -0.020231204996277063,
-  "sp_gain": -0.029244880959299557
+  "min_gain": -0.0235342572660574,
+  "sp_gain": -0.03147982410259387
  },
  {
   "ticker": "BKNG",
@@ -2042,14 +2042,14 @@
   "entry_date": "2026-11-16",
   "entry_open": 160.85,
   "status": "läuft",
-  "days": 2,
+  "days": 3,
   "hit": false,
   "hit_date": null,
   "days_to_hit": null,
-  "last_gain": -0.03972644791530888,
+  "last_gain": -0.04706252432062108,
   "max_gain": -0.020640392901708382,
-  "min_gain": -0.03972644791530888,
-  "sp_gain": -0.029244880959299557
+  "min_gain": -0.04706252432062108,
+  "sp_gain": -0.03147982410259387
  },
  {
   "ticker": "RHM.DE",
@@ -2060,14 +2060,14 @@
   "entry_date": "2026-11-17",
   "entry_open": 765.0,
   "status": "läuft",
-  "days": 1,
+  "days": 2,
   "hit": false,
   "hit_date": null,
   "days_to_hit": null,
-  "last_gain": -0.005359445210375791,
+  "last_gain": -0.027189526526756547,
   "max_gain": -0.005359445210375791,
-  "min_gain": -0.005359445210375791,
-  "sp_gain": -0.010255395026037006
+  "min_gain": -0.027189526526756547,
+  "sp_gain": -0.012534057147010502
  },
  {
   "ticker": "FIX",
@@ -2075,17 +2075,17 @@
   "signal_date": "2026-11-17",
   "score": 75.9,
   "price_at_signal": 1099.02,
-  "entry_date": null,
-  "entry_open": null,
-  "status": "wartet",
-  "days": 0,
+  "entry_date": "2026-11-18",
+  "entry_open": 1122.0,
+  "status": "läuft",
+  "days": 1,
   "hit": false,
   "hit_date": null,
   "days_to_hit": null,
-  "last_gain": null,
-  "max_gain": null,
-  "min_gain": null,
-  "sp_gain": null
+  "last_gain": 0.016568596987800888,
+  "max_gain": 0.016568596987800888,
+  "min_gain": 0.016568596987800888,
+  "sp_gain": -0.002302272838388908
  },
  {
   "ticker": "DELL",
@@ -2093,16 +2093,16 @@
   "signal_date": "2026-11-17",
   "score": 75.3,
   "price_at_signal": 322.79,
-  "entry_date": null,
-  "entry_open": null,
-  "status": "wartet",
-  "days": 0,
+  "entry_date": "2026-11-18",
+  "entry_open": 328.61,
+  "status": "läuft",
+  "days": 1,
   "hit": false,
   "hit_date": null,
   "days_to_hit": null,
-  "last_gain": null,
-  "max_gain": null,
-  "min_gain": null,
-  "sp_gain": null
+  "last_gain": -0.04716837798893225,
+  "max_gain": -0.04716837798893225,
+  "min_gain": -0.04716837798893225,
+  "sp_gain": -0.002302272838388908
  }
 ]
