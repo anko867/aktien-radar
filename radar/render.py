@@ -79,6 +79,8 @@ def money(x, sym):
 # ---------------------------------------------------------------- Diagramme
 def price_chart(series, hi52, t_mean, sym):
     s = series.dropna().iloc[-252:]
+    if len(s) < 2:
+        return '<p class="muted">Kursverlauf: noch nicht genug Kursdaten (neu an der Börse oder Datenlücke).</p>'
     w, h, ml, mr, mt, mb = 640, 210, 8, 78, 12, 26
     vals = list(s.values) + [hi52] + ([t_mean] if t_mean and np.isfinite(t_mean) else [])
     lo, hi = min(vals) * 0.97, max(vals) * 1.03
@@ -140,7 +142,7 @@ def target_range(price, lo, mean, med, hi, sym):
 
 
 # ---------------------------------------------------------------- Karte pro Aktie
-def card(rank, tk, r, uni, info, det, news, ins, hist, real, prices, usd_eur, kind, ex=None, note=None):
+def _card_raw(rank, tk, r, uni, info, det, news, ins, hist, real, prices, usd_eur, kind, ex=None, note=None):
     i = info or {}
     sym = cur_sym(i, tk)
     name = i.get("longName") or i.get("shortName") or uni[tk]["name"]
@@ -291,6 +293,16 @@ def card(rank, tk, r, uni, info, det, news, ins, hist, real, prices, usd_eur, ki
 
 
 # ---------------------------------------------------------------- Abschnitte
+def card(rank, tk, *args, **kw):
+    """Eine einzelne kaputte Karte darf nie den ganzen Lauf stoppen."""
+    try:
+        return _card_raw(rank, tk, *args, **kw)
+    except Exception as e:  # noqa: BLE001
+        print(f"WARNUNG: Karte für {tk} konnte nicht erstellt werden ({type(e).__name__}: {e})", flush=True)
+        return (f'<div class="card"><p class="warn" style="padding:12px 14px">{esc(tk)}: Die Karte konnte heute nicht erstellt werden '
+                f'({esc(type(e).__name__)}). Mögliche Ursache: zu wenige Kursdaten.</p></div>')
+
+
 def section_market(m):
     rows = "".join(
         f"<tr><td>{esc(n)}</td><td>{de(v['last'], 2)}</td><td class=\"{'up' if v['chg1d'] >= 0 else 'dn'}\">{pc(v['chg1d'])}</td>"
