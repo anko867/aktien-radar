@@ -1,22 +1,22 @@
 [    0s] Python 3.12.16, pandas 3.1.1, numpy 2.5.5, yfinance 1.8.0
-[    1s] Aktienliste: 603 Aktien
-[   42s] Kurse: 603 Aktien, Datenstand 2026-11-19
-[   42s] Handelbar: 571, Kandidaten fuer Analystendaten: 299
-[   49s] Top: 14 (alle Filter), Beobachtung: 25
+[    0s] Aktienliste: 603 Aktien
+[   51s] Kurse: 603 Aktien, Datenstand 2026-11-19
+[   52s] Handelbar: 571, Kandidaten fuer Analystendaten: 299
+[   62s] Top: 14 (alle Filter), Beobachtung: 25
 HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"No fundamentals data found for symbol: AIXA.DE"}}}
 HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"No fundamentals data found for symbol: ENR.DE"}}}
 HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"No fundamentals data found for symbol: IFX.DE"}}}
-HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"No fundamentals data found for symbol: EIN.DE"}}}
 HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"No fundamentals data found for symbol: BVB.DE"}}}
 HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"No fundamentals data found for symbol: ANT"}}}
 HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"No fundamentals data found for symbol: SHA0.DE"}}}
-[   50s] Analystenverlauf geladen
-[   52s] Nachrichten geladen (39 mit Treffern)
-[  130s] SEC-Insiderdaten: 38 von 38
-[  130s] FRED: OK: 3 von 3 Reihen
-[  231s] Finnhub: OK: 37 von 38 Aktien
-[  231s] Alpha Vantage: OK: 12 von 12 Aktien (0 neu abgerufen, Rest aus dem Zwischenspeicher dieses Tages)
-[  243s] Financial Modeling Prep: OK: 38 Gegenproben
+HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"No fundamentals data found for symbol: EIN.DE"}}}
+[   64s] Analystenverlauf geladen
+[   67s] Nachrichten geladen (39 mit Treffern)
+[  133s] SEC-Insiderdaten: 38 von 38
+[  134s] FRED: OK: 3 von 3 Reihen
+[  225s] Finnhub: OK: 37 von 38 Aktien
+[  225s] Alpha Vantage: OK: 12 von 12 Aktien (0 neu abgerufen, Rest aus dem Zwischenspeicher dieses Tages)
+[  227s] Financial Modeling Prep: OK: 38 Gegenproben
 Traceback (most recent call last):
   File "/home/runner/work/aktien-radar/aktien-radar/run_daily.py", line 142, in <module>
     html = build_page(ctx)
