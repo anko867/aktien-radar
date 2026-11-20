@@ -1,22 +1,22 @@
 [    0s] Python 3.12.16, pandas 3.1.1, numpy 2.5.5, yfinance 1.8.0
 [    0s] Aktienliste: 603 Aktien
-[   49s] Kurse: 603 Aktien, Datenstand 2026-11-19
-[   50s] Handelbar: 571, Kandidaten fuer Analystendaten: 299
-[   60s] Top: 14 (alle Filter), Beobachtung: 25
+[   51s] Kurse: 603 Aktien, Datenstand 2026-11-19
+[   51s] Handelbar: 571, Kandidaten fuer Analystendaten: 299
+[   61s] Top: 14 (alle Filter), Beobachtung: 25
 HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"No fundamentals data found for symbol: ENR.DE"}}}
 HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"No fundamentals data found for symbol: AIXA.DE"}}}
 HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"No fundamentals data found for symbol: IFX.DE"}}}
-HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"No fundamentals data found for symbol: EIN.DE"}}}
 HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"No fundamentals data found for symbol: SHA0.DE"}}}
-HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"No fundamentals data found for symbol: BVB.DE"}}}
 HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"No fundamentals data found for symbol: ANT"}}}
-[   62s] Analystenverlauf geladen
-[   64s] Nachrichten geladen (38 mit Treffern)
-[  126s] SEC-Insiderdaten: 38 von 38
-[  127s] FRED: OK: 3 von 3 Reihen
-[  218s] Finnhub: OK: 37 von 38 Aktien
-[  218s] Alpha Vantage: OK: 12 von 12 Aktien (0 neu abgerufen, Rest aus dem Zwischenspeicher dieses Tages)
-[  219s] Financial Modeling Prep: OK: 38 Gegenproben
+HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"No fundamentals data found for symbol: EIN.DE"}}}
+HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"No fundamentals data found for symbol: BVB.DE"}}}
+[   63s] Analystenverlauf geladen
+[   66s] Nachrichten geladen (39 mit Treffern)
+[  156s] SEC-Insiderdaten: 38 von 38
+[  157s] FRED: OK: 3 von 3 Reihen
+[  251s] Finnhub: OK: 37 von 38 Aktien
+[  251s] Alpha Vantage: OK: 12 von 12 Aktien (0 neu abgerufen, Rest aus dem Zwischenspeicher dieses Tages)
+[  255s] Financial Modeling Prep: OK: 22 Gegenproben (['HTTP 429'])
 Traceback (most recent call last):
   File "/home/runner/work/aktien-radar/aktien-radar/run_daily.py", line 142, in <module>
     html = build_page(ctx)
