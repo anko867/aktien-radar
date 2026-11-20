@@ -2122,5 +2122,41 @@
   "max_gain": null,
   "min_gain": null,
   "sp_gain": null
+ },
+ {
+  "ticker": "STX",
+  "name": "Seagate Technology",
+  "signal_date": "2026-11-19",
+  "score": 81.8,
+  "price_at_signal": 521.39,
+  "entry_date": null,
+  "entry_open": null,
+  "status": "wartet",
+  "days": 0,
+  "hit": false,
+  "hit_date": null,
+  "days_to_hit": null,
+  "last_gain": null,
+  "max_gain": null,
+  "min_gain": null,
+  "sp_gain": null
+ },
+ {
+  "ticker": "AXON",
+  "name": "Axon Enterprise",
+  "signal_date": "2026-11-19",
+  "score": 78.5,
+  "price_at_signal": 306.98,
+  "entry_date": null,
+  "entry_open": null,
+  "status": "wartet",
+  "days": 0,
+  "hit": false,
+  "hit_date": null,
+  "days_to_hit": null,
+  "last_gain": null,
+  "max_gain": null,
+  "min_gain": null,
+  "sp_gain": null
  }
 ]
