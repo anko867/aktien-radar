@@ -1,20 +1,22 @@
 [    0s] Python 3.12.16, pandas 3.1.1, numpy 2.5.5, yfinance 1.8.0
 [    0s] Aktienliste: 603 Aktien
-[   51s] Kurse: 603 Aktien, Datenstand 2026-11-19
-[   52s] Handelbar: 571, Kandidaten fuer Analystendaten: 299
-[   62s] Top: 14 (alle Filter), Beobachtung: 25
-HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"No fundamentals data found for symbol: AIXA.DE"}}}
-HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"No fundamentals data found for symbol: ENR.DE"}}}
+
+1 Failed download:
+['ABT']: OperationalError('database is locked')
+[   53s] Kurse: 602 Aktien, Datenstand 2026-11-20
+[   53s] Handelbar: 570, Kandidaten fuer Analystendaten: 319
+[   62s] Top: 6 (alle Filter), Beobachtung: 25
 HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"No fundamentals data found for symbol: IFX.DE"}}}
-HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"No fundamentals data found for symbol: ANT"}}}
-HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"No fundamentals data found for symbol: EIN.DE"}}}
-HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"No fundamentals data found for symbol: SHA0.DE"}}}
+HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"No fundamentals data found for symbol: AIXA.DE"}}}
 HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"No fundamentals data found for symbol: BVB.DE"}}}
-[   64s] Analystenverlauf geladen
-[   66s] Nachrichten geladen (39 mit Treffern)
-[  132s] SEC-Insiderdaten: 38 von 38
-[  132s] FRED: OK: 3 von 3 Reihen
-[  244s] Finnhub: OK: 37 von 38 Aktien
-[  244s] Alpha Vantage: OK: 12 von 12 Aktien (0 neu abgerufen, Rest aus dem Zwischenspeicher dieses Tages)
-[  255s] Financial Modeling Prep: OK: 38 Gegenproben
-[  255s] Seite geschrieben: docs/index.html (806 KB)
+HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"No fundamentals data found for symbol: SHA0.DE"}}}
+HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"No fundamentals data found for symbol: EIN.DE"}}}
+HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"No fundamentals data found for symbol: ANT"}}}
+[   63s] Analystenverlauf geladen
+[   66s] Nachrichten geladen (31 mit Treffern)
+[  117s] SEC-Insiderdaten: 31 von 31
+[  120s] FRED: OK: 3 von 3 Reihen
+[  199s] Finnhub: OK: 30 von 31 Aktien
+[  207s] Alpha Vantage: OK: 6 von 6 Aktien (6 neu abgerufen, Rest aus dem Zwischenspeicher dieses Tages)
+[  217s] Financial Modeling Prep: OK: 31 Gegenproben
+[  217s] Seite geschrieben: docs/index.html (668 KB)
