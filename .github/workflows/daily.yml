@@ -6,6 +6,7 @@ on:
     # Frueher gestartete Laeufe (22:47/00:23 UTC im Oktober 2026) bekamen leere Kurse. GitHub startet geplante Laeufe
     # zudem mit Verspaetung. Darum mehrere Versuche zwischen 02:23 und 10:47 UTC (ungerade Minuten); der Vorab-Check
     # (tools/guard.py) ueberspringt alle weiteren, sobald die Daten des letzten Handelstags vorliegen.
+    # Beobachtung: GitHub startet geplante Laeufe oft erst gegen 10:00 UTC (21.11.2026: 7,5 Stunden nach 02:23; 24.11.2026: bis 10:34 UTC gar nicht).
     # = 04:23 bis 09:17 Uhr Sommerzeit (eine Stunde frueher im Winter), Dienstag bis Samstag.
     - cron: "23 2 * * 2-6"
     - cron: "47 3 * * 2-6"
