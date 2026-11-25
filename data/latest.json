@@ -1,15 +1,15 @@
 {
  "run_utc_date": "2026-11-25",
- "run_utc": "2026-11-25T05:05:58Z",
- "stale_count": 85,
+ "run_utc": "2026-11-25T11:33:32Z",
+ "stale_count": 1,
  "asof": "2026-11-24",
  "top": [
   "ALNY",
   "AXON",
   "NOW",
   "FSLR",
+  "RHM.DE",
   "GNRC",
-  "ENR.DE",
   "MELI",
   "WYNN",
   "CHRW",
@@ -33,6 +33,7 @@
   "GLW",
   "ORCL",
   "LITE",
+  "IFX.DE",
   "AKAM",
   "RDDT",
   "FLEX",
@@ -43,15 +44,14 @@
   "RKLB",
   "ALAB",
   "DELL",
-  "IFX.DE",
-  "NRG",
-  "ARM"
+  "AIXA.DE",
+  "NRG"
  ],
  "counts": {
   "universe": 603,
   "data": 602,
-  "liquid": 569,
-  "dd": 173,
+  "liquid": 570,
+  "dd": 175,
   "pass": 20
  },
  "notes": [
@@ -59,7 +59,7 @@
   "Nasdaq-100: 101 Aktien von Wikipedia gelesen",
   "DAX: 40 Aktien von Wikipedia gelesen",
   "MDAX: 44 Aktien von Wikipedia gelesen",
-  "85 Aktien haben für den Datenstand-Tag bei Yahoo noch keinen Kurs; ihre Karten zeigen den letzten echten Kurs mit Hinweis.",
-  "Ohne Kursdaten bei Yahoo (1): ARE"
+  "1 Aktien haben für den Datenstand-Tag bei Yahoo noch keinen Kurs; ihre Karten zeigen den letzten echten Kurs mit Hinweis.",
+  "Ohne Kursdaten bei Yahoo (1): ANET"
  ]
 }

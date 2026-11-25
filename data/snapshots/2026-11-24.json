@@ -5,8 +5,8 @@
   "AXON",
   "NOW",
   "FSLR",
+  "RHM.DE",
   "GNRC",
-  "ENR.DE",
   "MELI",
   "WYNN",
   "CHRW",
@@ -30,6 +30,7 @@
   "GLW",
   "ORCL",
   "LITE",
+  "IFX.DE",
   "AKAM",
   "RDDT",
   "FLEX",
@@ -40,17 +41,16 @@
   "RKLB",
   "ALAB",
   "DELL",
-  "IFX.DE",
-  "NRG",
-  "ARM"
+  "AIXA.DE",
+  "NRG"
  ],
  "score": {
   "ALNY": 90.6,
   "AXON": 84.5,
   "NOW": 80.1,
   "FSLR": 75.1,
+  "RHM.DE": 73.9,
   "GNRC": 69.8,
-  "ENR.DE": 69.1,
   "MELI": 66.2,
   "WYNN": 61.5,
   "CHRW": 57.3,
@@ -72,6 +72,7 @@
   "GLW": 74.5,
   "ORCL": 74.4,
   "LITE": 74.2,
+  "IFX.DE": 74.2,
   "AKAM": 74.1,
   "RDDT": 73.8,
   "FLEX": 73.6,
@@ -82,8 +83,7 @@
   "RKLB": 72.3,
   "ALAB": 72.0,
   "DELL": 71.7,
-  "IFX.DE": 71.2,
-  "NRG": 70.8,
-  "ARM": 70.7
+  "AIXA.DE": 71.1,
+  "NRG": 70.8
  }
 }
