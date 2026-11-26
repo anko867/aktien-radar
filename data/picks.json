@@ -1326,7 +1326,7 @@
   "hit": false,
   "hit_date": null,
   "days_to_hit": null,
-  "last_gain": -0.1174398633608198,
+  "last_gain": -0.1356430021419871,
   "max_gain": 0.03581906508560939,
   "min_gain": -0.14268938386369678,
   "sp_gain": -0.06963512750548517
@@ -1344,9 +1344,9 @@
   "hit": false,
   "hit_date": null,
   "days_to_hit": null,
-  "last_gain": -0.1948948924868218,
+  "last_gain": -0.2339339095091928,
   "max_gain": 0.029729780815279883,
-  "min_gain": -0.1948948924868218,
+  "min_gain": -0.2339339095091928,
   "sp_gain": -0.05241245110871351
  },
  {
@@ -1362,9 +1362,9 @@
   "hit": false,
   "hit_date": null,
   "days_to_hit": null,
-  "last_gain": -0.08605984526134614,
+  "last_gain": -0.12808185137456285,
   "max_gain": 0.02930686078856648,
-  "min_gain": -0.11738253908482521,
+  "min_gain": -0.12808185137456285,
   "sp_gain": -0.05241245110871351
  },
  {
@@ -1398,7 +1398,7 @@
   "hit": true,
   "hit_date": "2026-11-10",
   "days_to_hit": 7,
-  "last_gain": 0.16832662561316325,
+  "last_gain": 0.20551125958765604,
   "max_gain": 0.2094952623792241,
   "min_gain": 0.039508610272913414,
   "sp_gain": -0.05241245110871351
@@ -1452,9 +1452,9 @@
   "hit": false,
   "hit_date": null,
   "days_to_hit": null,
-  "last_gain": -0.01630899103436967,
+  "last_gain": -0.023748196682304767,
   "max_gain": 0.10844068650363892,
-  "min_gain": -0.01802574129420842,
+  "min_gain": -0.023748196682304767,
   "sp_gain": -0.05241245110871351
  },
  {
@@ -1938,9 +1938,9 @@
   "hit": false,
   "hit_date": null,
   "days_to_hit": null,
-  "last_gain": -0.1252999877929688,
+  "last_gain": -0.1820999908447266,
   "max_gain": 0.04220001220703118,
-  "min_gain": -0.1252999877929688,
+  "min_gain": -0.1820999908447266,
   "sp_gain": -0.05730126393108648
  },
  {
@@ -2064,7 +2064,7 @@
   "hit": false,
   "hit_date": null,
   "days_to_hit": null,
-  "last_gain": -0.0398692810457516,
+  "last_gain": -0.03816995059742645,
   "max_gain": -0.005359445210375791,
   "min_gain": -0.09359473932802287,
   "sp_gain": -0.03152527826394269
@@ -2363,6 +2363,24 @@
   "signal_date": "2026-11-25",
   "score": 62.5,
   "price_at_signal": 543.69,
+  "entry_date": null,
+  "entry_open": null,
+  "status": "wartet",
+  "days": 0,
+  "hit": false,
+  "hit_date": null,
+  "days_to_hit": null,
+  "last_gain": null,
+  "max_gain": null,
+  "min_gain": null,
+  "sp_gain": null
+ },
+ {
+  "ticker": "ALNY",
+  "name": "Alnylam Pharmaceuticals",
+  "signal_date": "2026-11-25",
+  "score": 90.6,
+  "price_at_signal": 164.73,
   "entry_date": null,
   "entry_open": null,
   "status": "wartet",

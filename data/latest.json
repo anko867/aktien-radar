@@ -1,7 +1,7 @@
 {
  "run_utc_date": "2026-11-26",
- "run_utc": "2026-11-26T05:05:52Z",
- "stale_count": 85,
+ "run_utc": "2026-11-26T10:05:22Z",
+ "stale_count": 1,
  "asof": "2026-11-25",
  "top": [
   "AXON",
@@ -10,6 +10,7 @@
   "HOOD",
   "DELL",
   "COIN",
+  "RHM.DE",
   "ALB",
   "HPE",
   "TWLO",
@@ -17,8 +18,7 @@
   "FCX",
   "APTV",
   "MELI",
-  "CAT",
-  "GNRC"
+  "CAT"
  ],
  "watch": [
   "FLEX",
@@ -33,8 +33,8 @@
   "DDOG",
   "GLW",
   "ORCL",
-  "LITE",
   "IFX.DE",
+  "LITE",
   "RDDT",
   "CIEN",
   "TER",
@@ -49,16 +49,17 @@
  ],
  "counts": {
   "universe": 603,
-  "data": 603,
+  "data": 602,
   "liquid": 569,
-  "dd": 162,
-  "pass": 26
+  "dd": 159,
+  "pass": 27
  },
  "notes": [
   "S&P 500: 503 Aktien von Wikipedia gelesen",
   "Nasdaq-100: 101 Aktien von Wikipedia gelesen",
   "DAX: 40 Aktien von Wikipedia gelesen",
   "MDAX: 44 Aktien von Wikipedia gelesen",
-  "85 Aktien haben für den Datenstand-Tag bei Yahoo noch keinen Kurs; ihre Karten zeigen den letzten echten Kurs mit Hinweis."
+  "1 Aktien haben für den Datenstand-Tag bei Yahoo noch keinen Kurs; ihre Karten zeigen den letzten echten Kurs mit Hinweis.",
+  "Ohne Kursdaten bei Yahoo (1): T"
  ]
 }
