@@ -1,6 +1,6 @@
 {
  "run_utc_date": "2026-11-27",
- "run_utc": "2026-11-27T05:05:39Z",
+ "run_utc": "2026-11-27T10:05:24Z",
  "stale_count": 1,
  "asof": "2026-11-25",
  "top": [
@@ -51,7 +51,7 @@
   "universe": 603,
   "data": 602,
   "liquid": 569,
-  "dd": 158,
+  "dd": 159,
   "pass": 27
  },
  "notes": [
@@ -59,8 +59,8 @@
   "Nasdaq-100: 101 Aktien von Wikipedia gelesen",
   "DAX: 40 Aktien von Wikipedia gelesen",
   "MDAX: 44 Aktien von Wikipedia gelesen",
-  "Für den 26.11.2026 hatte Yahoo nur bei 0 % der Aktien Kurse (Feiertag oder Tagesdaten noch nicht abgeschlossen). Datenstand ist deshalb der 25.11.2026.",
+  "Für den 26.11.2026 hatte Yahoo nur bei 14 % der Aktien Kurse (Feiertag oder Tagesdaten noch nicht abgeschlossen). Datenstand ist deshalb der 25.11.2026.",
   "1 Aktien haben für den Datenstand-Tag bei Yahoo noch keinen Kurs; ihre Karten zeigen den letzten echten Kurs mit Hinweis.",
-  "Ohne Kursdaten bei Yahoo (1): ADI"
+  "Ohne Kursdaten bei Yahoo (1): AMGN"
  ]
 }
