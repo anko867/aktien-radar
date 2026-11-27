@@ -1,6 +1,6 @@
 {
  "run_utc_date": "2026-11-27",
- "run_utc": "2026-11-27T10:05:24Z",
+ "run_utc": "2026-11-27T11:06:20Z",
  "stale_count": 1,
  "asof": "2026-11-25",
  "top": [
@@ -61,6 +61,6 @@
   "MDAX: 44 Aktien von Wikipedia gelesen",
   "Für den 26.11.2026 hatte Yahoo nur bei 14 % der Aktien Kurse (Feiertag oder Tagesdaten noch nicht abgeschlossen). Datenstand ist deshalb der 25.11.2026.",
   "1 Aktien haben für den Datenstand-Tag bei Yahoo noch keinen Kurs; ihre Karten zeigen den letzten echten Kurs mit Hinweis.",
-  "Ohne Kursdaten bei Yahoo (1): AMGN"
+  "Ohne Kursdaten bei Yahoo (1): ANET"
  ]
 }
