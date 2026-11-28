@@ -1,7 +1,7 @@
 {
  "run_utc_date": "2026-11-28",
- "run_utc": "2026-11-28T05:05:25Z",
- "stale_count": 85,
+ "run_utc": "2026-11-28T10:04:55Z",
+ "stale_count": 1,
  "asof": "2026-11-27",
  "top": [
   "COHR",
@@ -18,7 +18,7 @@
   "FIX",
   "FSLR",
   "DELL",
-  "ALB"
+  "RHM.DE"
  ],
  "watch": [
   "LRCX",
@@ -34,14 +34,14 @@
   "KLAC",
   "VRT",
   "ARM",
+  "IFX.DE",
   "CIEN",
+  "ALB",
   "RDDT",
   "RKLB",
   "GEV",
   "HPE",
   "VST",
-  "IFX.DE",
-  "RHM.DE",
   "TWLO",
   "NVDA",
   "Q",
@@ -49,16 +49,17 @@
  ],
  "counts": {
   "universe": 603,
-  "data": 603,
-  "liquid": 570,
+  "data": 602,
+  "liquid": 569,
   "dd": 151,
-  "pass": 38
+  "pass": 40
  },
  "notes": [
   "S&P 500: 503 Aktien von Wikipedia gelesen",
   "Nasdaq-100: 101 Aktien von Wikipedia gelesen",
   "DAX: 40 Aktien von Wikipedia gelesen",
   "MDAX: 44 Aktien von Wikipedia gelesen",
-  "85 Aktien haben für den Datenstand-Tag bei Yahoo noch keinen Kurs; ihre Karten zeigen den letzten echten Kurs mit Hinweis."
+  "1 Aktien haben für den Datenstand-Tag bei Yahoo noch keinen Kurs; ihre Karten zeigen den letzten echten Kurs mit Hinweis.",
+  "Ohne Kursdaten bei Yahoo (1): APD"
  ]
 }
